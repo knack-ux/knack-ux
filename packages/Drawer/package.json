@@ -1,0 +1,25 @@
+{
+  "name": "@knack/drawer",
+  "version": "0.1.0",
+  "description": "Drawer Popup component for the Knack UI Project",
+  "main": "lib/index.js",
+  "repository": "https://github.com/chrispcode/knack",
+  "author": "Kristiyan Serafimov (chrispcode)",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack --watch --config=../../webpack/webpack.dev.js",
+    "build": "webpack --config=../../webpack/webpack.prod.js",
+    "build:doc": "webpack --config=../../webpack/webpack.dev.js",
+    "clean": "rm -rf lib"
+  },
+  "peerDependencies": {
+    "framer-motion": "^1.2.2",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "styled-components": "^4.1.3"
+  },
+  "dependencies": {
+    "react-focus-lock": "^2.0.4",
+    "react-scroll-locky": "^1.5.0"
+  }
+}

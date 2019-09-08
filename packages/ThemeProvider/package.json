@@ -1,0 +1,19 @@
+{
+  "name": "@knack/theme",
+  "version": "0.1.0",
+  "description": "Theme provider for the Knack UI Project",
+  "main": "lib/index.js",
+  "repository": "https://github.com/chrispcode/knack",
+  "author": "Kristiyan Serafimov (chrispcode)",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack --watch --config=../../webpack/webpack.dev.js",
+    "build": "webpack --config=../../webpack/webpack.prod.js",
+    "build:doc": "webpack --config=../../webpack/webpack.dev.js",
+    "clean": "rm -rf lib"
+  },
+  "peerDependencies": {
+    "react": "^16.8.4",
+    "styled-components": "^4.1.3"
+  }
+}

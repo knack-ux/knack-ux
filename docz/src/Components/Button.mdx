@@ -1,0 +1,31 @@
+---
+name: Button
+route: /button
+menu: Components
+---
+
+import { useState } from 'react';
+import { Playground, Props } from 'docz';
+import { Primary, Secondary } from '@knack/button';
+import { version } from '@knack/button/package.json'
+
+# Button
+<span>Current version: {version}</span>
+
+```js
+
+import Button from '@knack/button';
+
+```
+### Props - `All html button props`
+
+## Primary (Default)
+<Playground>
+  <Primary>Continue</Primary>
+</Playground>
+
+## Secondary
+<Playground>
+  <Secondary>Press</Secondary>
+</Playground>
+

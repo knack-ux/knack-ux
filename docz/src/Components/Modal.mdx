@@ -1,0 +1,51 @@
+---
+name: Modal
+route: /modal
+menu: Components
+---
+
+import { Fragment, useState } from 'react';
+import { Playground, Props } from 'docz';
+import Modal, { Top, Bottom, Content } from '@knack/modal';
+import { version } from '@knack/modal/package.json'
+
+# Modal
+<span>Current version: {version}</span>
+
+```js
+import Modal from '@knack/modal';
+```
+<Props of={Modal} />
+
+### Props - `All html button props`
+
+## Basic
+<Playground>
+  {() => {
+    const [open, setOpen] = useState(true);
+    return (
+      <Fragment>
+        <button onClick={() => setOpen(!open)}>
+          Open Modal
+        </button>
+        <Modal
+          open={open}
+          onClose={() => setOpen(!open)}
+        >
+          <Top>
+            <h3>Title</h3>
+          </Top>
+          <Content>
+            <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe laudantium esse perspiciatis repudiandae sunt dolorum veritatis ad. Possimus totam nisi laudantium aspernatur sunt minima ipsum repudiandae ducimus natus, quam vel?</div>
+            <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe laudantium esse perspiciatis repudiandae sunt dolorum veritatis ad. Possimus totam nisi laudantium aspernatur sunt minima ipsum repudiandae ducimus natus, quam vel?</div>
+            <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe laudantium esse perspiciatis repudiandae sunt dolorum veritatis ad. Possimus totam nisi laudantium aspernatur sunt minima ipsum repudiandae ducimus natus, quam vel?</div>
+          </Content>
+          <Bottom>
+            Some button or something
+          </Bottom>
+        </Modal>
+      </Fragment>
+    )
+  }}
+  
+</Playground>

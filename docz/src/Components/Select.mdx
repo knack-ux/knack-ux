@@ -1,0 +1,38 @@
+---
+name: Select
+route: /select
+menu: Components
+---
+
+import { useState } from 'react';
+import { Playground, Props } from 'docz';
+import Select from '@knack/select';
+import { version } from '@knack/select/package.json'
+
+# Select
+<span>Current version: {version}</span>
+
+```js
+
+import Select from '@knack/select';
+
+```
+<Props of={Select} />
+
+### Props - `All html button props`
+
+## Basic
+<Playground>
+  <Select
+    id="favourite-option-select"
+    label="Favourite Option:"
+    options={[
+      'Option 1',
+      'Option 2',
+      'Option 3',
+      'Option 4',
+      'Option 5'
+    ]}
+  />
+</Playground>
+

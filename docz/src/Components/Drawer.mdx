@@ -1,0 +1,52 @@
+---
+name: Drawer
+route: /drawer
+menu: Components
+---
+
+import { Fragment, useState } from 'react';
+import { Playground, Props } from 'docz';
+import Drawer from '@knack/drawer';
+import { version } from '@knack/drawer/package.json'
+
+# Drawer
+<span>Current version: {version}</span>
+
+```js
+
+import Drawer from '@knack/drawer';
+
+```
+<Props of={Drawer} />
+
+### Props - `All html button props`
+
+## Basic
+<Playground>
+  {() => {
+    const [isOpen, setOpen] = useState(false);
+
+    return (
+      <Fragment>
+        <button onClick={() => setOpen(true)}>Open Drawer</button>
+        {isOpen && <Drawer onClose={() => setOpen(false)}>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nostrum provident facere quod, impedit quam ratione illum sapiente quos, doloremque accusantium vel quo excepturi enim deserunt unde alias obcaecati eveniet.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nostrum provident facere quod, impedit quam ratione illum sapiente quos, doloremque accusantium vel quo excepturi enim deserunt unde alias obcaecati eveniet.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nostrum provident facere quod, impedit quam ratione illum sapiente quos, doloremque accusantium vel quo excepturi enim deserunt unde alias obcaecati eveniet.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nostrum provident facere quod, impedit quam ratione illum sapiente quos, doloremque accusantium vel quo excepturi enim deserunt unde alias obcaecati eveniet.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nostrum provident facere quod, impedit quam ratione illum sapiente quos, doloremque accusantium vel quo excepturi enim deserunt unde alias obcaecati eveniet.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nostrum provident facere quod, impedit quam ratione illum sapiente quos, doloremque accusantium vel quo excepturi enim deserunt unde alias obcaecati eveniet.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nostrum provident facere quod, impedit quam ratione illum sapiente quos, doloremque accusantium vel quo excepturi enim deserunt unde alias obcaecati eveniet.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nostrum provident facere quod, impedit quam ratione illum sapiente quos, doloremque accusantium vel quo excepturi enim deserunt unde alias obcaecati eveniet.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nostrum provident facere quod, impedit quam ratione illum sapiente quos, doloremque accusantium vel quo excepturi enim deserunt unde alias obcaecati eveniet.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nostrum provident facere quod, impedit quam ratione illum sapiente quos, doloremque accusantium vel quo excepturi enim deserunt unde alias obcaecati eveniet.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nostrum provident facere quod, impedit quam ratione illum sapiente quos, doloremque accusantium vel quo excepturi enim deserunt unde alias obcaecati eveniet.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nostrum provident facere quod, impedit quam ratione illum sapiente quos, doloremque accusantium vel quo excepturi enim deserunt unde alias obcaecati eveniet.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nostrum provident facere quod, impedit quam ratione illum sapiente quos, doloremque accusantium vel quo excepturi enim deserunt unde alias obcaecati eveniet.
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime nostrum provident facere quod, impedit quam ratione illum sapiente quos, doloremque accusantium vel quo excepturi enim deserunt unde alias obcaecati eveniet.
+        </Drawer>
+        }
+      </Fragment>
+    )
+  }}
+</Playground>

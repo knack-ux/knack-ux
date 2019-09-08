@@ -1,0 +1,24 @@
+{
+  "packages": [
+    "packages/*",
+    "docz"
+  ],
+  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "command": {
+    "publish": {
+      "conventionalCommits": true,
+      "message": "chore(release): release, check description for versions [skip ci]"
+    },
+    "version": {
+      "push": false
+    },
+    "run": {
+      "build": {
+        "ignore": "@knack/docz"
+      }
+    },
+    "stream": true
+  }
+}
