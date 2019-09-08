@@ -5,6 +5,9 @@
     "packages/*",
     "docz"
   ],
+  "scripts": {
+    "lint": "eslint . --ext .tsx --ext .ts"
+  },
   "dependencies": {
     "framer-motion": "^1.6.3",
     "react": "^16.8.4",
@@ -63,9 +66,5 @@
       "pre-commit": "npm run lint",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  },
-  "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
   }
 }
