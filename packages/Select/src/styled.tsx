@@ -1,15 +1,13 @@
 import styled, { css } from 'styled-components';
 
-import { Styled } from '@chrispcode/knack-input';
+import {
+  Wrap as BaseWrap,
+  Base as BaseInput,
+  Label as BaseLabel,
+  Container as BaseContainer
+} from '@chrispcode/knack-input/lib/styled';
 
 import ArrowSVG from './assets/arrow-down.svg';
-
-const {
-  Wrap: BaseWrap,
-  Base: BaseInput,
-  Label: BaseLabel,
-  Container: BaseContainer
-} = Styled;
 
 type ButtonListOptionProps = {
   active: boolean

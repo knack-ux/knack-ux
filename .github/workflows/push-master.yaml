@@ -17,5 +17,14 @@ jobs:
 
       - run: yarn install
       - run: yarn lerna bootstrap
+      - run: yarn lerna run build --stream --ignore @chrispcode/knack-storybook
       - run: yarn lint
+      - run: yarn lerna run build --stream --scope @chrispcode/knack-storybook
+      - run: yarn version:storybook
+      - run: echo $(cat _STORYBOOK_VERSION)
+      - name: Build Storybook Dockerfile
+        run: |
+        docker build -f docker/storybook.Dockerfile \
+          -t docker.pkg.github.com/chrispcode/knack/storybook:$(cat _DOCZ_VERSION) \
+          -t docker.pkg.github.com/chrispcode/knack/storybook .
 

@@ -7,8 +7,7 @@
   ],
   "scripts": {
     "lint": "eslint . --ext .tsx --ext .ts",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "version:storybook": "node ./scripts/version/storybook"
   },
   "dependencies": {
     "framer-motion": "^1.6.7",
