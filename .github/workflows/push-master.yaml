@@ -37,6 +37,7 @@ jobs:
           docker build -f docker/storybook.Dockerfile
           -t docker.pkg.github.com/chrispcode/knack/storybook:$(cat _STORYBOOK_VERSION)
           -t docker.pkg.github.com/chrispcode/knack/storybook .
+          -t registry.heroku.com/knack-ui/web
 
       - name: Authenticate to GitHub Registry
         run: >- 
@@ -47,3 +48,27 @@ jobs:
 
       - name: Push Storybook to Github Registry
         run: docker push docker.pkg.github.com/chrispcode/knack/storybook:$(cat _STORYBOOK_VERSION)
+
+      - name: Authenticate to Heroku Registry
+        run: >- 
+          docker login 
+          -u _
+          -p ${{ secrets.HEROKU_API_KEY }}
+          registry.heroku.com 
+
+      - name: Push Storybook to Heroku Registry
+        run: docker push registry.heroku.com/knack-ui/web
+
+      - name: Auhenticate to Heroku App
+        uses: actions/heroku@master
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        with:
+          args: container:login
+
+      - name: Upload new version of Storybook to Heroku
+        uses: actions/heroku@master
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        with:
+          args: container:release web -a knack-ui   
