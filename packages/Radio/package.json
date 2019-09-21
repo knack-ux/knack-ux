@@ -1,5 +1,5 @@
 {
-  "name": "@knack/radio",
+  "name": "@chrispcode/knack-radio",
   "version": "0.1.0",
   "description": "Radio Group component for the Knack UI Project",
   "main": "lib/index.js",

@@ -1,5 +1,5 @@
 {
-  "name": "@knack/notification",
+  "name": "@chrispcode/knack-notification",
   "version": "0.1.0",
   "description": "Notification component for the Knack UI Project",
   "main": "lib/index.js",

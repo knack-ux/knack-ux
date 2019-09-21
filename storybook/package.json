@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "name": "@chrispcode/knack-storybook",
+  "version": "0.1.0",
+  "description": "Storybook documentation environment for the Knack UI Project",
+  "main": "lib/index.js",
+  "repository": "https://github.com/chrispcode/knack",
+  "author": "Kristiyan Serafimov (chrispcode)",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "start-storybook -p 6006",
+    "build": "build-storybook"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "@chrispcode/knack-button": "^0.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@storybook/addon-actions": "^5.2.1",
+    "@storybook/addon-docs": "^5.3.0-alpha.0",
+    "@storybook/addon-links": "^5.2.1",
+    "@storybook/addons": "^5.2.1",
+    "@storybook/react": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "react": "^16.8.4",
+    "styled-components": "^4.1.3"
+  }
+}

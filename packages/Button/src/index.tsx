@@ -25,6 +25,7 @@ const Primary = styled.button`
 
 const Secondary = styled(Primary)`
   padding: 8px 24px;
+  font-size: 14px;
 `;
 
 export {

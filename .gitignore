@@ -2,5 +2,6 @@
 node_modules/
 docz/.docz/
 lib/
+storybook/storybook-static
 
 yarn-error.log

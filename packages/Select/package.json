@@ -1,5 +1,5 @@
 {
-  "name": "@knack/select",
+  "name": "@chrispcode/knack-select",
   "version": "0.1.0",
   "description": "Select component for the Knack UI Project",
   "main": "lib/index.js",
@@ -18,7 +18,7 @@
     "xstate": "^4.6.0"
   },
   "dependencies": {
-    "@knack/input": "^0.1.0",
-    "@xstate/react": "^0.7.0"
+    "@chrispcode/knack-input": "^0.1.0",
+    "@xstate/react": "^0.7.1"
   }
 }

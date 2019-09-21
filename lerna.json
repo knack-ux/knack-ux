@@ -1,7 +1,7 @@
 {
   "packages": [
     "packages/*",
-    "docz"
+    "storybook"
   ],
   "version": "independent",
   "npmClient": "yarn",

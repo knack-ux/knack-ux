@@ -89,10 +89,10 @@ function Modal({
     );
   }
 
-  return ReactDOM.createPortal(
+  return open ? ReactDOM.createPortal(
     renderPortal(),
     document.body
-  );
+  ) : null;
 }
 
 export { Top, Bottom, Content };
