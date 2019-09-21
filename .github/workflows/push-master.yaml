@@ -17,13 +17,33 @@ jobs:
 
       - run: yarn install
       - run: yarn lerna bootstrap
-      - run: yarn lerna run build --stream --ignore @chrispcode/knack-storybook
+
+      - name: Build all the packages
+        run: yarn lerna run build --stream --ignore @chrispcode/knack-storybook
+      
       - run: yarn lint
-      - run: yarn lerna run build --stream --scope @chrispcode/knack-storybook
-      - run: yarn version:storybook
-      - run: echo $(cat _STORYBOOK_VERSION)
+
+      - name: Build Storybook
+        run: yarn lerna run build --stream --scope @chrispcode/knack-storybook
+      
+      - name: Extract Storybook version
+        run: yarn version:storybook
+
+      - name: Echo Storybook version
+        run: echo $(cat _STORYBOOK_VERSION)
+
       - name: Build Storybook Dockerfile
         run: >-
           docker build -f docker/storybook.Dockerfile
           -t docker.pkg.github.com/chrispcode/knack/storybook:$(cat _STORYBOOK_VERSION)
           -t docker.pkg.github.com/chrispcode/knack/storybook .
+
+      - name: Authenticate to GitHub Registry
+        run: >- 
+          docker login 
+          -u chirspcode
+          -p ${{ secrets.GITHUB_REGISTRY_TOKEN }}
+          docker.pkg.github.com 
+
+      - name: Push Storybook to Github Registry
+        run: docker push docker.pkg.github.com/chrispcode/knack/storybook:$(cat _STORYBOOK_VERSION)
