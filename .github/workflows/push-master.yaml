@@ -9,12 +9,12 @@ jobs:
   prepare:
     name: Project Preparation
     runs-on: ubuntu-latest
-    
     steps:
-    - uses: actions/checkout@v1
-  
+    - name: Checkout
+      uses: actions/checkout@v1
     - name: Install
       uses: actions/setup-node@v1
       run: yarn install
     - name: Bootstrap
+      uses: actions/setup-node@v1
       run: lerna bootstrap

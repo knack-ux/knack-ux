@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { Styled } from '@knack/input';
+import { Styled } from '@chrispcode/knack-input';
 
 import ArrowSVG from './assets/arrow-down.svg';
 

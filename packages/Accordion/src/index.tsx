@@ -13,9 +13,14 @@ interface Props extends Button {
    | React.ReactElement<RowProps, typeof Row>
    | React.ReactElement<RowProps, typeof Row>[]
 }
-
-class Accordion extends PureComponent<Props> {
-  state = { expandedRow: undefined };
+interface State {
+  expandedRow: string | undefined
+}
+class Accordion extends PureComponent<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { expandedRow: undefined };
+  }
 
   setExpanded(value: string) {
     this.setState({

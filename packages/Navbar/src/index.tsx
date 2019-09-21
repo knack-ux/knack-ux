@@ -4,7 +4,7 @@ import React, {
   useEffect
 } from 'react';
 
-import Notification from '@knack/notification';
+// import Notification from '@knack/notification';
 import { useAnimation } from 'framer-motion';
 
 import {
@@ -62,15 +62,15 @@ function Navbar({
     }
   }, [isOpen]);
 
-  function renderNotifications() {
-    return (
-      React.Children
-        .toArray(children)
-        .filter(
-          child => areSimilar(child, Notification)
-        )
-    );
-  }
+  // function renderNotifications() {
+  //   return (
+  //     React.Children
+  //       .toArray(children)
+  //       .filter(
+  //         (child) => areSimilar(child, Notification)
+  //       )
+  //   );
+  // }
 
   function renderMenu() {
     return (
@@ -78,7 +78,7 @@ function Navbar({
         <Nav>
           {React.Children
             .toArray(children)
-            .filter(child => areSimilar(child, Link) && !child.props.fixed)}
+            .filter((child) => areSimilar(child, Link) && !child.props.fixed)}
         </Nav>
       </Menu>
     );
@@ -88,14 +88,14 @@ function Navbar({
     return (
       React.Children
         .toArray(children)
-        .filter(child => child.type === Link && child.props.fixed)
+        .filter((child) => child.type === Link && child.props.fixed)
     );
   }
 
   return (
     <Wrap>
       <HorizontalLine />
-      {renderNotifications()}
+      {/* {renderNotifications()} */}
       <Container>
         <Logo />
         <Fixed>

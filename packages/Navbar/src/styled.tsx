@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
-import { Wrap as NotificationWrap } from '@knack/notification';
+import { Wrap as NotificationWrap } from '@chrispcode/knack-notification';
 
 import MenuSVG from './assets/menu.svg';
 
@@ -50,10 +50,10 @@ type ExpandProps = {
 
 export const Expand = styled.button.attrs(() => ({
   children: (
-    <Fragment>
+    <>
       <MenuSVG fill="#182B4B" />
       Menu
-    </Fragment>
+    </>
   )
 }))<ExpandProps>`
   display: flex;
