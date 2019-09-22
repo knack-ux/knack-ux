@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-        with:
-          fetch-depth: 30
-
+      
+      - run: git branch -u master
+      - run: git status
       - run: git log
       - run: git tag
 
