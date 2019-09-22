@@ -11,11 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-
+        with:
+          ref: master
+    
+      - run: git status
       - run: git checkout master
       - run: git status
       - run: git log
       - run: git tag
+      - run: | 
+          git config --global user.email "kristiyan.serafimov@gmail.com";
+          git config --global user.name "Kristiyan Serafimov";
 
       - name: Setup node
         uses: actions/setup-node@v1
