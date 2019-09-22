@@ -6,8 +6,8 @@ on:
     - master
 
 jobs:
-  prepare:
-    name: Project Preparation
+  build:
+    name: Build, Lint and Publish
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -22,6 +22,12 @@ jobs:
         run: yarn lerna run build --stream --ignore @chrispcode/knack-storybook
       
       - run: yarn lint
+
+      - name: Update versions and changelogs
+        run: yarn lerna version -y
+
+      - name: Push to Master
+        run: git push --follow-tags --set-upstream origin master
 
       - name: Build Storybook
         run: yarn lerna run build --stream --scope @chrispcode/knack-storybook
