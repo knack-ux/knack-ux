@@ -4,6 +4,9 @@ on:
   push:
     branches:
     - master
+    paths-ignore:
+    - 'packages/*/package.json'
+    - 'packages/*/CHANGELOG.md'
 
 jobs:
   build:
@@ -12,16 +15,17 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - run: git remote set-url origin https://x-access-token:${{ secrets.GITHUB_REGISTRY_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
-
-      - run: git checkout master
+      - name: Configure Git
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_REGISTRY_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git;
+          git checkout master;
+          git status;
+          git config --global user.email "kristiyan.serafimov@gmail.com";
+          git config --global user.name "Kristiyan Serafimov";
+  
       - run: git status
       - run: git log
       - run: git tag
-      - name: Config Git
-        run: | 
-          git config --global user.email "kristiyan.serafimov@gmail.com";
-          git config --global user.name "Kristiyan Serafimov";
 
       - name: Setup node
         uses: actions/setup-node@v1
