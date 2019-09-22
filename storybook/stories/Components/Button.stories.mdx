@@ -1,15 +1,28 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
-import { Primary } from '@chrispcode/knack-button';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import Button from '@chrispcode/knack-button';
+import { version } from '@chrispcode/knack-button/package.json';
 
-<Meta title="MDX|Checkbox" component={Primary} />
+<Meta title="Components|Button" />
 
-# Button at version 0.1.0
+# Button
+<span>Latest Version: {version}</span>
 
-With `MDX` we can define a story for `Checkbox` right in the middle of our
-markdown documentation.
+```
+  import Button from '@chrispcode/knack-button';
+```
 
+<Props of={Button} />
+
+## Primary
 <Preview>
   <Story name="Primary">
-    <Primary>Button</Primary>
+    <Button>Contrinue</Button>
+  </Story>
+</Preview>
+
+## Secondary
+<Preview>
+  <Story name="Secondary">
+    <Button secondary>Option</Button>
   </Story>
 </Preview>
