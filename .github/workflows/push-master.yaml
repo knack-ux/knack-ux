@@ -11,15 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-        with:
-          ref: master
-    
-      - run: git status
+
+      - run: git remote set-url origin https://x-access-token:${{ secrets.GITHUB_REGISTRY_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
+
       - run: git checkout master
       - run: git status
       - run: git log
       - run: git tag
-      - run: | 
+      - name: Config Git
+        run: | 
           git config --global user.email "kristiyan.serafimov@gmail.com";
           git config --global user.name "Kristiyan Serafimov";
 
