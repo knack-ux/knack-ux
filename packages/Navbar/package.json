@@ -1,6 +1,6 @@
 {
   "name": "@chrispcode/knack-navbar",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Navbar component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": "https://github.com/chrispcode/knack",
@@ -13,11 +13,11 @@
     "clean": "rm -rf lib"
   },
   "peerDependencies": {
-    "react": "^16.8.4",
     "framer-motion": "^1.6.3",
+    "react": "^16.8.4",
     "styled-components": "^4.1.3"
   },
   "dependencies": {
-    "@chrispcode/knack-notification": "^0.1.0"
+    "@chrispcode/knack-notification": "^0.2.0"
   }
 }
