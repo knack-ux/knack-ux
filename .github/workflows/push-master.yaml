@@ -10,10 +10,11 @@ jobs:
     name: Skip if commit has [skip ci]
     runs-on: ubuntu-latest
     steps:
-      - uses: chrispcode/skip-commit
-        env:
-          COMMIT_FILTER: skip ci
-
+      - name: Check for [skip ci]
+      - run: echo 'There is no skip ci'
+      - if: |
+        contains(github.event.commits[0].message, '[skip ci]') == false &&
+        contains(github.event.commits[0].message, '[ci skip]') == false
   build:
     name: Build, Lint and Publish
     runs-on: ubuntu-latest
