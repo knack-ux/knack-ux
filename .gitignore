@@ -1,7 +1,7 @@
 .DS_Store
+lib/
 node_modules/
 docz/.docz/
-lib/
 storybook/storybook-static
-
+_STORYBOOK_VERSION
 yarn-error.log
