@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check for [skip ci]
-      - run: echo 'There is no skip ci'
-      - if: |
+        run: echo 'There is no skip ci'
+        if: |
           contains(github.event.commits[0].message, '[skip ci]') == false &&
           contains(github.event.commits[0].message, '[ci skip]') == false
           
