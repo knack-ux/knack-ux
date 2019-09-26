@@ -10,6 +10,10 @@ jobs:
     name: Build, Lint and Publish
     runs-on: ubuntu-latest
     steps:
+      - uses: veggiemonk/skip-commit@master
+        env: 
+          COMMIT_FILTER: "[skip-ci]"
+
       - uses: actions/checkout@v1
 
       - name: Configure Git
