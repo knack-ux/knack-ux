@@ -1,6 +1,6 @@
 {
   "name": "@chrispcode/knack-button",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Button component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": "https://github.com/chrispcode/knack",

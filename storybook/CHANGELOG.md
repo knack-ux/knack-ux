@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/chrispcode/knack/compare/@chrispcode/knack-storybook@0.3.0...@chrispcode/knack-storybook@0.3.1) (2019-09-26)
+
+**Note:** Version bump only for package @chrispcode/knack-storybook
+
+
+
+
+
 # [0.3.0](https://github.com/chrispcode/knack/compare/@chrispcode/knack-storybook@0.2.0...@chrispcode/knack-storybook@0.3.0) (2019-09-22)
 
 

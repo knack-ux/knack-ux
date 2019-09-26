@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@chrispcode/knack-storybook",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Storybook documentation environment for the Knack UI Project",
   "main": "lib/index.js",
   "repository": "https://github.com/chrispcode/knack",
@@ -15,7 +15,7 @@
     "build": "build-storybook"
   },
   "dependencies": {
-    "@chrispcode/knack-button": "^0.3.0"
+    "@chrispcode/knack-button": "^0.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
