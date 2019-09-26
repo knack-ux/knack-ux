@@ -36,7 +36,7 @@ jobs:
       - run: yarn lerna bootstrap
 
       - name: Build all the packages
-        run: yarn lerna run build --stream --ignore @chrispcode/knack-storybook
+        run: yarn lerna run build:doc --stream --ignore @chrispcode/knack-storybook
       
       - run: yarn lint
 
