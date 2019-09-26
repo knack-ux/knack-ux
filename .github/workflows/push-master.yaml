@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: veggiemonk/skip-commit@master
         env: 
-          COMMIT_FILTER: "[skip-ci]"
+          COMMIT_FILTER: "[skip ci]"
 
       - uses: actions/checkout@v1
 
