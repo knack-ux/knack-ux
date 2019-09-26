@@ -2,10 +2,8 @@ name: Push To Master
 
 on: 
   push:
-    paths:
-      - '*'
-      - '!*.json'
-      - '!*.md'
+    branches:
+      - master
 
 jobs:
   build:
