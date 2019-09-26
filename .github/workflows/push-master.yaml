@@ -7,7 +7,7 @@ on:
       - '!*.json'
       - '!*.md'
     branches:
-    - master
+      - master
 
 jobs:
   build:
