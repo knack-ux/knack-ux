@@ -85,7 +85,16 @@ module.exports = {
               configFile: babelrc
             }
           },
-          'react-svg-loader'
+          {
+            loader: 'react-svg-loader',
+            options: {
+              svgo: {
+                plugins: [
+                  {removeViewBox: false}
+                ]
+              }
+            }
+          }
         ]
       }
     ]

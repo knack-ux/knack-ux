@@ -1,0 +1,58 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import Alert from '@knack-ux/alert';
+import { version } from '@knack-ux/alert/package.json';
+
+<Meta title="Components|Alert" />
+
+# Alert
+<span>Latest Version: {version}</span>
+
+```
+  import Alert from '@knack-ux/alert';
+```
+
+<Props of={Alert} />
+
+## Info
+<Preview>
+  <Story name="Info">
+    <Alert
+      title="New Notification!"
+      description="You got a new subscriber!"
+      intent="info"
+    />
+  </Story>
+</Preview>
+
+## Success
+<Preview>
+  <Story name="Success">
+    <Alert
+      title="New Notification!"
+      description="You got a new subscriber!"
+      intent="success"
+    />
+  </Story>
+</Preview>
+
+## Warning
+<Preview>
+  <Story name="Warning">
+    <Alert
+      title="Warning"
+      description="Road ahead!"
+      intent="warning"
+    />
+  </Story>
+</Preview>
+
+## Danger
+<Preview>
+  <Story name="Danger">
+    <Alert
+      title="504"
+      description="Gateway Timeout"
+      intent="danger"
+    />
+  </Story>
+</Preview>

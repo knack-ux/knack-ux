@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
-import { Wrap as NotificationWrap } from '@chrispcode/knack-notification';
+import { Wrap as NotificationWrap } from '@knack-ux/alert/lib/styled';
 
 import MenuSVG from './assets/menu.svg';
 

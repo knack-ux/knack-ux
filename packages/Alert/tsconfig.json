@@ -3,10 +3,10 @@
   "compilerOptions": {
     "declarationDir": "./lib",
     "outDir": "./lib",
-    "baseUrl": ".",
+    "baseUrl": "."
   },
   "include": [
     "src/**/*",
     "../../custom.d.ts"
-  ],
+  ]
 }

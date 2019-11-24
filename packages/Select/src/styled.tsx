@@ -5,7 +5,7 @@ import {
   Base as BaseInput,
   Label as BaseLabel,
   Container as BaseContainer
-} from '@chrispcode/knack-input/lib/styled';
+} from '@knack-ux/input/lib/styled';
 
 import ArrowSVG from './assets/arrow-down.svg';
 
@@ -70,7 +70,7 @@ export const List = styled.ul.attrs({
 
   ${({ warning, error }: any) => (
     (warning || error) && css`
-      width: calc(100% - 32px);
+      /* width: calc(100% - 32px); */
       bottom: 0px;
     `
   )}

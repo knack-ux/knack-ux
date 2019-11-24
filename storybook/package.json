@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@chrispcode/knack-storybook",
+  "name": "@knack-ux/storybook",
   "version": "0.3.1",
   "description": "Storybook documentation environment for the Knack UI Project",
   "main": "lib/index.js",
@@ -11,21 +11,29 @@
   },
   "license": "MIT",
   "scripts": {
-    "start": "start-storybook -p 6006",
-    "build": "build-storybook"
+    "start": "start-storybook -p 6006 --quiet",
+    "build": "build-storybook --quiet"
   },
   "dependencies": {
-    "@chrispcode/knack-button": "^0.3.1"
+    "@knack-ux/alert": "^0.2.0",
+    "@knack-ux/button": "^0.3.1",
+    "@knack-ux/select": "^0.2.0",
+    "@knack-ux/checkbox": "^0.1.0",
+    "@knack-ux/checkbox-group": "^0.1.0",
+    "@knack-ux/theme": "^0.2.0",
+    "@knack-ux/input": "^0.2.0",
+    "@storybook/theming": "^5.2.1"
+    
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "@storybook/addon-actions": "^5.2.1",
-    "@storybook/addon-docs": "^5.3.0-alpha.0",
+    "@storybook/addon-docs": "^5.2.1",
     "@storybook/addon-links": "^5.2.1",
     "@storybook/addons": "^5.2.1",
     "@storybook/react": "^5.2.1",
     "babel-loader": "^8.0.6",
-    "react": "^16.8.4",
+    "react": "^16.10.2",
     "styled-components": "^4.1.3"
   }
 }

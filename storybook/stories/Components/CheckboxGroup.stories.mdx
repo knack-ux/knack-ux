@@ -1,0 +1,44 @@
+import { useState } from 'react';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import CheckboxGroup from '@knack-ux/checkbox-group';
+import { version } from '@knack-ux/checkbox-group/package.json';
+
+<Meta title="Components|Checkbox Group" />
+
+# Checkbox Group
+<span>Latest Version: {version}</span>
+
+```
+import CheckboxGroup from '@knack-ux/checkbox-group';
+```
+
+## Props
+
+<Props of={CheckboxGroup} />
+
+```
+  As well as all div props
+```
+
+## Basic
+
+<Preview>
+  <Story name="Basic">
+    {() => {
+      const [checked, setChecked] = useState([]);
+      return (
+        <CheckboxGroup
+          id="icecream"
+          label="Which kinds of ice cream do you find nice?"
+          checked={checked}
+          options={[
+            { key: 'Vanilla', value: 'vanilla' },
+            { key: 'Chocolate', value: 'choco' },
+            { key: 'Strawberry', value: 'strawberry' }
+          ]}
+          onChange={(event) => setChecked(event.target.value)}
+        />
+      )
+    }}
+  </Story>
+</Preview>

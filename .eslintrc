@@ -10,7 +10,8 @@
     "react/jsx-filename-extension": "off",
     "no-unused-vars": "off",
     "react/prop-types": "off",
-    "react/jsx-props-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/no-noninteractive-element-to-interactive-role": "off"
   },
   "settings": {
     "import/resolver": {

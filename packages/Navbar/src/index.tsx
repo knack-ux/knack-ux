@@ -4,7 +4,7 @@ import React, {
   useEffect
 } from 'react';
 
-// import Notification from '@knack/notification';
+// import Notification from '@knack/alert';
 import { useAnimation } from 'framer-motion';
 
 import {

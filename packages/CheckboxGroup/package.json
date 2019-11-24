@@ -1,7 +1,7 @@
 {
-  "name": "@chrispcode/knack-notification",
-  "version": "0.2.0",
-  "description": "Notification component for the Knack UI Project",
+  "name": "@knack-ux/checkbox-group",
+  "version": "0.1.0",
+  "description": "Checkbox Group component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": "https://github.com/chrispcode/knack",
   "author": "Kristiyan Serafimov (chrispcode)",
@@ -13,7 +13,12 @@
     "clean": "rm -rf lib"
   },
   "peerDependencies": {
+    "framer-motion": "^1.2.2",
     "react": "^16.8.4",
     "styled-components": "^4.1.3"
+  },
+  "dependencies": {
+    "@knack-ux/checkbox": "^0.1.0",
+    "lodash.remove": "^4.7.0"
   }
 }

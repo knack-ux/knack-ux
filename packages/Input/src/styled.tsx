@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import _get from 'lodash.get';
 
 import ErrorSVG from './assets/error.svg';
 import WarningSVG from './assets/warning.svg';
@@ -8,24 +9,29 @@ import { Props } from '.';
 export const WarningText = styled.p`
   font-size: 12px;
   margin: 4px 0 0 4px;
-  color: ${({ theme }) => theme.orange.darkest};
-  /* remove the width
+  color: ${({ theme }) => _get(theme, 'orange.darkest', '#F46C02')};
+  /*
+    remove the width
     and padding of the
     waringng/error icon
   */
   width: calc(100% - 24px - 12px);
+  position: absolute;
+  bottom: 0px;
+  transform: translate(0, 100%);
+
 `;
 
 export const ErrorText = styled(WarningText)`
-  color: ${({ theme }) => theme.red.darker};
+  color: ${({ theme }) => _get(theme, 'red.darker', '#AA1945')};
 `;
 
 export const WarningIcon = styled(WarningSVG)`
-  fill: ${({ theme }) => theme.orange.standard};
+  fill: ${({ theme }) => _get(theme, 'orange.standar', '#FF7F50')};
 `;
 
 export const ErrorIcon = styled(ErrorSVG)`
-  fill: ${({ theme }) => theme.red.standard};
+  fill: ${({ theme }) => _get(theme, 'red.standard', '#DD215A')};
 `;
 
 export const Container = styled.div`
@@ -116,13 +122,13 @@ export const Base = styled.input<BaseInputProps>`
 
   ${({ warning, theme }) => (
     warning && css`
-      border: 2px solid ${theme.orange.standard} !important;
+      border: 2px solid ${_get(theme, 'orange.standard', '#FF7F50')} !important;
     `
   )}
 
   ${({ error, theme }) => (
     error && css`
-      border: 2px solid ${theme.red.standard} !important;
+      border: 2px solid ${_get(theme, 'red.standard', '#DD215A')} !important;
     `
   )}
 `;

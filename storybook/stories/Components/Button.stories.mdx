@@ -1,6 +1,6 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import Button from '@chrispcode/knack-button';
-import { version } from '@chrispcode/knack-button/package.json';
+import Button from '@knack-ux/button';
+import { version } from '@knack-ux/button/package.json';
 
 <Meta title="Components|Button" />
 
@@ -8,21 +8,66 @@ import { version } from '@chrispcode/knack-button/package.json';
 <span>Latest Version: {version}</span>
 
 ```
-  import Button from '@chrispcode/knack-button';
+  import Button from '@knack-ux/button';
 ```
 
 <Props of={Button} />
 
-## Primary
+## Appearance - default
 <Preview>
-  <Story name="Primary">
-    <Button>Contrinue</Button>
+  <Story name="Default">
+    <>
+      <Button mr="8px">Default</Button>
+      <Button intent="success" mr="8px">Success</Button>
+      <Button intent="warning" mr="8px">Warning</Button>
+      <Button intent="danger">Danger</Button>
+    </>
   </Story>
 </Preview>
 
-## Secondary
+## Appearance - primary
 <Preview>
-  <Story name="Secondary">
-    <Button secondary>Option</Button>
+  <Story name="Primary">
+    <>
+      <Button appearance="primary" mr="8px">Default</Button>
+      <Button appearance="primary" intent="success" mr="8px">Success</Button>
+      <Button appearance="primary" intent="warning" mr="8px">Warning</Button>
+      <Button appearance="primary" intent="danger">Danger</Button>
+    </>
+  </Story>
+</Preview>
+
+
+
+## Appearance - minimal
+<Preview>
+  <Story name="Minimal">
+    <>
+      <Button appearance="minimal" mr="8px">Default</Button>
+      <Button appearance="minimal" intent="success" mr="8px">Success</Button>
+      <Button appearance="minimal" intent="warning" mr="8px">Warning</Button>
+      <Button appearance="minimal" intent="danger">Danger</Button>
+    </>
+  </Story>
+</Preview>
+
+## Icon
+<Preview>
+  <Story name="Icon">
+    <>
+     <Button
+        icon="arrow_forward"
+        appearance="primary"
+        mr="8px"
+      >
+      </Button>
+      <Button
+        icon="arrow_forward"
+        appearance="primary"
+        mr="8px"
+      >
+        Continue
+      </Button>
+    </>
   </Story>
 </Preview>

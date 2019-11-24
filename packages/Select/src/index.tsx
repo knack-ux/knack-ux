@@ -1,4 +1,6 @@
-import React, { useRef } from 'react';
+import React, {
+  useRef, useReducer, useEffect, useLayoutEffect
+} from 'react';
 import { Machine, assign, actions } from 'xstate';
 import { useMachine } from '@xstate/react';
 import {
@@ -6,7 +8,7 @@ import {
   WarningIcon,
   ErrorText,
   ErrorIcon
-} from '@chrispcode/knack-input/lib/styled';
+} from '@knack-ux/input/lib/styled';
 
 import {
   Wrap,
@@ -18,108 +20,95 @@ import {
   Container
 } from './styled';
 
-const selectMachine = Machine(
-  {
-    id: 'select',
-    initial: 'focused',
-    states: {
-      focused: {
-        on: {
-          OPEN: {
-            target: 'opened',
-            actions: ['focusList']
-          }
-        }
-      },
-      opened: {
-        onEntry: ['selectFirstIfNotSet'],
-        on: {
-          CLOSE: {
-            target: 'focused',
-            actions: ['focusInput']
-          },
-          SELECT: {
-            target: 'focused',
-            actions: ['select', 'focusInput']
-          },
-          SELECT_NEXT: { actions: ['selectNext'] },
-          SELECT_PREVIOUS: { actions: ['selectPrevious'] },
-          SELECT_FIRST: { actions: ['selectFirst'] },
-          SELECT_LAST: { actions: ['selectLast'] }
-        }
-      },
-    },
-    context: {
-      currentIndex: 0,
-      selected: '',
-      options: [],
-      inputRef: null,
-      listRef: null
+interface ReducerState {
+  currentState: 'open' | 'close'
+  currentIndex: number
+  selected: string
+  options: string[]
+  inputRef: React.RefObject<HTMLInputElement> | null
+  listRef: React.RefObject<HTMLUListElement> | null
+}
+
+function reducer(state: ReducerState, action: any) {
+  switch (action.type) {
+    case 'OPEN': {
+      setImmediate(() => {
+        state.listRef.current.focus();
+      });
+      return {
+        ...state,
+        currentState: 'open',
+        selected: state.selected !== '' ? state.selected : state.options[0],
+        currentIndex: state.currentIndex !== -1 ? state.currentIndex : 0
+      };
     }
-  },
-  {
-    actions: {
-      focusInput: (context) => {
-        setImmediate(() => {
-          context.inputRef.current.focus();
-        });
-      },
-      focusList: (context) => {
-        setImmediate(() => {
-          context.listRef.current.focus();
-        });
-      },
-      select: assign((_, event) => ({
-        currentIndex: event.payload.index,
-        selected: event.payload.option
-      })),
-      selectFirst: assign((context) => ({
+    case 'CLOSE': {
+      setImmediate(() => {
+        state.inputRef.current.focus();
+      });
+      return {
+        ...state,
+        currentState: 'close'
+      };
+    }
+    case 'SELECT':
+      setImmediate(() => {
+        state.inputRef.current.focus();
+      });
+      return {
+        ...state,
+        currentState: 'close',
+        currentIndex: action.payload.index,
+        selected: action.payload.option
+      };
+    case 'SELECT_NEXT': {
+      const nextIndex = (
+        state.currentIndex + 1 > state.options.length - 1
+          ? state.currentIndex
+          : state.currentIndex + 1
+      );
+      return {
+        ...state,
+        currentIndex: nextIndex,
+        selected: state.options[nextIndex],
+        options: state.options
+      };
+    }
+    case 'SELECT_PREVIOUS': {
+      const previousIndex = (
+        state.currentIndex === 0
+          ? state.currentIndex
+          : state.currentIndex - 1
+      );
+      return {
+        ...state,
+        currentIndex: previousIndex,
+        selected: state.options[previousIndex],
+        options: state.options
+      };
+    }
+    case 'SELECT_FIRST': {
+      return {
+        ...state,
         currentIndex: 0,
-        selected: context.options[0]
-      })),
-      selectFirstIfNotSet: actions.send((context) => {
-        if (!context.selected) {
-          return 'SELECT_FIRST';
-        }
-        return '';
-      }),
-      selectLast: assign((context) => {
-        const lastIndex = (
-          context.options.length - 1
-        );
-        return {
-          currentIndex: lastIndex,
-          selected: context.options[lastIndex],
-          options: context.options
-        };
-      }),
-      selectNext: assign((context) => {
-        const nextIndex = (
-          context.currentIndex + 1 > context.options.length - 1
-            ? context.currentIndex
-            : context.currentIndex + 1
-        );
-        return {
-          currentIndex: nextIndex,
-          selected: context.options[nextIndex],
-          options: context.options
-        };
-      }),
-      selectPrevious: assign((context) => {
-        const previousIndex = (
-          context.currentIndex === 0
-            ? context.currentIndex
-            : context.currentIndex - 1
-        );
-        return {
-          currentIndex: previousIndex,
-          selected: context.options[previousIndex],
-          options: context.options
-        };
-      })
+        selected: state.options[0]
+      };
     }
+    case 'SELECT_LAST': {
+      const lastIndex = (
+        state.options.length - 1
+      );
+      return {
+        ...state,
+        currentIndex: lastIndex,
+        selected: state.options[lastIndex],
+        options: state.options
+      };
+    }
+    default:
+      return state;
   }
-);
+}
 
 const keyCodes = {
   enter: 13,
@@ -150,40 +139,40 @@ function Select({
 }: Props) {
   const listRef = useRef(null);
   const inputRef = useRef(null);
-  const [current, send] = useMachine(
-    selectMachine.withContext({
-      currentIndex: -1,
-      selected: '',
-      options,
-      listRef,
-      inputRef,
-    })
-  );
+
+  const [state, dispatch] = useReducer(reducer, {
+    currentState: 'close',
+    currentIndex: -1,
+    selected: '',
+    options,
+    listRef,
+    inputRef,
+  });
 
   function handleOptionPress(
     event: React.KeyboardEvent<HTMLUListElement>
-  ): any {
+  ) {
+    event.preventDefault();
     switch (event.keyCode) {
       case keyCodes.arrowDown: {
-        send('SELECT_NEXT');
+        dispatch({ type: 'SELECT_NEXT' });
         break;
       }
       case keyCodes.arrowUp: {
-        send('SELECT_PREVIOUS');
+        dispatch({ type: 'SELECT_PREVIOUS' });
         break;
       }
       case keyCodes.home: {
-        send('SELECT_FIRST');
+        dispatch({ type: 'SELECT_FIRST' });
         break;
       }
       case keyCodes.end: {
-        send('SELECT_LAST');
+        dispatch({ type: 'SELECT_LAST' });
         break;
       }
       case keyCodes.enter:
-      case keyCodes.space:
       case keyCodes.esc: {
-        send('CLOSE');
+        dispatch({ type: 'CLOSE' });
         break;
       }
       default: break;
@@ -196,7 +185,7 @@ function Select({
     switch (event.keyCode) {
       case keyCodes.enter:
       case keyCodes.space:
-        send('OPEN');
+        dispatch('OPEN');
         break;
       default: break;
     }
@@ -208,7 +197,7 @@ function Select({
   ) {
     return (
       () => {
-        send({
+        dispatch({
           type: 'SELECT',
           payload: {
             index,
@@ -236,24 +225,26 @@ function Select({
   }
 
   function renderList() {
-    const activeOptionId = `${id}-option-${current.context.selected}`;
+    const activeOptionId = `${id}-option-${state.selected}`;
 
     return (
-      current.matches('opened') && (
+      state.currentState === 'open' && (
         <List
           ref={listRef}
           onKeyDown={handleOptionPress}
-          onBlur={() => send('CLOSE')}
-          active={current.matches('opened')}
+          onBlur={() => dispatch({ type: 'CLOSE' })}
+          active={state.currentState === 'open'}
           aria-activedescendant={activeOptionId}
+          error={error}
+          warning={warning}
         >
           {
-            current.context.options.map(
+            state.options.map(
               (option, index) => (
                 <Option
                   key={option}
                   id={`${id}-option-${option}`}
-                  active={option === current.context.selected}
+                  active={option === state.selected}
                   onClick={handleOptionClick(option, index)}
                 >
                   {option}
@@ -278,15 +269,15 @@ function Select({
           type="button"
           id={buttonId}
           ref={inputRef}
-          active={current.matches('opened')}
-          onClick={() => send('OPEN')}
+          active={state.currentState === 'open'}
+          onClick={() => dispatch({ type: 'OPEN' })}
           onKeyPress={handleInputPress}
-          aria-expanded={current.matches('opened')}
+          aria-expanded={state.currentState === 'open'}
           aria-labelledby={`${buttonId} ${labelId}`}
           warning={warning}
           error={error}
         >
-          {current.context.selected}
+          {state.selected}
           <ArrowIcon />
         </Button>
         {/* <WarningIcon /> */}

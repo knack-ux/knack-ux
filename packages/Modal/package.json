@@ -1,5 +1,5 @@
 {
-  "name": "@chrispcode/knack-modal",
+  "name": "@knack-ux/modal",
   "version": "0.2.0",
   "description": "Modal component for the Knack UI Project",
   "main": "lib/index.js",
@@ -19,6 +19,6 @@
     "styled-components": "^4.1.3"
   },
   "dependencies": {
-    "react-focus-on": "^3.1.0"
+    "react-focus-on": "^3.1.3"
   }
 }

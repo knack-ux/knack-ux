@@ -29,7 +29,7 @@ jobs:
           git checkout master;
           git status;
           git config --global user.email "kristiyan.serafimov@gmail.com";
-          git config --global user.name "Kristiyan Serafimov";
+          git config --global user.name "Hubot Bender";
   
       - run: git status
       - run: git log

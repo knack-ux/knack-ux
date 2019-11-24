@@ -1,32 +1,26 @@
 import React from 'react';
-import { ThemeProvider as Base } from 'styled-components';
+import { ThemeProvider as Base, DefaultTheme } from 'styled-components';
+import _get from 'lodash.get';
 
-const theme = {
-  blue: {
-    lighter: '#407CD4',
-    standard: '#0052CC',
-    darker: '#001F4C'
+export const defaultTheme = {
+  colors: {
+    default: '#0052CC',
+    info: '#0052CC',
+    success: '#3DA68C',
+    warning: '#FF7F50',
+    danger: '#DD215A'
   },
-  violet: {
-    lighter: '#5F66D7',
-    standard: '#3D428B',
-    darker: '#21244B'
-  },
-  red: {
-    lighter: '#E3668C',
-    standard: '#DD215A',
-    darker: '#AA1945'
-  },
-  orange: {
-    lighter: '#FFFF97',
-    standard: '#FF7F50',
-    darker: '#F46C02'
-  }
+  focus: '#CED6E0'
 };
 
-function ThemeProvider() {
+
+export function ThemeProvider({
+  children
+}: any) {
   return (
-    <Base theme={theme} />
+    <Base theme={defaultTheme}>
+      {children}
+    </Base>
   );
 }
 

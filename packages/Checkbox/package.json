@@ -1,14 +1,11 @@
 {
-  "name": "@chrispcode/knack-accordion",
-  "version": "0.2.0",
-  "description": "Accordion component for the Knack UI Project",
+  "name": "@knack-ux/checkbox",
+  "version": "0.1.0",
+  "description": "Checkbox component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": "https://github.com/chrispcode/knack",
   "author": "Kristiyan Serafimov (chrispcode)",
   "license": "MIT",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "scripts": {
     "start": "webpack --watch --config=../../webpack/webpack.dev.js",
     "build": "webpack --config=../../webpack/webpack.prod.js",
@@ -16,7 +13,7 @@
     "clean": "rm -rf lib"
   },
   "peerDependencies": {
-    "framer-motion": "^1.6.3",
+    "framer-motion": "^1.2.2",
     "react": "^16.8.4",
     "styled-components": "^4.1.3"
   }

@@ -1,0 +1,123 @@
+import { useState, useRef, useEffect } from 'react';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import Radio from '@knack-ux/radio/lib/rewrite';
+import Radio2 from '@knack-ux/radio';
+import { version } from '@knack-ux/radio/package.json';
+
+import Alert from '@knack-ux/alert';
+
+<Meta title="Components|Radio" />
+
+# Radio
+<span>Latest Version: {version}</span>
+
+```
+  import Radio from '@knack-ux/radio';
+```
+
+<Props of={Radio} />
+
+```ts
+
+interface Option {
+  id: string
+  key: string
+  value: any
+}
+
+```
+
+## Controlled
+
+<Preview>
+  <Story name="Controlled">
+    {() => {
+      const [value, setValue] = useState('');
+      return (
+        <Radio
+          id="ice"
+          label="What is your favourite ice cream?"
+          onChange={(value) => setValue(value)}
+          value={value}
+          options={[
+            {key: 'Vanilla', value: 'vanilla'},
+            {key: 'Chocolate', value: 'chocolate'},
+            {key: 'Strawberry', value: 'strawberry'}
+          ]}
+        />
+      )
+    }}
+  </Story>
+</Preview>
+
+
+<!-- ## Vertical (default)
+
+<Preview>
+  <Story name="Vertical">
+    {() => {
+      const [selected, setSelected] = useState(null);
+      return (
+        <Radio
+          id="pet"
+          label="What is your prefered pet?"
+          selected={selected}
+          options={[
+            { key: 'Dog', value: 'dog', id: 'pet-dog' },
+            { key: 'Cat', value: 'cat', id: 'pet-cat' },
+            { key: 'Turtle', value: 'turtle', id: 'pet-turtle' }
+          ]}
+          onChange={(selected) => setSelected(selected)}
+        />
+      )
+    }}
+  </Story>
+</Preview>
+
+
+## Horizontal
+
+<Preview>
+  <Story name="Horizontal">
+    {() => {
+      const [selected, setSelected] = useState(null);
+      return (
+        <Radio
+          direction="horizontal"
+          id="icecream"
+          label="What is your favourite ice cream?"
+          selected={selected}
+          options={[
+            { key: 'Vanilla', value: 'vanilla', id: 'ice-vanilla' },
+            { key: 'Chocolate', value: 'choco', id: 'ice-choco' }
+          ]}
+          onChange={(selected) => setSelected(selected)}
+        />
+      )
+    }}
+  </Story>
+</Preview>
+
+## Error
+
+<Preview>
+  <Story name="Error">
+    {() => {
+      const [selected, setSelected] = useState(null);
+      return (
+        <Radio
+          id="pet-error"
+          label="What is your prefered pet?"
+          selected={selected}
+          error="I am an error in display!"
+          options={[
+            { key: 'Dog', value: 'dog', id: 'error-pet-dog' },
+            { key: 'Cat', value: 'cat', id: 'error-pet-cat' },
+            { key: 'Turtle', value: 'turtle', id: 'error-pet-turtle' }
+          ]}
+          onChange={(selected) => setSelected(selected)}
+        />
+      )
+    }}
+  </Story>
+</Preview> -->
