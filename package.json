@@ -41,7 +41,7 @@
     "babel-plugin-syntax-jsx": "^6.18.0",
     "chalk": "^2.4.2",
     "columnify": "^1.5.4",
-    "commander": "^3.0.2",
+    "commander": "^4.0.1",
     "core-js": "^3.2.1",
     "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.0.1",
