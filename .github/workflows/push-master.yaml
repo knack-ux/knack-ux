@@ -90,4 +90,11 @@ jobs:
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         with:
-          args: container:release web -a knack-ui   
+          args: container:release web -a knack-ui
+
+  complete:
+    name: Complete
+    runs-on: ubuntu-latest
+    steps:
+      - name: Complete
+        run: echo "Completed has been the build! - Master Yoda"
