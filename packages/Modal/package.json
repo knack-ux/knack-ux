@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/modal",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Modal component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": "https://github.com/chrispcode/knack",
