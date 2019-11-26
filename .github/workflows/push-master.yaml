@@ -23,12 +23,11 @@ jobs:
   
       - run: git status
       - run: git log
-      - run: git tag
 
       - name: Setup node
         uses: actions/setup-node@v1
 
-      - run: yarn install
+      - run: yarn install --pure-lockfile
       - run: yarn lerna bootstrap
 
       - name: Build all the packages
@@ -51,8 +50,8 @@ jobs:
       - name: Build Storybook Dockerfile
         run: >-
           docker build -f docker/storybook.Dockerfile
-          -t docker.pkg.github.com/chrispcode/knack/storybook:$(cat _STORYBOOK_VERSION)
-          -t docker.pkg.github.com/chrispcode/knack/storybook .
+          -t docker.pkg.github.com/knack-ux/storybook:$(cat _STORYBOOK_VERSION)
+          -t docker.pkg.github.com/knack-ux/storybook:latest .
 
       - name: Authenticate to GitHub Registry
         run: >- 
@@ -62,7 +61,7 @@ jobs:
           docker.pkg.github.com 
 
       - name: Push Storybook to Github Registry
-        run: docker push docker.pkg.github.com/chrispcode/knack/storybook:$(cat _STORYBOOK_VERSION)
+        run: docker push docker.pkg.github.com/knack-ux/storybook:$(cat _STORYBOOK_VERSION)
 
       - name: Push to Master
         run: git push --follow-tags --set-upstream origin master
