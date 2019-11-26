@@ -23,7 +23,6 @@
     "@knack-ux/theme": "^0.2.0",
     "@knack-ux/input": "^0.2.0",
     "@storybook/theming": "^5.2.1"
-    
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",

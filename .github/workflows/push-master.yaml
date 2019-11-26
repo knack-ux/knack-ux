@@ -15,7 +15,7 @@ jobs:
 
       - name: Configure Git
         run: |
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_REGISTRY_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git;
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git;
           git checkout master;
           git status;
           git config --global user.email "kristiyan.serafimov@gmail.com";
@@ -39,9 +39,6 @@ jobs:
       - name: Update versions and changelogs
         run: yarn lerna version -y
 
-      - name: Push to Master
-        run: git push --follow-tags --set-upstream origin master
-
       - name: Build Storybook
         run: yarn lerna run build --stream --scope @knack-ux/storybook
       
@@ -56,41 +53,22 @@ jobs:
           docker build -f docker/storybook.Dockerfile
           -t docker.pkg.github.com/chrispcode/knack/storybook:$(cat _STORYBOOK_VERSION)
           -t docker.pkg.github.com/chrispcode/knack/storybook .
-          -t registry.heroku.com/knack-ui/web
 
       - name: Authenticate to GitHub Registry
         run: >- 
           docker login 
           -u chirspcode
-          -p ${{ secrets.GITHUB_REGISTRY_TOKEN }}
+          -p ${{ secrets.GITHUB_TOKEN }}
           docker.pkg.github.com 
 
       - name: Push Storybook to Github Registry
         run: docker push docker.pkg.github.com/chrispcode/knack/storybook:$(cat _STORYBOOK_VERSION)
 
-      - name: Authenticate to Heroku Registry
-        run: >- 
-          docker login 
-          -u _
-          -p ${{ secrets.HEROKU_API_KEY }}
-          registry.heroku.com 
+      - name: Push to Master
+        run: git push --follow-tags --set-upstream origin master
 
-      - name: Push Storybook to Heroku Registry
-        run: docker push registry.heroku.com/knack-ui/web
-
-      - name: Auhenticate to Heroku App
-        uses: actions/heroku@master
-        env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        with:
-          args: container:login
-
-      - name: Upload new version of Storybook to Heroku
-        uses: actions/heroku@master
-        env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        with:
-          args: container:release web -a knack-ui
+      - name: Push packages to Github NPM Registry
+        run: npm set //npm.pkg.github.com/:_authToken {{ secrets.GITHUB_TOKEN }}
 
   complete:
     name: Complete

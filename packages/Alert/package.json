@@ -12,6 +12,9 @@
     "build:doc": "webpack --config=../../webpack/webpack.dev.js",
     "clean": "rm -rf lib"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "peerDependencies": {
     "react": "^16.8.4",
     "styled-components": "^4.1.3",
