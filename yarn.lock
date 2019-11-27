@@ -10477,9 +10477,9 @@ react-transition-group@^2.2.1:
     react-lifecycles-compat "^3.0.4"
 
 react-use-gesture@^6.0.2:
-  version "6.0.2"
-  resolved "https://registry.yarnpkg.com/react-use-gesture/-/react-use-gesture-6.0.2.tgz#2202c68fd8bf2ec8d33b2d919686839f8ccc759e"
-  integrity sha512-zzKWtIjQFzEfwJAxo0JNveXHhehVj6ybfJVlRY5zbfvME6aY8QlZCR7vFF3jnBsJFLRySWYGfjD6WwpyYnS5Cg==
+  version "6.0.14"
+  resolved "https://registry.yarnpkg.com/react-use-gesture/-/react-use-gesture-6.0.14.tgz#ab2d35ef72a5fb6060a6160eb12568c276f8a4b1"
+  integrity sha512-d9cnZJ0DOFd3FIO76J776DyhtbODgbxGKu19lvc1aSNTnRV5EKr9V4Uda188l2Qh0Va3pqWGxEQlw72r2cmnFQ==
 
 react@^16.10.2, react@^16.8.3:
   version "16.12.0"
