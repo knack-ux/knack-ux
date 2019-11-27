@@ -67,7 +67,9 @@ jobs:
         run: git push --follow-tags --set-upstream origin master
 
       - name: Push packages to Github NPM Registry
-        run: npm set //npm.pkg.github.com/:_authToken {{ secrets.GITHUB_TOKEN }}
+        run: >-
+           npm set //npm.pkg.github.com/:_authToken {{ secrets.GITHUB_TOKEN }};
+           yarn lerna publish from-package -y
 
   complete:
     name: Complete
