@@ -106,7 +106,7 @@ export const Base = styled.button<Props>`
         background: 'white',
         color: theme.colors[intent],
         '&:hover': {
-          background: '#F1F2F6'
+          background: '#EBECF0'
         }
       }
     }
