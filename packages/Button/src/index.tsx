@@ -61,7 +61,6 @@ export const Base = styled.button<Props>`
   font-size: 16px;
 
   background: #F1F2F6;
-
   border: none;
   border-radius: 3px;
 
