@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/button@0.5.0...@knack-ux/button@0.6.0) (2019-11-28)
+
+
+### Features
+
+* **button:** small change to get an update ([f81f6ba](https://github.com/knack-ux/knack-ux/commit/f81f6ba))
+
+
+
+
+
 # [0.5.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/button@0.4.0...@knack-ux/button@0.5.0) (2019-11-28)
 
 
