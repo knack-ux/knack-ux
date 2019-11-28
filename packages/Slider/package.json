@@ -3,7 +3,11 @@
   "version": "0.3.0",
   "description": "Slider component for the Knack UI Project",
   "main": "lib/index.js",
-  "repository": "https://github.com/chrispcode/knack",
+  "repository" : {
+    "type" : "git",
+    "url": "ssh://git@github.com/knack-ux/knack-ux.git",
+    "directory": "@knack-ux/slider"
+  },
   "author": "Kristiyan Serafimov (chrispcode)",
   "license": "MIT",
   "scripts": {

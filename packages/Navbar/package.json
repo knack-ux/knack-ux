@@ -3,7 +3,11 @@
   "version": "0.3.0",
   "description": "Navbar component for the Knack UI Project",
   "main": "lib/index.js",
-  "repository": "https://github.com/chrispcode/knack",
+  "repository" : {
+    "type" : "git",
+    "url": "ssh://git@github.com/knack-ux/knack-ux.git",
+    "directory": "@knack-ux/navbar"
+  },
   "author": "Kristiyan Serafimov (chrispcode)",
   "license": "MIT",
   "scripts": {

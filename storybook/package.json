@@ -4,7 +4,6 @@
   "version": "0.4.0",
   "description": "Storybook documentation environment for the Knack UI Project",
   "main": "lib/index.js",
-  "repository": "https://github.com/chrispcode/knack",
   "author": "Kristiyan Serafimov (chrispcode)",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

@@ -3,7 +3,11 @@
   "version": "0.2.0",
   "description": "Checkbox component for the Knack UI Project",
   "main": "lib/index.js",
-  "repository": "https://github.com/chrispcode/knack",
+  "repository" : {
+    "type" : "git",
+    "url": "ssh://git@github.com/knack-ux/knack-ux.git",
+    "directory": "@knack-ux/checkbox"
+  },
   "author": "Kristiyan Serafimov (chrispcode)",
   "license": "MIT",
   "scripts": {
