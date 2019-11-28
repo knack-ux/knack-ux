@@ -68,8 +68,9 @@ jobs:
 
       - name: Push packages to Github NPM Registry
         run: >-
+           npm config set @knack-ux:registry https://npm.pkg.github.com
            npm set //npm.pkg.github.com/:_authToken {{ secrets.GITHUB_TOKEN }};
-           yarn lerna publish from-package -y
+           yarn lerna publish from-package --no-verify-access -y;
 
   complete:
     name: Complete
