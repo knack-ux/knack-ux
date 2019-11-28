@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@knack-ux/storybook",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Storybook documentation environment for the Knack UI Project",
   "main": "lib/index.js",
   "author": "Kristiyan Serafimov (chrispcode)",
@@ -14,13 +14,13 @@
     "build": "build-storybook --quiet"
   },
   "dependencies": {
-    "@knack-ux/alert": "^0.3.0",
-    "@knack-ux/button": "^0.4.0",
-    "@knack-ux/checkbox": "^0.2.0",
-    "@knack-ux/checkbox-group": "^0.2.0",
-    "@knack-ux/input": "^0.3.0",
-    "@knack-ux/select": "^0.3.0",
-    "@knack-ux/theme": "^0.3.0",
+    "@knack-ux/alert": "^0.4.0",
+    "@knack-ux/button": "^0.5.0",
+    "@knack-ux/checkbox": "^0.3.0",
+    "@knack-ux/checkbox-group": "^0.3.0",
+    "@knack-ux/input": "^0.4.0",
+    "@knack-ux/select": "^0.4.0",
+    "@knack-ux/theme": "^0.4.0",
     "@storybook/theming": "^5.2.1"
   },
   "devDependencies": {

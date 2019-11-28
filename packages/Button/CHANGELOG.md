@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/button@0.4.0...@knack-ux/button@0.5.0) (2019-11-28)
+
+
+### Bug Fixes
+
+* **button:** darken background hover on minimal ([6464b8f](https://github.com/knack-ux/knack-ux/commit/6464b8f))
+
+
+### Features
+
+* **package.json:** add repository fields ([36c89ad](https://github.com/knack-ux/knack-ux/commit/36c89ad))
+
+
+
+
+
 # 0.4.0 (2019-11-26)
 
 

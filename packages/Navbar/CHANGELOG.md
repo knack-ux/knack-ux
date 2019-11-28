@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/navbar@0.3.0...@knack-ux/navbar@0.4.0) (2019-11-28)
+
+
+### Features
+
+* **package.json:** add repository fields ([36c89ad](https://github.com/knack-ux/knack-ux/commit/36c89ad))
+
+
+
+
+
 # 0.3.0 (2019-11-26)
 
 

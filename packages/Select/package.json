@@ -1,10 +1,10 @@
 {
   "name": "@knack-ux/select",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Select component for the Knack UI Project",
   "main": "lib/index.js",
-  "repository" : {
-    "type" : "git",
+  "repository": {
+    "type": "git",
     "url": "ssh://git@github.com/knack-ux/knack-ux.git",
     "directory": "@knack-ux/select"
   },
@@ -25,7 +25,7 @@
     "xstate": "^4.6.0"
   },
   "dependencies": {
-    "@knack-ux/input": "^0.3.0",
+    "@knack-ux/input": "^0.4.0",
     "@xstate/react": "^0.8.1"
   }
 }
