@@ -49,7 +49,7 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/generator@^7.4.0", "@babel/generator@^7.6.0", "@babel/generator@^7.7.4":
+"@babel/generator@^7.4.0", "@babel/generator@^7.6.0", "@babel/generator@^7.7.2", "@babel/generator@^7.7.4":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.7.4.tgz#db651e2840ca9aa66f327dcec1dc5f5fa9611369"
   integrity sha512-m5qo2WgdOJeyYngKImbkyQrnUN1mPceaG5BV+G0E3gWsa4l/jCSryWJdM2x8OuGAOyh+3d5pVYfZWCiNFtynxg==
@@ -326,10 +326,15 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.1.0", "@babel/parser@^7.4.2", "@babel/parser@^7.4.3", "@babel/parser@^7.6.0", "@babel/parser@^7.7.4":
+"@babel/parser@^7.1.0", "@babel/parser@^7.4.3", "@babel/parser@^7.6.0", "@babel/parser@^7.7.4":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.7.4.tgz#75ab2d7110c2cf2fa949959afb05fa346d2231bb"
   integrity sha512-jIwvLO0zCL+O/LmEJQjWA75MQTWwx3c3u2JOTDK5D3/9egrWRRA0/0hk9XXywYnXZVVpzrBYeIQTmhwUaePI9g==
+
+"@babel/parser@^7.7.3":
+  version "7.7.5"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.7.5.tgz#cbf45321619ac12d83363fcf9c94bb67fa646d71"
+  integrity sha512-KNlOe9+/nk4i29g0VXgl8PEXIRms5xKLJeuZ6UptN0fHv+jDiriG+y94X6qAgWTR0h3KaoM1wK5G5h7MHFRSig==
 
 "@babel/plugin-proposal-async-generator-functions@^7.2.0", "@babel/plugin-proposal-async-generator-functions@^7.7.4":
   version "7.7.4"
@@ -742,7 +747,7 @@
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-jsx" "^7.7.4"
 
-"@babel/plugin-transform-react-jsx@^7.0.0", "@babel/plugin-transform-react-jsx@^7.3.0", "@babel/plugin-transform-react-jsx@^7.7.4":
+"@babel/plugin-transform-react-jsx@^7.0.0", "@babel/plugin-transform-react-jsx@^7.7.0", "@babel/plugin-transform-react-jsx@^7.7.4":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.7.4.tgz#d91205717fae4e2f84d020cd3057ec02a10f11da"
   integrity sha512-LixU4BS95ZTEAZdPaIuyg/k8FiiqN9laQ0dMHB4MlpydHY53uQdWCUrwjLr5o6ilS6fAgZey4Q14XBjl5tL6xw==
@@ -2365,22 +2370,22 @@
     uuid "^3.3.2"
 
 "@storybook/addon-docs@^5.2.1":
-  version "5.2.6"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-5.2.6.tgz#73184f37b2716928b81a8ff4f43ac3bf51332ab0"
-  integrity sha512-HLOlT3+FdxYWPFuMtym6tTqEpItobdOmjNNLZPVzGdbmj7lFEGDpW6JiZuYoEQaXW2rm0v7EpdoE3Szr133GOQ==
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-docs/-/addon-docs-5.2.8.tgz#e616e7d660db26c5d550b77de9b9cddf031b40b5"
+  integrity sha512-MOPDQ717ezD1wrDfTlaRosSnxYtTWAuFD0Eh2XGqZ5mYxt70EwUZipKEik9B7I41qqmUEUrbWlGo75wSb+aOew==
   dependencies:
-    "@babel/generator" "^7.4.0"
-    "@babel/parser" "^7.4.2"
-    "@babel/plugin-transform-react-jsx" "^7.3.0"
+    "@babel/generator" "^7.7.2"
+    "@babel/parser" "^7.7.3"
+    "@babel/plugin-transform-react-jsx" "^7.7.0"
     "@mdx-js/loader" "^1.1.0"
     "@mdx-js/mdx" "^1.1.0"
     "@mdx-js/react" "^1.0.27"
-    "@storybook/addons" "5.2.6"
-    "@storybook/api" "5.2.6"
-    "@storybook/components" "5.2.6"
-    "@storybook/router" "5.2.6"
-    "@storybook/source-loader" "5.2.6"
-    "@storybook/theming" "5.2.6"
+    "@storybook/addons" "5.2.8"
+    "@storybook/api" "5.2.8"
+    "@storybook/components" "5.2.8"
+    "@storybook/router" "5.2.8"
+    "@storybook/source-loader" "5.2.8"
+    "@storybook/theming" "5.2.8"
     core-js "^3.0.1"
     global "^4.3.2"
     js-string-escape "^1.0.1"
@@ -2533,31 +2538,6 @@
   integrity sha512-+oVSEJdeh7TQ1Bhanb3mCr7fc3Bug3+K79abZ28J45Ub5x4L/ZVClj1xMgUsJs30BZ5FB8vhdgH6TQb0NSxR4A==
   dependencies:
     core-js "^3.0.1"
-
-"@storybook/components@5.2.6":
-  version "5.2.6"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-5.2.6.tgz#cddb60227720aea7cae34fe782d0370bcdbd4005"
-  integrity sha512-C7OS90bZ1ZvxlWUZ3B2MPFFggqAtUo7X8DqqS3IwsuDUiK9dD/KS0MwPgOuFDnOTW1R5XqmQd/ylt53w3s/U5g==
-  dependencies:
-    "@storybook/client-logger" "5.2.6"
-    "@storybook/theming" "5.2.6"
-    "@types/react-syntax-highlighter" "10.1.0"
-    "@types/react-textarea-autosize" "^4.3.3"
-    core-js "^3.0.1"
-    global "^4.3.2"
-    markdown-to-jsx "^6.9.1"
-    memoizerific "^1.11.3"
-    polished "^3.3.1"
-    popper.js "^1.14.7"
-    prop-types "^15.7.2"
-    react "^16.8.3"
-    react-dom "^16.8.3"
-    react-focus-lock "^1.18.3"
-    react-helmet-async "^1.0.2"
-    react-popper-tooltip "^2.8.3"
-    react-syntax-highlighter "^8.0.1"
-    react-textarea-autosize "^7.1.0"
-    simplebar-react "^1.0.0-alpha.6"
 
 "@storybook/components@5.2.8":
   version "5.2.8"
@@ -2737,13 +2717,14 @@
     memoizerific "^1.11.3"
     qs "^6.6.0"
 
-"@storybook/source-loader@5.2.6":
-  version "5.2.6"
-  resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-5.2.6.tgz#06e6b5e93ea4c635c7d05c517ad8711de9030ba3"
-  integrity sha512-OJWmmLlt84efk+xLEqkyVQBlD5n9tbPlkrepQKtGBpR0JXeGyyvJ/3S8jnpW3NYUrFjUgHPkSWBp/c5CfzPwSw==
+"@storybook/source-loader@5.2.8":
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/@storybook/source-loader/-/source-loader-5.2.8.tgz#f8fb5c090e386749b058686f52ec5dedea538185"
+  integrity sha512-4PHR6IO4VkOof/59wPsKkQah1s+fyeccNPetBlxGKfhis+T7HNQEh9Tn7yFkhQ44DY1UhKDBRaAmNEjEKkFpQA==
   dependencies:
-    "@storybook/addons" "5.2.6"
-    "@storybook/router" "5.2.6"
+    "@storybook/addons" "5.2.8"
+    "@storybook/client-logger" "5.2.8"
+    "@storybook/router" "5.2.8"
     core-js "^3.0.1"
     estraverse "^4.2.0"
     global "^4.3.2"
