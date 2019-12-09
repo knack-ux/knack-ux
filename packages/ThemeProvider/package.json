@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/theme",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Theme provider for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {

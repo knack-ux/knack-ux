@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/input@0.4.0...@knack-ux/input@0.5.0) (2019-12-09)
+
+
+### Features
+
+* **packages:** remove most of them clean ([06aa5a9](https://github.com/knack-ux/knack-ux/commit/06aa5a9))
+
+
+
+
+
 # [0.4.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/input@0.3.0...@knack-ux/input@0.4.0) (2019-11-28)
 
 
