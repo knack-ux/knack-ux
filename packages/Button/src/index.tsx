@@ -1,16 +1,9 @@
 import React, {
   ButtonHTMLAttributes
 } from 'react';
-import styled, { css } from 'styled-components';
-import { darken } from 'polished';
+import { LayoutProps, SpaceProps } from 'styled-system';
 
-import {
-  variant,
-  layout,
-  LayoutProps,
-  space,
-  SpaceProps
-} from 'styled-system';
+import { Base } from './styled';
 
 type ReactButton = ButtonHTMLAttributes<HTMLButtonElement>
 
@@ -50,67 +43,6 @@ export function Button({
     </Base>
   );
 }
-
-export const Base = styled.button<Props>`
-  display: inline-flex;
-  align-items: center;
-  height: 40px;
-  padding: 0 16px;
-
-  font-family: 'Cabin';
-  font-size: 16px;
-
-  background: #F1F2F6;
-  border: none;
-  border-radius: 3px;
-
-  cursor: pointer;
-
-  &::-moz-focus-inner {
-    border: 0;
-  }
-
-  & > *:nth-child(2) {
-    margin-left: 8px;
-  }
-
-  ${({ theme }) => css`
-    &:focus {
-      box-shadow: 0 0 0 2px ${theme.focus};
-    }
-  `}
-
-  ${space}
-  ${layout}
-
-  ${({ theme, intent }) => variant({
-    prop: 'appearance',
-    variants: {
-      default: {
-        border: '2px solid #CED6E0',
-        background: '#FAFBFC',
-        color: theme.colors[intent]
-      },
-      primary: {
-        background: theme.colors[intent],
-        color: 'white',
-        '&:hover': {
-          background: darken(
-            0.1,
-            theme.colors[intent]
-          )
-        }
-      },
-      minimal: {
-        background: 'white',
-        color: theme.colors[intent],
-        '&:hover': {
-          background: '#EBECF0'
-        }
-      }
-    }
-  })}
-`;
 
 
 export default Button;

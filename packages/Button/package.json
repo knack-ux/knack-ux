@@ -8,6 +8,9 @@
     "url": "ssh://git@github.com/knack-ux/knack-ux.git",
     "directory": "@knack-ux/button"
   },
+  "files": [
+    "lib/"
+  ],
   "author": "Kristiyan Serafimov (chrispcode)",
   "license": "MIT",
   "scripts": {
@@ -28,5 +31,9 @@
     "@knack-ux/theme": "^0.4.0",
     "lodash.get": "^4.4.2",
     "polished": "^3.4.2"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/jest-dom": "^4.2.4"
   }
 }

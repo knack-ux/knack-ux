@@ -1,85 +1,20 @@
 import styled, { css } from 'styled-components';
+import { space, layout } from 'styled-system';
 import _get from 'lodash.get';
-
-import ErrorSVG from './assets/error.svg';
-import WarningSVG from './assets/warning.svg';
 
 import { Props } from '.';
 
-export const WarningText = styled.p`
-  font-size: 12px;
-  margin: 4px 0 0 4px;
-  color: ${({ theme }) => _get(theme, 'orange.darkest', '#F46C02')};
-  /*
-    remove the width
-    and padding of the
-    waringng/error icon
-  */
-  width: calc(100% - 24px - 12px);
-  position: absolute;
-  bottom: 0px;
-  transform: translate(0, 100%);
-
-`;
-
-export const ErrorText = styled(WarningText)`
-  color: ${({ theme }) => _get(theme, 'red.darker', '#AA1945')};
-`;
-
-export const WarningIcon = styled(WarningSVG)`
-  fill: ${({ theme }) => _get(theme, 'orange.standar', '#FF7F50')};
-`;
-
-export const ErrorIcon = styled(ErrorSVG)`
-  fill: ${({ theme }) => _get(theme, 'red.standard', '#DD215A')};
-`;
-
-export const Container = styled.div`
-  display: flex;
-  position: relative;
-  align-items: center;
-
-  & > svg {
-    min-width: 24px;
-    min-height: 24px;
-    padding-left: 8px;
-  }
-`;
-
-type WrapProps = Pick<Props, 'fluid'>
-
-export const Wrap = styled.div<WrapProps>`
+export const Wrap = styled.div`
   display: inline-flex;
   flex-direction: column;
-  width: 320px;
-  font-family: "Open Sans";
-
-  ${({ fluid }) => (
-    fluid && css`
-      width: 100%;
-    `
-  )}
-`;
-
-type Label = Pick<Props, 'disabled'>
-
-export const Label = styled.label<Label>`
-  align-self: flex-start;
-
-  color: #172B4D;
-  font-size: 16px;
   
-  padding-left: 4px;
-  margin-bottom: 6px;
+  width: 320px;
 
-  ${({ disabled }) => (
-    disabled && css`
-      color: #707780;
-    `
-  )}
+  font-family: "Cabin";
+
+  ${space}
+  ${layout}
 `;
-
-type BaseInputProps = Pick<Props, 'warning' | 'error'>
 
 export const Base = styled.input<BaseInputProps>`
   background-color: #FAFBFC;
@@ -120,15 +55,54 @@ export const Base = styled.input<BaseInputProps>`
     }
   }
 
-  ${({ warning, theme }) => (
-    warning && css`
-      border: 2px solid ${_get(theme, 'orange.standard', '#FF7F50')} !important;
-    `
-  )}
-
   ${({ error, theme }) => (
     error && css`
-      border: 2px solid ${_get(theme, 'red.standard', '#DD215A')} !important;
+      border: 2px solid ${theme.colors.danger};
     `
   )}
 `;
+
+type LabelProps = Pick<Props, 'disabled'>
+
+export const Label = styled.label<LabelProps>`
+  align-self: flex-start;
+
+  color: #172B4D;
+  font-size: 16px;
+  
+  padding-left: 4px;
+  margin-bottom: 6px;
+
+  ${({ disabled }) => (
+    disabled && css`
+      color: #707780;
+    `
+  )}
+`;
+
+export const ErrorText = styled.div`
+  font-size: 14px;
+  margin: 4px 0 0 4px;
+  color: ${({ theme }) => theme.a11y.danger};
+  /*
+    remove the width
+    and padding of the
+    waringng/error icon
+  */
+  width: calc(100% - 24px - 12px);
+`;
+
+export const Container = styled.div`
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  & > i {
+    min-width: 24px;
+    min-height: 24px;
+    padding-left: 8px;
+    color: ${({ theme }) => theme.colors.danger};
+  }
+`;
+
+type BaseInputProps = Pick<Props, 'error'>

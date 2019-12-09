@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "module": "es6",
+    "module": "esnext",
     "noImplicitAny": false,
     "target": "es6",
     "moduleResolution": "node",
@@ -9,7 +9,8 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "lib": ["es2016", "dom"],
+    "lib": ["dom", "esnext"],
+    "esModuleInterop": true
   },
   "exclude": [
     "node_modules",

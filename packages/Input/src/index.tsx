@@ -1,46 +1,46 @@
 import React from 'react';
+import { SpaceProps } from 'styled-system';
 
 import {
   Base,
   Container,
-  ErrorIcon,
   ErrorText,
   Label,
-  WarningIcon,
-  WarningText,
   Wrap
 } from './styled';
 
+type ReactDiv = React.HTMLAttributes<HTMLDivElement>;
 type ReactInput = React.InputHTMLAttributes<HTMLInputElement>;
 
-interface Props extends ReactInput {
+interface Props extends ReactDiv, SpaceProps {
   id: string
   label: string
-  warning?: string
+  value: string
   error?: string
-  fluid?: boolean
+  disabled?: boolean
+  inputProps?: ReactInput
+  onChange: () => void
 }
 
 function Input({
   id,
   label,
-  warning,
+  value,
   error,
   disabled,
+  inputProps,
+  onChange,
   ...props
 }: Props) {
   function renderIcon() {
-    if (warning) return <WarningIcon />;
-    if (error) return <ErrorIcon />;
+    if (error) {
+      return (
+        <i className="material-icons-round">
+          error
+        </i>
+      );
+    }
     return null;
-  }
-
-  function renderWarning() {
-    return (
-      <WarningText>
-        {warning}
-      </WarningText>
-    );
   }
 
   function renderError() {
@@ -62,14 +62,14 @@ function Input({
       <Container>
         <Base
           id={id}
-          warning={warning}
-          error={error}
+          value={value}
+          onChange={onChange}
           disabled={disabled}
-          {...props}
+          error={error}
+          {...inputProps}
         />
         {renderIcon()}
       </Container>
-      {warning && renderWarning()}
       {error && renderError()}
     </Wrap>
   );

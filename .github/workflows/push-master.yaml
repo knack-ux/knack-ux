@@ -3,7 +3,7 @@ name: Push To Master
 on: 
   push:
     branches:
-    - master
+      - master
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
       - run: yarn install --pure-lockfile
       - run: yarn lerna bootstrap
 
-      - name: Build all the packages
+      - name: Build all packages with docs
         run: yarn lerna run build:doc --stream --ignore @knack-ux/storybook
       
       - run: yarn lint
@@ -65,6 +65,9 @@ jobs:
 
       - name: Push to Master
         run: git push --follow-tags --set-upstream origin master
+      
+      - name: Build all packages for production
+        run: yarn lerna run build --stream --ignore @knack-ux/storybook
 
       - name: Set config pointing to Github Registry
         run: npm config set @knack-ux:registry https://npm.pkg.github.com;  
