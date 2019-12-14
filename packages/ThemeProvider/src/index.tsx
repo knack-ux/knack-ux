@@ -1,7 +1,5 @@
 import React from 'react';
 import { ThemeProvider as Base, DefaultTheme } from 'styled-components';
-import _get from 'lodash.get';
-
 
 // and extend them!
 
@@ -21,6 +19,7 @@ export const defaultTheme = {
     warning: '#FF8B00',
     danger: '#FF5630'
   },
+  breakpoints: ['648px', '1176px'],
   focus: '#CED6E0'
 };
 
@@ -39,6 +38,7 @@ declare module 'styled-components' {
       warning: string
       danger: string
     },
+    breakpoints: string[],
     focus: string
   }
 }

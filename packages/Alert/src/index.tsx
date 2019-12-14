@@ -1,7 +1,6 @@
 import React, { HTMLAttributes } from 'react';
-import {
-  system, LayoutProps, SpaceProps
-} from 'styled-system';
+import { LayoutProps, SpaceProps } from 'styled-system';
+import Icon from '@knack-ux/icon';
 
 import {
   Container,
@@ -30,9 +29,7 @@ export function Alert({
     else if (intent === 'success') iconName = 'check';
 
     return (
-      <i className="material-icons-round">
-        {iconName}
-      </i>
+      <Icon icon={iconName} />
     );
   }
 
