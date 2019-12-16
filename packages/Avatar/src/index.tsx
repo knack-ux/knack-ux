@@ -1,31 +1,36 @@
 
-import React from 'react';
-import styled from 'styled-components';
+import React, { HTMLAttributes } from 'react';
 import {
-  layout, space, color,
-  LayoutProps, SpaceProps, ColorProps
+  LayoutProps,
+  SpaceProps,
+  ColorProps,
+  FontSizeProps
 } from 'styled-system';
 
-export function generateInitials(name: string) {
-  const nameParts = name.split(' ');
-  let initials = nameParts[0].substring(0, 1).toUpperCase();
+import { AvatarBase } from './styled';
+import { getInitials, getInitialFontSize } from './helpers';
 
-  if (nameParts.length > 1) {
-    initials += nameParts[nameParts.length - 1].substring(0, 1).toUpperCase();
-  }
-  return initials;
-}
+type ReactDiv = Omit<HTMLAttributes<HTMLDivElement>, 'color'>;
 
-type ReactDiv = Omit<React.HTMLAttributes<HTMLDivElement>, 'color'>;
+type BaseProps =
+  & ReactDiv
+  & LayoutProps
+  & SpaceProps
+  & ColorProps
+  & FontSizeProps;
 
-export interface Props extends ReactDiv, LayoutProps, SpaceProps, ColorProps {
+export interface Props extends BaseProps {
   name: string
   src?: string
+  size?: number
+  sizeLimitOneCharacter?: number
 }
 
 export function Avatar({
   name,
   src,
+  size = 40,
+  sizeLimitOneCharacter = 24,
   ...props
 }: Props) {
   function renderImage() {
@@ -35,15 +40,23 @@ export function Avatar({
   }
 
   function renderInitial() {
-    return !src && (
-      generateInitials(name)
-    );
+    if (size > sizeLimitOneCharacter) {
+      return !src && (
+        getInitials(name)
+      );
+    }
+
+    return getInitials(name)[0];
   }
+
+  const fontSize = getInitialFontSize(size, sizeLimitOneCharacter);
 
   return (
     <AvatarBase
       color="white"
       backgroundColor="default"
+      size={size}
+      fontSize={fontSize}
       {...props}
     >
       {renderInitial()}
@@ -52,23 +65,5 @@ export function Avatar({
   );
 }
 
-const AvatarBase: React.ComponentType<Omit<Props, 'name'>> = styled.div`
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  
-  font-size: 18px;
-  font-family: "Cabin";
-  font-weight: 600;
-
-  overflow: hidden;
-
-  ${layout}
-  ${space}
-  ${color}
-`;
 
 export default Avatar;
