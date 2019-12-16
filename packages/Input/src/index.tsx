@@ -19,7 +19,7 @@ interface Props extends ReactDiv, SpaceProps {
   error?: string
   disabled?: boolean
   inputProps?: ReactInput
-  onChange: () => void
+  onChange: ReactInput['onChange']
 }
 
 function Input({
