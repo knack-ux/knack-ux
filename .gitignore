@@ -6,3 +6,4 @@ coverage/
 storybook/storybook-static
 _STORYBOOK_VERSION
 yarn-error.log
+.firebase/

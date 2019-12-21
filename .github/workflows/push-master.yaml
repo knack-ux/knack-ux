@@ -78,6 +78,13 @@ jobs:
       - name: Push packages to Github NPM Registry
         run: yarn lerna publish from-package --no-verify-access -y;
 
+      - name: Deploy Storybook to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_AUTH_KEY }}
+
   complete:
     name: Complete
     runs-on: ubuntu-latest
