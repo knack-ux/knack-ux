@@ -19,6 +19,7 @@
     "@knack-ux/badge": "^0.1.0",
     "@knack-ux/button": "^0.8.0",
     "@knack-ux/input": "^0.5.0",
+    "@knack-ux/pill": "^0.1.0",
     "@knack-ux/theme": "^0.6.0",
     "@storybook/theming": "^5.2.1",
     "serialize-javascript": "^2.1.2"
