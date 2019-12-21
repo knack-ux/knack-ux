@@ -34,5 +34,5 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0"
   },
-  "gitHead": "d51f38e228660db628b9f7c92c2670a2c9ff9a68"
+  "gitHead": "259d59c20c130d889bb07835c16f1b8bda3dff43"
 }
