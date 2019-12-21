@@ -45,4 +45,6 @@ export const BadgeBase = styled.div<Props>`
       background: 'black'
     }
   })}
+
+  ${color}
 `;
