@@ -34,11 +34,21 @@ export function Alert({
   }
 
   return (
-    <Wrap intent={intent} {...props}>
+    <Wrap
+      py={[16, 24]} // padding top and bottom (y axis)
+      pr={[40, 48]}
+      pl={[16, 24]}
+      intent={intent}
+      {...props}
+    >
       {renderIcon()}
       <Container>
-        {title && <Title>{title}</Title>}
-        <Description>
+        {title && (
+        <Title fontSize={[2, 3]}>
+          {title}
+        </Title>
+        )}
+        <Description fontSize={[1, 2]}>
           {description}
         </Description>
       </Container>

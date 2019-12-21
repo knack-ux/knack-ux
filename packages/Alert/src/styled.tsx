@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import {
-  system, layout, space
+  system, layout, space, typography,
+  TypographyProps
 } from 'styled-system';
-
 
 import { Props } from '.';
 
@@ -38,20 +38,26 @@ export const Wrap = styled.div<WrapProps>`
   }
 `;
 
-export const Title = styled.div`
+export const Title = styled.div<TypographyProps>`
+  color: #001F4C;
   font-family: "Open Sans";
   font-weight: 600;
   font-size: 18px;
-  color: #001F4C;
+
   margin-left: 16px;
   margin-bottom: 4px;
+
+  ${typography}
 `;
 
-export const Description = styled.div`
+export const Description = styled.div<TypographyProps>`
+  color: #001F4C;
   font-family: "Open Sans";
   font-size: 16px;
-  color: #001F4C;
+
   margin-left: 16px;
+
+  ${typography}
 `;
 
 export const Container = styled.div``;
