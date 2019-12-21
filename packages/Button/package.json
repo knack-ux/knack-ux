@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/button",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Button component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {
@@ -28,7 +28,7 @@
     "styled-system": "5.1.2"
   },
   "dependencies": {
-    "@knack-ux/theme": "^0.7.0",
+    "@knack-ux/theme": "^0.7.1",
     "lodash.get": "^4.4.2",
     "polished": "^3.4.2"
   },
