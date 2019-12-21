@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/storybook@0.8.1...@knack-ux/storybook@0.9.0) (2019-12-21)
+
+
+### Features
+
+* **badge:** create badge component ([36bd405](https://github.com/knack-ux/knack-ux/commit/36bd405))
+* **pill:** create pill component ([2a8c334](https://github.com/knack-ux/knack-ux/commit/2a8c334))
+
+
+
+
+
 ## [0.8.1](https://github.com/knack-ux/knack-ux/compare/@knack-ux/storybook@0.8.0...@knack-ux/storybook@0.8.1) (2019-12-16)
 
 **Note:** Version bump only for package @knack-ux/storybook

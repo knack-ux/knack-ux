@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/avatar",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Avatar component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {
@@ -28,7 +28,7 @@
     "styled-system": "5.1.2"
   },
   "dependencies": {
-    "@knack-ux/theme": "^0.6.0",
+    "@knack-ux/theme": "^0.7.0",
     "lodash.get": "^4.4.2",
     "polished": "^3.4.2"
   },
