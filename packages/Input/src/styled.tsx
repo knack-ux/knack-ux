@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import { space, layout } from 'styled-system';
-import _get from 'lodash.get';
 
 import { Props } from '.';
 
