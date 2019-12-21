@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/alert",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Alert component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {
@@ -29,7 +29,7 @@
     "styled-system": "^5.1.2"
   },
   "dependencies": {
-    "@knack-ux/icon": "^0.2.2"
+    "@knack-ux/icon": "^0.2.3"
   },
   "gitHead": "d51f38e228660db628b9f7c92c2670a2c9ff9a68"
 }
