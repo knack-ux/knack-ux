@@ -6,6 +6,8 @@
     "storybook"
   ],
   "scripts": {
+    "test": "yarn jest",
+    "test:watch": "yarn jest --watch --coverage",
     "lint": "eslint . --ext .tsx --ext .ts",
     "version:storybook": "node ./scripts/version/storybook"
   },
