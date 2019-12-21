@@ -1,0 +1,27 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import Badge from '@knack-ux/badge';
+import { version } from '@knack-ux/badge/package.json';
+
+<Meta title="Components|Badge" />
+
+# Badge
+<span>Latest Version: {version}</span>
+
+```
+  import Badge from '@knack-ux/badge';
+```
+
+<Props of={Badge} />
+
+## Variants
+<Preview>
+  <Story name="Variants">
+    <>
+      <Badge mr="8px">Default</Badge>
+      <Badge variant="success" mr="8px">Success</Badge>
+      <Badge variant="warning" mr="8px">Warning</Badge>
+      <Badge variant="danger" mr="8px">Danger</Badge>
+      <Badge variant="notspecified" mr="8px">Not Specified</Badge>
+    </>
+  </Story>
+</Preview>

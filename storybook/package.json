@@ -16,6 +16,7 @@
   "dependencies": {
     "@knack-ux/alert": "^0.6.0",
     "@knack-ux/avatar": "^0.3.0",
+    "@knack-ux/badge": "^0.1.0",
     "@knack-ux/button": "^0.8.0",
     "@knack-ux/input": "^0.5.0",
     "@knack-ux/theme": "^0.6.0",
