@@ -25,7 +25,8 @@
     "styled-system": "^5.1.2"
   },
   "dependencies": {
-    "@knack-ux/theme": "^0.7.1"
+    "@knack-ux/theme": "^0.7.1",
+    "polished": "^3.4.2"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
