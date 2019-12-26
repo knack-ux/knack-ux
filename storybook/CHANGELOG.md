@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/storybook@0.9.2...@knack-ux/storybook@0.10.0) (2019-12-26)
+
+
+### Features
+
+* **menu:** create menu component ([7bf264c](https://github.com/knack-ux/knack-ux/commit/7bf264c))
+
+
+
+
+
 ## [0.9.2](https://github.com/knack-ux/knack-ux/compare/@knack-ux/storybook@0.9.1...@knack-ux/storybook@0.9.2) (2019-12-21)
 
 **Note:** Version bump only for package @knack-ux/storybook
