@@ -17,6 +17,7 @@
     "@knack-ux/button": "^0.8.3",
     "@knack-ux/input": "^0.5.4",
     "@knack-ux/pill": "^0.2.2",
+    "@knack-ux/popover": "^0.1.0",
     "@knack-ux/theme": "^0.7.2",
     "@knack-ux/menu": "^0.1.0",
     "@storybook/theming": "^5.2.1",

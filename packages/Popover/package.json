@@ -1,0 +1,35 @@
+{
+  "name": "@knack-ux/popover",
+  "version": "0.1.0",
+  "description": "Popover component for the Knack UI Project",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/knack-ux/knack-ux.git",
+    "directory": "@knack-ux/popover"
+  },
+  "files": [
+    "lib/"
+  ],
+  "author": "Kristiyan Serafimov (chrispcode)",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack --watch --config=../../webpack/webpack.dev.js",
+    "build": "webpack --config=../../webpack/webpack.prod.js",
+    "build:doc": "webpack --config=../../webpack/webpack.dev.js",
+    "clean": "rm -rf lib"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": "^16.8.4",
+    "styled-components": "^4.1.3",
+    "styled-system": "^5.1.2"
+  },
+  "dependencies": {
+    "@knack-ux/theme": "^0.7.2",
+    "@knack-ux/button": "^0.8.3"
+  },
+  "gitHead": "259d59c20c130d889bb07835c16f1b8bda3dff43"
+}
