@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/storybook@0.10.0...@knack-ux/storybook@0.11.0) (2020-01-06)
+
+
+### Bug Fixes
+
+* **storybook:** duplicate package at different versions ([2085979](https://github.com/knack-ux/knack-ux/commit/2085979))
+
+
+### Features
+
+* **popover:** under development ([c0c30d7](https://github.com/knack-ux/knack-ux/commit/c0c30d7))
+* **side-sheet:** create component, needs mobile view attention ([492b789](https://github.com/knack-ux/knack-ux/commit/492b789))
+
+
+
+
+
 # [0.10.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/storybook@0.9.2...@knack-ux/storybook@0.10.0) (2019-12-26)
 
 

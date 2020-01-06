@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/button@0.8.3...@knack-ux/button@0.9.0) (2020-01-06)
+
+
+### Features
+
+* **button:** add circular prop ([fdf1e30](https://github.com/knack-ux/knack-ux/commit/fdf1e30))
+
+
+
+
+
 ## [0.8.3](https://github.com/knack-ux/knack-ux/compare/@knack-ux/button@0.8.2...@knack-ux/button@0.8.3) (2019-12-21)
 
 
