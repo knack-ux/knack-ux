@@ -1,5 +1,5 @@
 import React, {
-  ButtonHTMLAttributes
+  ButtonHTMLAttributes, forwardRef, Ref
 } from 'react';
 import { LayoutProps, SpaceProps } from 'styled-system';
 
@@ -11,15 +11,20 @@ export interface Props extends ReactButton, SpaceProps, LayoutProps {
   appearance?: 'default' | 'primary' | 'minimal'
   intent?: string
   icon?: string
+  ref?: Ref<HTMLButtonElement>
+  circular?: boolean
 }
 
-export function Button({
-  appearance = 'default',
-  intent = 'default',
-  icon,
-  children,
-  ...props
-}: Props) {
+export const Button = forwardRef<HTMLButtonElement, Props>((
+  {
+    appearance = 'default',
+    intent = 'default',
+    icon,
+    children,
+    ...props
+  },
+  ref
+) => {
   function renderIcon() {
     return icon && (
       <i
@@ -36,13 +41,14 @@ export function Button({
       intent={intent}
       appearance={appearance}
       type="button"
+      ref={ref}
       {...props}
     >
       {renderIcon()}
       {children}
     </Base>
   );
-}
+});
 
 
 export default Button;

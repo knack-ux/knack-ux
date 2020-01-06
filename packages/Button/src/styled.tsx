@@ -7,6 +7,8 @@ import { Props } from '.';
 export const Base = styled.button<Props>`
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   height: 40px;
   padding: 0 16px;
 
@@ -33,9 +35,6 @@ export const Base = styled.button<Props>`
       box-shadow: 0 0 0 2px ${theme.focus};
     }
   `}
-
-  ${space}
-  ${layout}
 
   ${({ theme, intent }) => variant({
     prop: 'appearance',
@@ -80,4 +79,16 @@ export const Base = styled.button<Props>`
       }
     `
   )}
+
+  ${({ circular }) => (
+    circular && css`
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border-radius: 50%;
+    `
+  )}
+
+  ${space}
+  ${layout}
 `;
