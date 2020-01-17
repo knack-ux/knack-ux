@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@knack-ux/storybook",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "description": "Storybook documentation environment for the Knack UI Project",
   "main": "lib/index.js",
   "author": "Kristiyan Serafimov (chrispcode)",
@@ -12,14 +12,14 @@
   },
   "dependencies": {
     "@knack-ux/alert": "^0.6.3",
-    "@knack-ux/avatar": "^0.3.3",
+    "@knack-ux/avatar": "^0.4.0",
     "@knack-ux/badge": "^0.2.2",
-    "@knack-ux/button": "^0.9.0",
+    "@knack-ux/button": "^0.10.0",
     "@knack-ux/input": "^0.5.4",
     "@knack-ux/menu": "^0.2.1",
     "@knack-ux/pill": "^0.2.2",
-    "@knack-ux/side-sheet": "^0.2.0",
-    "@knack-ux/tab": "^0.0.0",
+    "@knack-ux/side-sheet": "^0.2.1",
+    "@knack-ux/tab": "^0.1.0",
     "@knack-ux/theme": "^0.7.2",
     "@storybook/theming": "^5.3.5",
     "serialize-javascript": "^2.1.2"

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/avatar@0.3.3...@knack-ux/avatar@0.4.0) (2020-01-17)
+
+
+### Features
+
+* **update:** snapshots and dep ([d0f22b1](https://github.com/knack-ux/knack-ux/commit/d0f22b1))
+
+
+
+
+
 ## [0.3.3](https://github.com/knack-ux/knack-ux/compare/@knack-ux/avatar@0.3.2...@knack-ux/avatar@0.3.3) (2019-12-21)
 
 **Note:** Version bump only for package @knack-ux/avatar

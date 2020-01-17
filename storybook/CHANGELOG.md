@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/storybook@0.11.0...@knack-ux/storybook@0.12.0) (2020-01-17)
+
+
+### Features
+
+* **tabs:** create tabs component ([43c115e](https://github.com/knack-ux/knack-ux/commit/43c115e))
+* **update:** snapshots and dep ([d0f22b1](https://github.com/knack-ux/knack-ux/commit/d0f22b1))
+
+
+
+
+
 # [0.11.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/storybook@0.10.0...@knack-ux/storybook@0.11.0) (2020-01-06)
 
 

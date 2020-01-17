@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/button@0.9.0...@knack-ux/button@0.10.0) (2020-01-17)
+
+
+### Features
+
+* **update:** snapshots and dep ([d0f22b1](https://github.com/knack-ux/knack-ux/commit/d0f22b1))
+
+
+
+
+
 # [0.9.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/button@0.8.3...@knack-ux/button@0.9.0) (2020-01-06)
 
 
