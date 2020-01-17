@@ -1,12 +1,12 @@
 {
-  "name": "@knack-ux/popover",
-  "version": "0.2.0",
-  "description": "Popover component for the Knack UI Project",
+  "name": "@knack-ux/tab",
+  "version": "0.0.0",
+  "description": "Tab component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "ssh://git@github.com/knack-ux/knack-ux.git",
-    "directory": "@knack-ux/popover"
+    "directory": "@knack-ux/tab"
   },
   "files": [
     "lib/"
@@ -25,7 +25,8 @@
   "peerDependencies": {
     "react": "^16.8.4",
     "styled-components": "^4.1.3",
-    "styled-system": "^5.1.2"
+    "styled-system": "^5.1.2",
+    "framer-motion": "^1.7.0"
   },
   "dependencies": {
     "@knack-ux/button": "^0.9.0",
