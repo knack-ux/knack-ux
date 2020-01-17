@@ -17,7 +17,8 @@
         "devDependencies": ["**/*.test.tsx", "**/*.spec.tsx"]
       }
     ],
-    "import/extensions": ["error", "never"]
+    "import/extensions": ["error", "never"],
+    "no-use-before-define": "off"
   },
   "settings": {
     "import/resolver": {
