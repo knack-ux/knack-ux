@@ -2,7 +2,7 @@
 
 exports[`<Avatar /> component match snapshot on 24px size (initials) 1`] = `
 <div
-  class="sc-bdVaJa hwiuaP"
+  class="sc-AykKC iJucbB"
   color="white"
   font-size="11"
   size="24"
@@ -13,7 +13,7 @@ exports[`<Avatar /> component match snapshot on 24px size (initials) 1`] = `
 
 exports[`<Avatar /> component match snapshot on 40px size (image src) 1`] = `
 <div
-  class="sc-bdVaJa bQBpdy"
+  class="sc-AykKC duvJcy"
   color="white"
   font-size="16"
   size="40"
@@ -27,7 +27,7 @@ exports[`<Avatar /> component match snapshot on 40px size (image src) 1`] = `
 
 exports[`<Avatar /> component match snapshot on 40px size (initials) 1`] = `
 <div
-  class="sc-bdVaJa bQBpdy"
+  class="sc-AykKC duvJcy"
   color="white"
   font-size="16"
   size="40"

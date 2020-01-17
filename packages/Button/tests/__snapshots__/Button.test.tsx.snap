@@ -2,7 +2,7 @@
 
 exports[`Button should match disabled snapshot 1`] = `
 <button
-  class="sc-bdVaJa fiakJD"
+  class="sc-AykKC bgmUOJ"
   disabled=""
   type="button"
 >
@@ -12,7 +12,7 @@ exports[`Button should match disabled snapshot 1`] = `
 
 exports[`Button should match snapshot 1`] = `
 <button
-  class="sc-bdVaJa dvnuXi"
+  class="sc-AykKC gWdNek"
   type="button"
 >
   Continue
