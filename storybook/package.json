@@ -19,7 +19,7 @@
     "@knack-ux/menu": "^0.2.1",
     "@knack-ux/pill": "^0.2.2",
     "@knack-ux/side-sheet": "^0.2.1",
-    "@knack-ux/tab": "^0.1.0",
+    "@knack-ux/tabs": "^0.1.0",
     "@knack-ux/theme": "^0.7.2",
     "@storybook/theming": "^5.3.5",
     "serialize-javascript": "^2.1.2"

@@ -1,7 +1,7 @@
 {
-  "name": "@knack-ux/tab",
+  "name": "@knack-ux/tabs",
   "version": "0.1.0",
-  "description": "Tab component for the Knack UI Project",
+  "description": "Tabs component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
@@ -30,7 +30,8 @@
   },
   "dependencies": {
     "@knack-ux/button": "^0.10.0",
-    "@knack-ux/theme": "^0.7.2"
+    "@knack-ux/theme": "^0.7.2",
+    "scroll-into-view": "^1.14.1"
   },
   "gitHead": "259d59c20c130d889bb07835c16f1b8bda3dff43"
 }

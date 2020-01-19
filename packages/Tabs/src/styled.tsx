@@ -1,10 +1,18 @@
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
+export const Wrap = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export const TabList = styled.div`
+  display: flex;
   position: relative;
+  max-width: 100%;
+  overflow-x: auto;
   
-  margin-bottom: 8px;
+  /* border-bottom: 4px solid #EBECF0; */
 
   outline: none;
 
@@ -14,13 +22,12 @@ export const TabList = styled.div`
     }
   }
 
-  &::after {
-    content: '';
-    width: 100%;
-    height: 4px;
-    background: #EBECF0;
-    position: absolute;
-    bottom: 0;
+  & {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  &::-webkit-scrollbar { 
+      display: none;  /* Safari and Chrome */
   }
 `;
 
@@ -30,11 +37,12 @@ export const Tab = styled.button`
   font-size: 16px;
   color: #091A42;
 
-  padding: 4px 16px;
+  padding: 4px 16px 8px 16px;
   margin-right: 8px;
   background: transparent;
   border: none;
   cursor: pointer;
+  outline: none;
 
   &:hover {
     background: #EBECF0;
@@ -50,6 +58,8 @@ export const Indicator = styled(motion.div)`
   height: 4px;
   width: 1px;
   background: #0052CC;
+  bottom: 0;
+  position: absolute;
 
   z-index: 1;
   transform: scaleX(0);
@@ -58,4 +68,13 @@ export const Indicator = styled(motion.div)`
 
 export const TabPanel = styled.div`
   font-family: "Cabin";
+`;
+
+
+export const BorderBottom = styled.div`
+  width: 100%;
+  height: 4px;
+  background: #EBECF0;
+  transform: translateY(-4px);
+  margin-bottom: 8px;
 `;

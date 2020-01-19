@@ -1,17 +1,21 @@
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
-import Tabs, { Tab } from '@knack-ux/tab';
-import { version } from '@knack-ux/tab/package.json';
+import Tabs, { Tab } from '@knack-ux/tabs';
+import { version } from '@knack-ux/tabs/package.json';
 
-<Meta title="Components|Tab" />
+<Meta title="Components|Tabs" />
 
 # Tab
 <span>Latest Version: {version}</span>
 
 ```
-  import Tab from '@knack-ux/tab';
+  import Tabs, { Tab } from '@knack-ux/tabs';
 ```
+### Props - Tabs
+<Props of={Tabs} />
 
+### Props - Tab
 <Props of={Tab} />
+
 
 ## Variants
 <Preview>
@@ -21,7 +25,9 @@ import { version } from '@knack-ux/tab/package.json';
       <Tab name="Tuesday">Tuesday Content</Tab>
       <Tab name="Wednesday">Wednesday Content</Tab>
       <Tab name="Thursday">Thursday Content</Tab>
-      <Tab name="Friday">Friday Content</Tab>
+      <Tab name="Friday">Friday Content + Party</Tab>
+      <Tab name="Saturday">Saturday Rest</Tab>
+      <Tab name="Sunday">Sunday Rest</Tab>
     </Tabs>
   </Story>
 </Preview>

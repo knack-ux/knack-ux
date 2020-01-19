@@ -7,47 +7,48 @@ import React, {
 import { useAnimation } from 'framer-motion';
 
 import {
+  Wrap,
   Indicator,
   Tab,
   TabList,
-  TabPanel
+  TabPanel,
+  BorderBottom
 } from './styled';
 
 import { useNumberLoop } from './helpers';
 
 export interface Props {
   label: string
-  children: ReactNode
   initial?: string
+  children: ReactElement[]
 }
 
 export function Tabs({
   label,
-  initial,
+  initial = '',
   children
-}) {
-  const tabCount = React.Children.toArray(children).length;
+}: Props) {
+  const tabs = React.Children.toArray(children);
 
-  const [activeIndex, activeActions] = useNumberLoop(0, tabCount);
-  const [focusIndex, focusActions] = useNumberLoop(0, tabCount);
+  const [activeIndex, activeActions] = useNumberLoop(0, tabs.length);
+  const [focusIndex, focusActions] = useNumberLoop(0, tabs.length);
   const indicatorAnimation = useAnimation();
 
   useEffect(() => {
-    const initialActive = React.Children.toArray(children)
-      .findIndex((child) => child.props.name === initial);
+    const initialActive = tabs.findIndex((child) => child.props.name === initial);
 
     activeActions.set(initialActive || 0);
     focusActions.set(initialActive || 0);
   }, []);
 
-  const activeChild: ReactElement = React.Children.toArray(children)[activeIndex];
-  const focusChild: ReactElement = React.Children.toArray(children)[focusIndex];
+  const activeChild: ReactElement = tabs[activeIndex];
+  const focusChild: ReactElement = tabs[focusIndex];
 
   function handleTabListKeyPress(event: KeyboardEvent) {
     if (event.key === 'ArrowRight') focusActions.increase();
     else if (event.key === 'ArrowLeft') focusActions.decrease();
+    else if (event.key === 'End') focusActions.set(tabs.length - 1);
     else if (event.key === 'Home') focusActions.set(0);
-    else if (event.key === 'End') focusActions.set(tabCount - 1);
     else if (event.key === ' ' || event.key === 'Enter') activeActions.set(focusIndex);
   }
 
@@ -67,7 +68,7 @@ export function Tabs({
         aria-activedescendant={focusChild.props.name}
         onKeyDown={handleTabListKeyPress}
       >
-        {React.Children.toArray(children).map((child, index) => (
+        {tabs.map((child, index) => (
           <Tab
             id={child.props.name}
             key={child.props.name}
@@ -79,8 +80,12 @@ export function Tabs({
               if (ref && index === activeIndex) {
                 indicatorAnimation.start({
                   scaleX: ref.offsetWidth,
-                  x: ref.offsetLeft,
+                  x: ref.offsetLeft
                 });
+              }
+
+              if (ref && index === focusIndex) {
+                ref.scrollIntoView();
               }
             }}
           >
@@ -100,14 +105,16 @@ export function Tabs({
   }
 
   return (
-    <div>
+    <Wrap>
       {renderTabList()}
+      <BorderBottom />
       <TabPanel role="tabpanel">
         {activeChild.props.children}
       </TabPanel>
-    </div>
+    </Wrap>
   );
 }
+
 
 export { Tab };
 export default Tabs;
