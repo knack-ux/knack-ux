@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const SideSheetBase = styled(motion.div)`
   bottom: 0;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   justify-content: flex-end;
 
