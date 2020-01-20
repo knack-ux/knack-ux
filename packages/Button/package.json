@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/button",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "Button component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {

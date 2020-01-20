@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2020-01-20)
+
+
+### Features
+
+* **tabs:** small fixes ([8c5a015](https://github.com/knack-ux/knack-ux/commit/8c5a015))
+
+
+
+
+
 # 0.1.0 (2020-01-17)
 
 

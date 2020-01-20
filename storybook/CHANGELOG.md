@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.13.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/storybook@0.12.0...@knack-ux/storybook@0.13.0) (2020-01-20)
+
+
+### Features
+
+* **tabs:** small fixes ([8c5a015](https://github.com/knack-ux/knack-ux/commit/8c5a015))
+
+
+
+
+
 # [0.12.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/storybook@0.11.0...@knack-ux/storybook@0.12.0) (2020-01-17)
 
 
