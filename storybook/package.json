@@ -21,16 +21,16 @@
     "@knack-ux/side-sheet": "^0.2.2",
     "@knack-ux/tabs": "^0.2.0",
     "@knack-ux/theme": "^0.7.2",
-    "@storybook/theming": "^5.3.7",
+    "@storybook/theming": "^5.3.8",
     "serialize-javascript": "^2.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
-    "@storybook/addon-actions": "^5.3.7",
-    "@storybook/addon-docs": "^5.3.7",
-    "@storybook/addon-links": "^5.3.7",
-    "@storybook/addons": "^5.3.7",
-    "@storybook/react": "^5.3.7",
+    "@storybook/addon-actions": "^5.3.8",
+    "@storybook/addon-docs": "^5.3.8",
+    "@storybook/addon-links": "^5.3.8",
+    "@storybook/addons": "^5.3.8",
+    "@storybook/react": "^5.3.8",
     "babel-loader": "^8.0.6",
     "react": "^16.10.2",
     "styled-components": "^5.0.0"
