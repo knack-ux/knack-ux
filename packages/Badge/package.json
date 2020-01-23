@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/badge",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Badge component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {

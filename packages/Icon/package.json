@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/icon",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Icon component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {

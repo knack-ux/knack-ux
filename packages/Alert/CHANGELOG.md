@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.5](https://github.com/knack-ux/knack-ux/compare/@knack-ux/alert@0.6.4...@knack-ux/alert@0.6.5) (2020-01-23)
+
+**Note:** Version bump only for package @knack-ux/alert
+
+
+
+
+
 ## [0.6.4](https://github.com/knack-ux/knack-ux/compare/@knack-ux/alert@0.6.3...@knack-ux/alert@0.6.4) (2020-01-20)
 
 **Note:** Version bump only for package @knack-ux/alert
