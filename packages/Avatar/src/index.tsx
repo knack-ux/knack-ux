@@ -6,9 +6,10 @@ import {
   ColorProps,
   FontSizeProps
 } from 'styled-system';
+import Icon from '@knack-ux/icon';
 
 import { AvatarBase } from './styled';
-import { getInitials, getInitialFontSize } from './helpers';
+import { getInitials, getInitialFontSize, getIconFontSize } from './helpers';
 
 type ReactDiv = Omit<HTMLAttributes<HTMLDivElement>, 'color'>;
 
@@ -22,6 +23,7 @@ type BaseProps =
 export interface Props extends BaseProps {
   name: string
   src?: string
+  icon?: string
   size?: number
   sizeLimitOneCharacter?: number
 }
@@ -29,19 +31,32 @@ export interface Props extends BaseProps {
 export function Avatar({
   name,
   src,
+  icon,
   size = 40,
   sizeLimitOneCharacter = 24,
   ...props
 }: Props) {
+  function renderIcon() {
+    return icon && (
+      <Icon
+        icon={icon}
+        fontSize={getIconFontSize(size)}
+      />
+    );
+  }
+
   function renderImage() {
     return src && (
-      <img src={src} alt="User Avatar" />
+      <img
+        src={src}
+        alt={name}
+      />
     );
   }
 
   function renderInitial() {
     if (size > sizeLimitOneCharacter) {
-      return !src && (
+      return !src && !icon && (
         getInitials(name)
       );
     }
@@ -53,12 +68,14 @@ export function Avatar({
 
   return (
     <AvatarBase
-      color="white"
+      aria-label={name}
       backgroundColor="default"
-      size={size}
       fontSize={fontSize}
+      color="white"
+      size={size}
       {...props}
     >
+      {renderIcon()}
       {renderInitial()}
       {renderImage()}
     </AvatarBase>

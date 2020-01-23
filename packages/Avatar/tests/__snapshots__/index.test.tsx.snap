@@ -2,7 +2,8 @@
 
 exports[`<Avatar /> component match snapshot on 24px size (initials) 1`] = `
 <div
-  class="sc-AykKC iJucbB"
+  aria-label="Jon Snow"
+  class="sc-AykKC cLAIFd"
   color="white"
   font-size="11"
   size="24"
@@ -13,13 +14,14 @@ exports[`<Avatar /> component match snapshot on 24px size (initials) 1`] = `
 
 exports[`<Avatar /> component match snapshot on 40px size (image src) 1`] = `
 <div
-  class="sc-AykKC duvJcy"
+  aria-label="Jon Snow"
+  class="sc-AykKC iLXZeW"
   color="white"
   font-size="16"
   size="40"
 >
   <img
-    alt="User Avatar"
+    alt="Jon Snow"
     src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Nikola-tesla-3909844.jpg"
   />
 </div>
@@ -27,7 +29,8 @@ exports[`<Avatar /> component match snapshot on 40px size (image src) 1`] = `
 
 exports[`<Avatar /> component match snapshot on 40px size (initials) 1`] = `
 <div
-  class="sc-AykKC duvJcy"
+  aria-label="Jon Snow"
+  class="sc-AykKC iLXZeW"
   color="white"
   font-size="16"
   size="40"

@@ -28,7 +28,8 @@
     "styled-system": "^5.1.2"
   },
   "dependencies": {
-    "@knack-ux/theme": "^0.7.2"
+    "@knack-ux/theme": "^0.7.2",
+    "@knack-ux/icon": "^0.2.4"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.0.0",

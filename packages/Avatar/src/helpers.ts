@@ -18,3 +18,7 @@ export function getInitialFontSize(
 
   return Math.ceil(size / 2.6);
 }
+
+export function getIconFontSize(size: number) {
+  return Math.round(size / 1.66);
+}
