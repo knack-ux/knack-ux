@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/avatar@0.4.1...@knack-ux/avatar@0.5.0) (2020-01-23)
+
+
+### Features
+
+* **avatar:** add icon support and aria-label properties ([32d96c6](https://github.com/knack-ux/knack-ux/commit/32d96c6))
+
+
+
+
+
 ## [0.4.1](https://github.com/knack-ux/knack-ux/compare/@knack-ux/avatar@0.4.0...@knack-ux/avatar@0.4.1) (2020-01-20)
 
 **Note:** Version bump only for package @knack-ux/avatar
