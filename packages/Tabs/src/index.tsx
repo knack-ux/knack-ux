@@ -20,7 +20,7 @@ import { useNumberLoop } from './helpers';
 export interface Props {
   label: string
   initial?: string
-  children: ReactElement[]
+  children: ReactElement<typeof Tabs>[]
 }
 
 export function Tabs({
@@ -28,7 +28,7 @@ export function Tabs({
   initial = '',
   children
 }: Props) {
-  const tabs = React.Children.toArray(children);
+  const tabs = React.Children.toArray(children) as ReactElement<typeof Tabs>[];
 
   const [activeIndex, activeActions] = useNumberLoop(0, tabs.length);
   const [focusIndex, focusActions] = useNumberLoop(0, tabs.length);
