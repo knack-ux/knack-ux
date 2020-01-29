@@ -8092,9 +8092,9 @@ fragment-cache@^0.2.1:
     map-cache "^0.2.2"
 
 framer-motion@^1.7.2:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-1.7.2.tgz#e9794e4d0f7ad331bf3150fb21b610bd2e5b8d0d"
-  integrity sha512-CXND08fRzxb5+xPLB+yjgiexLbpk+gsKdpKVWyXq+ts5MnDxYd+OXxu0F2/+zJZZIQoDsAMW4EwYRDEawXmGqQ==
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-1.8.3.tgz#7cac24aafb9083e045080b60217d2e16c5cb8d2b"
+  integrity sha512-xRtZ7pjRX48B2AL3XZCu1lzW1o3aDRBjfrs+sK5y2srQv69QmDRtPVuH2ZCCyARiTEi+yd9xeu3FXD0Dz5l6Qg==
   dependencies:
     "@popmotion/easing" "^1.0.2"
     "@popmotion/popcorn" "^0.4.2"
@@ -8102,7 +8102,7 @@ framer-motion@^1.7.2:
     hey-listen "^1.0.8"
     popmotion "9.0.0-beta-8"
     style-value-types "^3.1.6"
-    stylefire "^7.0.0"
+    stylefire "^7.0.2"
     tslib "^1.10.0"
   optionalDependencies:
     "@emotion/is-prop-valid" "^0.8.2"
@@ -15530,10 +15530,10 @@ styled-system@^5.1.4:
     "@styled-system/variant" "^5.1.4"
     object-assign "^4.1.1"
 
-stylefire@^7.0.0:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-7.0.1.tgz#69777dc9ffc48248284ea5c0a3fe03ba5c468339"
-  integrity sha512-xp7hGiK5xyX7xINQI7qWagcLMyS6aLLbP2kMA3DTS4X31uPI3M7IyOm9TPmXwaMKG9fJ2Cgo4F2okcNB6nzxKQ==
+stylefire@^7.0.2:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-7.0.2.tgz#874a82dd2bcada39c13e75e0c67b70009e06f556"
+  integrity sha512-LFIBP6fIA+EMqLSvM4V6zLa+O/iAcHoNJVuXkkZ5G8+T+Pd3KaQLqgxrpkeo1bwWQHqzgab8U3V3gudO231fZA==
   dependencies:
     "@popmotion/popcorn" "^0.4.4"
     framesync "^4.0.0"
