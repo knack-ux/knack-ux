@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/knack-ux/knack-ux/compare/@knack-ux/tabs@0.2.0...@knack-ux/tabs@0.2.1) (2020-01-23)
+
+
+### Bug Fixes
+
+* **tabs:** children reactelement typings ([0fa53a3](https://github.com/knack-ux/knack-ux/commit/0fa53a3))
+
+
+
+
+
 # 0.2.0 (2020-01-20)
 
 
