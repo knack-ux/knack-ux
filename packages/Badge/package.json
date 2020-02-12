@@ -28,11 +28,8 @@
     "styled-system": "^5.1.2"
   },
   "dependencies": {
-    "@knack-ux/theme": "^0.7.2"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^5.0.2",
-    "@testing-library/react": "^9.4.0"
+    "@knack-ux/theme": "^0.7.2",
+    "polished": "^3.4.4"
   },
   "gitHead": "259d59c20c130d889bb07835c16f1b8bda3dff43"
 }
