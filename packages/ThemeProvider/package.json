@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/theme",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "Theme provider for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {
@@ -24,7 +24,7 @@
   },
   "peerDependencies": {
     "react": "^16.8.4",
-     "styled-components": "^5.0.1"
+    "styled-components": "^5.0.1"
   },
   "gitHead": "259d59c20c130d889bb07835c16f1b8bda3dff43"
 }

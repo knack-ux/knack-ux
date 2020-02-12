@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/button@0.10.2...@knack-ux/button@0.11.0) (2020-02-12)
+
+
+### Features
+
+* **button:** read description ([4cadd86](https://github.com/knack-ux/knack-ux/commit/4cadd8619d7bd8751a721e6145c6b35a61055f4d))
+
+
+
+
+
 ## [0.10.2](https://github.com/knack-ux/knack-ux/compare/@knack-ux/button@0.10.1...@knack-ux/button@0.10.2) (2020-01-23)
 
 **Note:** Version bump only for package @knack-ux/button

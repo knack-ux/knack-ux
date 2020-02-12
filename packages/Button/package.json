@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/button",
-  "version": "0.10.2",
+  "version": "0.11.0",
   "description": "Button component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {
@@ -24,11 +24,11 @@
   },
   "peerDependencies": {
     "react": "^16.8.4",
-     "styled-components": "^5.0.1",
+    "styled-components": "^5.0.1",
     "styled-system": "^5.1.2"
   },
   "dependencies": {
-    "@knack-ux/theme": "^0.7.2",
+    "@knack-ux/theme": "^0.7.3",
     "polished": "^3.4.4"
   },
   "gitHead": "259d59c20c130d889bb07835c16f1b8bda3dff43"
