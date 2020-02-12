@@ -32,7 +32,7 @@ export const Base = styled.button<Props>`
 
   ${({ theme }) => css`
     &:focus {
-      box-shadow: 0 0 0 2px ${theme.focus};
+      outline: 3px solid ${theme.focus};
     }
   `}
 
@@ -42,7 +42,7 @@ export const Base = styled.button<Props>`
       default: {
         border: '2px solid #EBECF0',
         background: '#FAFBFC',
-        color: theme.a11y[intent],
+        color: theme.colors[intent],
         ':hover': {
           background: '#EBECF0'
         }
@@ -59,7 +59,7 @@ export const Base = styled.button<Props>`
       },
       minimal: {
         background: 'white',
-        color: theme.a11y[intent],
+        color: theme.colors[intent],
         '&:hover': {
           background: '#EBECF0'
         }
@@ -67,8 +67,8 @@ export const Base = styled.button<Props>`
     }
   })}
 
-  ${({ disabled }) => (
-    disabled && css`
+  ${(props) => (
+    props['aria-disabled'] && css`
       color: #6B778C;
       background: #EBECF0;
 

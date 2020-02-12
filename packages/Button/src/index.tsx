@@ -18,9 +18,10 @@ export interface Props extends ReactButton, SpaceProps, LayoutProps {
 export const Button = forwardRef<HTMLButtonElement, Props>((
   {
     appearance = 'default',
-    intent = 'default',
+    intent = 'info',
     icon,
     children,
+    disabled,
     ...props
   },
   ref
@@ -40,6 +41,7 @@ export const Button = forwardRef<HTMLButtonElement, Props>((
     <Base
       intent={intent}
       appearance={appearance}
+      aria-disabled={disabled}
       type="button"
       ref={ref}
       {...props}
