@@ -1,9 +1,11 @@
-.DS_Store
 lib/
 node_modules/
 docz/.docz/
 coverage/
+.firebase/
+.vscode/
+
+.DS_Store
 storybook/storybook-static
 _STORYBOOK_VERSION
 yarn-error.log
-.firebase/
