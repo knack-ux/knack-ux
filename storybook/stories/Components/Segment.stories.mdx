@@ -1,0 +1,39 @@
+import { useState } from 'react';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import Segment from '@knack-ux/segment';
+import { version } from '@knack-ux/segment/package.json';
+
+<Meta title="Components|Segment" />
+
+# Segment
+<span>Latest Version: {version}</span>
+
+```
+  import Segment from '@knack-ux/segment';
+```
+
+<Props of={Segment} />
+
+
+## Variants
+<Preview>
+  <Story name="Variants">
+    {() => {
+      const [selected, setSelected] = useState('days');
+      return (
+        <Segment
+          id="time"
+          options={[
+            {label: 'Hours', value: 'hours'},
+            {label: 'Days', value: 'days'},
+            {label: 'Weeks', value: 'weeks'}
+          ]}
+          value={selected}
+          onChange={(event) => {
+            setSelected(event.target.value)
+          }}
+        />
+      )
+    }}
+  </Story>
+</Preview>
