@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Alert /> snapshots 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-AxjAm SnzzN"
+  >
+    <i
+      class="src__IconBase-m4bsf3-0 eyPafq material-icons-round"
+      font-size="24"
+    >
+      error
+    </i>
+    <div
+      class="sc-AxhCb ccMvAG"
+    >
+      <div
+        class="sc-AxirZ fRWfze"
+        font-size="2,3"
+      >
+        Error 500
+      </div>
+      <div
+        class="sc-AxiKw cAQzyg"
+        font-size="1,2"
+      >
+        Something went wrong!
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

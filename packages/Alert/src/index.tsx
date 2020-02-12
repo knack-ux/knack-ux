@@ -35,9 +35,9 @@ export function Alert({
 
   return (
     <Wrap
-      py={[16, 24]} // padding top and bottom (y axis)
-      pr={[40, 48]}
-      pl={[16, 24]}
+      paddingY={[16, 24]} // padding top and bottom (y axis)
+      paddingRight={[40, 48]}
+      paddingLeft={[16, 24]}
       intent={intent}
       {...props}
     >
