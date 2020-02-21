@@ -82,7 +82,7 @@ export const Label = styled.label<LabelProps>`
 export const ErrorText = styled.div`
   font-size: 14px;
   margin: 4px 0 0 4px;
-  color: ${({ theme }) => theme.a11y.danger};
+  color: ${({ theme }) => theme.colors.danger};
   /*
     remove the width
     and padding of the
