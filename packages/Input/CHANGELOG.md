@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.6](https://github.com/knack-ux/knack-ux/compare/@knack-ux/input@0.5.5...@knack-ux/input@0.5.6) (2020-02-21)
+
+
+### Bug Fixes
+
+* **input:** remove use of theme.a11y ([8f7554b](https://github.com/knack-ux/knack-ux/commit/8f7554bff0a33886171fcd0d351f1a16ee8a3c8b))
+
+
+
+
+
 ## [0.5.5](https://github.com/knack-ux/knack-ux/compare/@knack-ux/input@0.5.4...@knack-ux/input@0.5.5) (2020-02-12)
 
 **Note:** Version bump only for package @knack-ux/input
