@@ -1,0 +1,38 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import Popover, { Trigger, Content } from '@knack-ux/popover';
+import Menu, { Item, Divider } from '@knack-ux/menu';
+import Button from '@knack-ux/button';
+import { version } from '@knack-ux/popover/package.json';
+
+<Meta title="Components|Popover" />
+
+# Popover
+<span>Latest Version: {version}</span>
+
+```
+  import Popover from '@knack-ux/popover';
+```
+
+<Props of={Popover} />
+
+## Basic
+<Preview>
+  <Story name="Variants">
+    <Popover>
+      <Trigger>
+        <Button>
+          Options
+        </Button>
+      </Trigger>
+      <Content width="160px" p="8px">
+        <Menu title="Options">
+          <Item icon="share">Share</Item>
+          <Item icon="shuffle">Move</Item>
+          <Item icon="edit">Rename</Item>
+          <Divider />
+          <Item intent="danger" icon="delete_outline">Delete</Item>
+        </Menu>
+      </Content>
+    </Popover>
+  </Story>
+</Preview>
