@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://github.com/knack-ux/knack-ux/compare/@knack-ux/avatar@0.5.2...@knack-ux/avatar@0.5.3) (2020-02-25)
+
+
+### Bug Fixes
+
+* **avatar:** change default variant to info ([886db17](https://github.com/knack-ux/knack-ux/commit/886db1763a6831ff3aec55189b1c906222972a5b))
+
+
+
+
+
 ## [0.5.2](https://github.com/knack-ux/knack-ux/compare/@knack-ux/avatar@0.5.1...@knack-ux/avatar@0.5.2) (2020-02-12)
 
 **Note:** Version bump only for package @knack-ux/avatar

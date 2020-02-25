@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.7](https://github.com/knack-ux/knack-ux/compare/@knack-ux/alert@0.6.6...@knack-ux/alert@0.6.7) (2020-02-25)
+
+
+### Bug Fixes
+
+* **avatar:** change default variant to info ([886db17](https://github.com/knack-ux/knack-ux/commit/886db1763a6831ff3aec55189b1c906222972a5b))
+
+
+
+
+
 ## [0.6.6](https://github.com/knack-ux/knack-ux/compare/@knack-ux/alert@0.6.5...@knack-ux/alert@0.6.6) (2020-02-12)
 
 **Note:** Version bump only for package @knack-ux/alert
