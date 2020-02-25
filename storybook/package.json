@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@knack-ux/storybook",
-  "version": "0.15.1",
+  "version": "0.16.0",
   "description": "Storybook documentation environment for the Knack UI Project",
   "main": "lib/index.js",
   "author": "Kristiyan Serafimov (chrispcode)",
