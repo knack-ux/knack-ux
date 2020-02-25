@@ -35,7 +35,7 @@ export function Alert({
 
   return (
     <Wrap
-      paddingY={[16, 24]} // padding top and bottom (y axis)
+      paddingY={[16, 24]}
       paddingRight={[40, 48]}
       paddingLeft={[16, 24]}
       intent={intent}

@@ -69,7 +69,7 @@ export function Avatar({
   return (
     <AvatarBase
       aria-label={name}
-      backgroundColor="default"
+      backgroundColor="info"
       fontSize={fontSize}
       color="white"
       size={size}
