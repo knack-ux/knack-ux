@@ -47,12 +47,14 @@ export function Popover({
     y.set(nextPositions.y);
   }, []);
 
-  const handleOutsideClick = useCallback((event: MouseEvent) => {
-    // @ts-ignore
-    if (!contentRef?.current?.contains(event.target)) {
-      setOpen(false);
-    }
-  }, []);
+  const handleOutsideClick = useCallback(
+    (event: MouseEvent) => {
+      // @ts-ignore
+      if (!contentRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    }, []
+  );
 
   useEffect(() => {
     if (!element) {
@@ -81,6 +83,7 @@ export function Popover({
 
     return React.cloneElement(trigger, {
       ref: triggerRef,
+      style: { pointerEvents: open ? 'none' : 'auto' },
       onClick: () => {
         setOpen(!open);
       },
