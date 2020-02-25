@@ -1,0 +1,36 @@
+{
+  "name": "@knack-ux/radio",
+  "version": "0.0.0",
+  "description": "Radio button component for the Knack UI Project",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/knack-ux/knack-ux.git",
+    "directory": "@knack-ux/radio"
+  },
+  "files": [
+    "lib/"
+  ],
+  "author": "Kristiyan Serafimov (chrispcode)",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack --watch --config=../../webpack/webpack.dev.js",
+    "build": "webpack --config=../../webpack/webpack.prod.js",
+    "build:doc": "webpack --config=../../webpack/webpack.dev.js",
+    "clean": "rm -rf lib"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "framer-motion": "^1.8.4",
+    "react": "^16.8.4",
+    "styled-components": "^5.0.1",
+    "styled-system": "^5.1.2"
+  },
+  "dependencies": {
+    "@knack-ux/icon": "^0.2.6",
+    "@knack-ux/theme": "^0.7.3",
+    "polished": "^3.4.4"
+  }
+}

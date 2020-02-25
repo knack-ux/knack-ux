@@ -1,0 +1,37 @@
+import { useState } from 'react';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import Radio from '@knack-ux/radio';
+import { version } from '@knack-ux/radio/package.json';
+
+<Meta title="Components|Radio" />
+
+# Radio
+<span>Latest Version: {version}</span>
+
+```
+  import Radio from '@knack-ux/radio';
+```
+
+<Props of={Radio} />
+
+## Basic
+<Preview>
+  <Story name="Basic">
+    {() => {
+      const [value, set] = useState("");
+      return (
+        <Radio
+          id="basic-radio"
+          label="Who is your favourite physicist?"
+          value={value}
+          options={[
+            {label: 'John Atanasoff', value: 'atanasoff'},
+            {label: 'Nikola Tesla', value: 'tesla'},
+            {label: 'Thomas Edison', value: 'edison'}
+          ]}
+          onChange={(event) => set(event.target.value)}
+        />
+      )
+    }}
+  </Story>
+</Preview>
