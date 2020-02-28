@@ -6,46 +6,30 @@ import React, {
   useEffect,
   useCallback
 } from 'react';
-import { useMotionValue } from 'framer-motion';
-import { createPortal } from 'react-dom';
+import { createPopper, Instance as PopperInstance, Placement } from '@popperjs/core';
 
 import { Content, Trigger } from './styled';
-import { calcPosition } from './helper';
 
 export interface Props {
   /**
-   *  Any string containing `left`, `right`, `top`, `bottom`
+   * Same as PopperJS placement
+   * so a combination of top, bottom and
+   * start, end center with a dash (-)
    */
-  placement?: string
+  placement?: Placement
   children: React.ReactNode
 }
 
 export function Popover({
-  placement = 'left-bottom',
+  placement = 'bottom-end',
   children
 }: Props) {
   const [open, setOpen] = useState(false);
-
+  const [popper, setPopper] = useState<PopperInstance>();
   const triggerRef = useRef<HTMLElement>();
-  const contentRef = useRef<HTMLElement>();
-  const x = useMotionValue(-1000);
-  const y = useMotionValue(-1000);
+  const contentRef = useRef<HTMLDivElement>();
 
-  let element = document.getElementById('popover-portal');
   const childrenArray = Children.toArray(children) as ReactElement[];
-
-  const reposition = useCallback(() => {
-    const triggerRect = triggerRef.current.getBoundingClientRect();
-    const contentRect = contentRef.current.getBoundingClientRect();
-
-    const nextPositions = calcPosition(
-      placement,
-      contentRect,
-      triggerRect
-    );
-    x.set(nextPositions.x);
-    y.set(nextPositions.y);
-  }, []);
 
   const handleOutsideClick = useCallback(
     (event: MouseEvent) => {
@@ -56,21 +40,45 @@ export function Popover({
     }, []
   );
 
-  useEffect(() => {
-    if (!element) {
-      element = document.createElement('div');
-      element.setAttribute('id', 'popover-portal');
-      document.body.appendChild(element);
-    }
+  function show() {
+    const popperInstance = createPopper(
+      triggerRef.current,
+      contentRef.current,
+      {
+        placement,
+        modifiers: [
+          {
+            name: 'offset',
+            options: {
+              offset: [0, 8],
+            },
+          },
+        ],
+      }
+    );
 
-    if (open) {
-      reposition();
-      window.addEventListener('resize', reposition);
-      document.addEventListener('mousedown', handleOutsideClick);
-    } else {
-      document.removeEventListener('mousedown', handleOutsideClick);
-      window.removeEventListener('resize', reposition);
+    setPopper(popperInstance);
+
+    document.addEventListener(
+      'mousedown',
+      handleOutsideClick
+    );
+  }
+
+  function destroy() {
+    if (popper) {
+      popper.destroy();
+      contentRef.current.removeAttribute('style');
+      document.removeEventListener(
+        'mousedown',
+        handleOutsideClick
+      );
     }
+  }
+
+  useEffect(() => {
+    if (open) show();
+    else destroy();
   }, [open]);
 
 
@@ -91,24 +99,18 @@ export function Popover({
   }
 
   function renderContent() {
-    const content = React.cloneElement(
-      (
-        childrenArray
-          .find((child: ReactElement) => child.type === Content)
-      ),
+    const content = childrenArray.find((child: ReactElement) => child.type === Content);
+
+    const contentAsPopover = React.cloneElement(
+      content,
       {
         ref: contentRef,
-        style: { x, y },
-        transition: {
-          type: 'linear'
-        }
+        'data-show': open,
+        ...content.props
       }
     );
 
-    return open && createPortal(
-      content,
-      element
-    );
+    return contentAsPopover;
   }
 
   return (

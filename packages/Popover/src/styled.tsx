@@ -11,13 +11,15 @@ import {
 
 export const Trigger = () => <></>;
 export const Content = styled(motion.div)<LayoutProps & SpaceProps>`
-  position: absolute;
-  top: 0;
-  left: 0;
-
+  display: none;
   background: white;
   border: 2px solid #EBECF0;
   border-radius: 3px;
+  margin-top: 8px;
+
+  &[data-show="true"] {
+    display: flex;
+  }
 
   ${layout}
   ${space}
