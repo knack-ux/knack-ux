@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, ComponentPropsWithoutRef } from 'react';
 
 import {
   Input,
@@ -12,7 +12,7 @@ export interface Option {
   value: string
 }
 
-export interface Props {
+export interface Props extends ComponentPropsWithoutRef<'div'> {
   id: string
   value: string
   label: string
@@ -25,7 +25,8 @@ export function Radio({
   options,
   onChange,
   value,
-  label
+  label,
+  ...props
 }: Props) {
   function renderLabel() {
     return (
@@ -57,7 +58,7 @@ export function Radio({
   }
 
   return (
-    <RadioBase>
+    <RadioBase {...props}>
       {renderLabel()}
       {renderOptions()}
     </RadioBase>
