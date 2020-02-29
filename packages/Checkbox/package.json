@@ -1,0 +1,35 @@
+{
+  "name": "@knack-ux/checkbox",
+  "version": "0.0.0",
+  "description": "Checkbox component for the Knack UI Project",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/knack-ux/knack-ux.git",
+    "directory": "@knack-ux/checkbox"
+  },
+  "files": [
+    "lib/"
+  ],
+  "author": "Kristiyan Serafimov (chrispcode)",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack --watch --config=../../webpack/webpack.dev.js",
+    "build": "webpack --config=../../webpack/webpack.prod.js",
+    "build:doc": "webpack --config=../../webpack/webpack.dev.js",
+    "clean": "rm -rf lib"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": "^16.8.4",
+    "styled-components": "^5.0.1",
+    "styled-system": "^5.1.2"
+  },
+  "dependencies": {
+    "@knack-ux/theme": "^0.7.3",
+    "@knack-ux/icon": "^0.2.6"
+  },
+  "gitHead": "259d59c20c130d889bb07835c16f1b8bda3dff43"
+}

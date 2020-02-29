@@ -15,6 +15,7 @@
     "@knack-ux/avatar": "^0.5.3",
     "@knack-ux/badge": "^0.3.0",
     "@knack-ux/button": "^0.11.0",
+    "@knack-ux/checkbox": "^0.0.0",
     "@knack-ux/input": "^0.5.6",
     "@knack-ux/menu": "^0.2.4",
     "@knack-ux/pill": "^0.2.3",

@@ -1,0 +1,65 @@
+import { useState } from 'react';
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
+import Checkbox from '@knack-ux/checkbox';
+import { version } from '@knack-ux/checkbox/package.json';
+
+<Meta title="Components|Checkbox" />
+
+# Checkbox
+<span>Latest Version: {version}</span>
+
+```
+  import Checkbox from '@knack-ux/checkbox';
+```
+
+<Props of={Checkbox} />
+
+## Basic
+<Preview>
+  <Story name="Basic">
+    {() => {
+      const [checked, set] = useState(false);
+      return (
+        <Checkbox
+          id="basic-checkbox"
+          label="I agree to follow the laws of physiscs!"
+          checked={checked}
+          onChange={(event) => {set(event.target.checked)}}
+        />
+      )
+    }}
+  </Story>
+</Preview>
+
+## Variants
+<Preview>
+  <Story name="Variants">
+    <>
+      <Checkbox
+        id="checkbox-not-checked"
+        label="Not checked, enabled"
+        checked={false}
+      />
+      <br />
+      <Checkbox
+        id="checkbo-checked"
+        label="Checked, enabled"
+        checked
+      />
+      <br />
+      <Checkbox
+        id="checkbox-not-checked-disabled"
+        label="Not checked, disabled"
+        checked={false}
+        disabled
+      />
+      <br />
+      <Checkbox
+        id="checkbo-checked-disabled"
+        label="Checked, disabled"
+        checked
+        disabled
+      />
+    </>
+  </Story>
+</Preview>
