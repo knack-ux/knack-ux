@@ -99,7 +99,8 @@ export function Popover({
   }
 
   function renderContent() {
-    const content = childrenArray.find((child: ReactElement) => child.type === Content);
+    const content = childrenArray
+      .find((child: ReactElement) => child.type === Content);
 
     const contentAsPopover = React.cloneElement(
       content,
