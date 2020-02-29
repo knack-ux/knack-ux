@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import {
-  space, layout, typography,
-  SpaceProps, LayoutProps, TypographyProps
+  space, layout, typography, color,
+  SpaceProps, LayoutProps, TypographyProps, ColorProps
 } from 'styled-system';
 
 
-interface Props extends SpaceProps, LayoutProps, TypographyProps {
+interface Props extends SpaceProps, LayoutProps, TypographyProps, ColorProps {
   icon: string
   size?: number
+  color?: string
 }
 
 export function Icon({
@@ -28,6 +29,7 @@ export function Icon({
 }
 
 const IconBase = styled.i`
+  ${color}
   ${space}
   ${layout}
   ${typography}
