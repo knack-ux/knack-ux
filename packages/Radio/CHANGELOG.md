@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/radio@0.1.0...@knack-ux/radio@0.2.0) (2020-02-29)
+
+
+### Features
+
+* **radio:** pass props down ([2cf5135](https://github.com/knack-ux/knack-ux/commit/2cf5135cdf1236ce9f0e225518e1b2c13f641fd8))
+
+
+
+
+
 # [0.1.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/radio@0.4.0...@knack-ux/radio@0.1.0) (2020-02-25)
 
 

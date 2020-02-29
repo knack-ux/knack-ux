@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/segment",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Segment component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {
@@ -29,7 +29,7 @@
     "styled-system": "^5.1.2"
   },
   "dependencies": {
-    "@knack-ux/icon": "^0.2.6",
+    "@knack-ux/icon": "^0.3.0",
     "@knack-ux/theme": "^0.7.3",
     "polished": "^3.4.4"
   },

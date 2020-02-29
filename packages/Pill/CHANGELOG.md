@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/knack-ux/knack-ux/compare/@knack-ux/pill@0.2.3...@knack-ux/pill@0.2.4) (2020-02-29)
+
+**Note:** Version bump only for package @knack-ux/pill
+
+
+
+
+
 ## [0.2.3](https://github.com/knack-ux/knack-ux/compare/@knack-ux/pill@0.2.2...@knack-ux/pill@0.2.3) (2020-02-12)
 
 

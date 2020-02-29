@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/icon@0.2.6...@knack-ux/icon@0.3.0) (2020-02-29)
+
+
+### Features
+
+* **icon:** add color prop ([b9cd3b4](https://github.com/knack-ux/knack-ux/commit/b9cd3b484f704bba957591a2459c104c2bdf574a))
+
+
+
+
+
 ## [0.2.6](https://github.com/knack-ux/knack-ux/compare/@knack-ux/icon@0.2.5...@knack-ux/icon@0.2.6) (2020-02-12)
 
 **Note:** Version bump only for package @knack-ux/icon
