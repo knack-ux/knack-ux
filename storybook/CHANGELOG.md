@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.3](https://github.com/knack-ux/knack-ux/compare/@knack-ux/storybook@0.17.2...@knack-ux/storybook@0.17.3) (2020-03-01)
+
+
+### Bug Fixes
+
+* **menu, popover:** make trigger render a div ([82055a5](https://github.com/knack-ux/knack-ux/commit/82055a5c16abc54bfb3a215ec202c3740eeff9d1))
+
+
+
+
+
 ## [0.17.2](https://github.com/knack-ux/knack-ux/compare/@knack-ux/storybook@0.17.1...@knack-ux/storybook@0.17.2) (2020-03-01)
 
 **Note:** Version bump only for package @knack-ux/storybook

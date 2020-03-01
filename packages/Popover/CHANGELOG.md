@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.5](https://github.com/knack-ux/knack-ux/compare/@knack-ux/popover@0.1.4...@knack-ux/popover@0.1.5) (2020-03-01)
+
+
+### Bug Fixes
+
+* **menu, popover:** make trigger render a div ([82055a5](https://github.com/knack-ux/knack-ux/commit/82055a5c16abc54bfb3a215ec202c3740eeff9d1))
+
+
+
+
+
 ## [0.1.4](https://github.com/knack-ux/knack-ux/compare/@knack-ux/popover@0.1.3...@knack-ux/popover@0.1.4) (2020-03-01)
 
 
