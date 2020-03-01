@@ -68,7 +68,7 @@ export function Popover({
   function destroy() {
     if (popper) {
       popper.destroy();
-      contentRef.current.removeAttribute('style');
+      // contentRef.current.removeAttribute('style');
       document.removeEventListener(
         'mousedown',
         handleOutsideClick
@@ -86,15 +86,13 @@ export function Popover({
     const trigger = (
       childrenArray
         .find((child: ReactElement) => child.type === Trigger)
-        .props.children
     );
 
     return React.cloneElement(trigger, {
       ref: triggerRef,
       style: { pointerEvents: open ? 'none' : 'auto' },
-      onClick: () => {
-        setOpen(!open);
-      },
+      onClick: () => setOpen(!open),
+      ...trigger.props
     });
   }
 
