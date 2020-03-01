@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { ComponentPropsWithoutRef } from 'react';
 
 import { ItemBase } from './styled';
 
-export interface Props {
+export interface Props extends ComponentPropsWithoutRef<'div'> {
   key?: string
   icon?: string
   onSelect?: () => void
