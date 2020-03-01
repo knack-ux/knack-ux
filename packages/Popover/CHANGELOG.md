@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/knack-ux/knack-ux/compare/@knack-ux/popover@0.1.3...@knack-ux/popover@0.1.4) (2020-03-01)
+
+
+### Bug Fixes
+
+* **popover:** make trigger a styled.div ([51599bb](https://github.com/knack-ux/knack-ux/commit/51599bbb3aa587af09b01b16be1a3854f4db8349))
+
+
+
+
+
 ## [0.1.3](https://github.com/knack-ux/knack-ux/compare/@knack-ux/popover@0.1.2...@knack-ux/popover@0.1.3) (2020-02-29)
 
 **Note:** Version bump only for package @knack-ux/popover
