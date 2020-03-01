@@ -9,7 +9,7 @@ import {
 } from 'styled-system';
 
 
-export const Trigger = () => <></>;
+export const Trigger = styled.div``;
 export const Content = styled(motion.div)<LayoutProps & SpaceProps>`
   display: none;
   background: white;
