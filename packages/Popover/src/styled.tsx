@@ -17,7 +17,9 @@ export const Trigger = styled.div`
   margin: 0;
   cursor: pointer;
 `;
+
 export const Content = styled(motion.div)<LayoutProps & SpaceProps>`
+  position: absolute;
   display: none;
   background: white;
   border: 2px solid #EBECF0;
