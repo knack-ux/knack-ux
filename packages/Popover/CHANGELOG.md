@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.6](https://github.com/knack-ux/knack-ux/compare/@knack-ux/popover@0.1.5...@knack-ux/popover@0.1.6) (2020-03-02)
+
+
+### Bug Fixes
+
+* **popover:** make content position absolute ([6d6cc04](https://github.com/knack-ux/knack-ux/commit/6d6cc04336ac035cdb6d49b78b93bb8a847762f5))
+
+
+
+
+
 ## [0.1.5](https://github.com/knack-ux/knack-ux/compare/@knack-ux/popover@0.1.4...@knack-ux/popover@0.1.5) (2020-03-01)
 
 
