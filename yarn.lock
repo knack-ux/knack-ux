@@ -3592,9 +3592,9 @@
     csstype "^2.2.0"
 
 "@types/styled-system@^5.1.7":
-  version "5.1.7"
-  resolved "https://registry.yarnpkg.com/@types/styled-system/-/styled-system-5.1.7.tgz#b5aeb6efea499103a497da762516cdf38efd9e02"
-  integrity sha512-0zMxF/B5Z4T6ZhCP8CKtxe8wBmH7sqDjK3lOMByNQ6gG/Qf6RDnBp1aZwkReS1uDVhrsPx9J+IbLigpAdYBkrQ==
+  version "5.1.8"
+  resolved "https://registry.yarnpkg.com/@types/styled-system/-/styled-system-5.1.8.tgz#cdf9ecccdc987bff6eb51ce6d74cc961fd1f348a"
+  integrity sha512-g+BH1EDonyoPVu2K3tnQ/mzFgxK2zmIftULRn8BXFbwQRJEOHWrsT2y6HU1SDtz2lEaZnGtL6gt80cxGxytKrw==
   dependencies:
     csstype "^2.6.9"
 
