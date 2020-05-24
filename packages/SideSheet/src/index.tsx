@@ -1,160 +1,99 @@
 import React, {
-  useRef,
-  useEffect,
+  ReactPortal,
   ReactNode,
   MouseEvent,
-  KeyboardEvent
+  useRef
 } from 'react';
+import styled from 'styled-components';
 import { createPortal } from 'react-dom';
-import { useAnimation } from 'framer-motion';
-import Button from '@knack-ux/button';
-import FocusLock from 'react-focus-lock';
-import { RemoveScroll } from 'react-remove-scroll';
+import { motion, AnimatePresence } from 'framer-motion';
 
-import { SideSheetBase, Container } from './styled';
+import Icon from '@knack-ux/icon';
+import Box from '@knack-ux/box';
+import FocusLock from 'react-focus-lock';
+
+import {
+  Curtain,
+  Container,
+  Content,
+  CollapseButton
+} from './styled';
 
 export interface Props {
-  show?: boolean
-  width?: number
+  id: string
+  show: boolean
   children: ReactNode
-  onCloseComplete?: () => void
-  onOpenComplete?: () => void
-  onBeforeClose?: () => boolean
-  shouldCloseOnOverlayClick?: boolean
-  shouldCloseOnEscapePress?: boolean
+  onClose: () => {}
 }
 
-const animations = {
-  container: {
-    show: {
-      x: 0,
-      transition: {
-        type: 'tween',
-        ease: 'circOut',
-        duration: 0.3
-      }
-    },
-    hide: {
-      x: '100%',
-      transition: {
-        type: 'tween',
-        ease: 'easeIn',
-        duration: 0.3
-      }
-    }
-  },
-  shade: {
-    show: {
-      background: 'rgba(23, 43, 77, 0.6)',
-      transition: {
-        type: 'tween',
-        ease: 'linear',
-        duration: 0.4
-      }
-    },
-    hide: {
-      background: 'rgba(0, 0, 0, 0)',
-      transition: {
-        type: 'tween',
-        ease: 'linear',
-        duration: 0.4
-      }
-    }
-  }
-};
-
 export function SideSheet({
-  show = false,
-  width = 640,
-  onBeforeClose = () => true,
-  onCloseComplete,
-  onOpenComplete,
-  shouldCloseOnEscapePress = true,
-  shouldCloseOnOverlayClick = true,
+  id,
+  show,
+  onClose,
   children
-}: Props) {
-  const containerRef = useRef();
-  const containerAnimation = useAnimation();
-  const shadeAnimation = useAnimation();
+}: Props): ReactPortal {
+  const curtainRef = useRef<HTMLDivElement>();
 
-  let element = document.getElementById('side-sheet');
+  let element = document.getElementById('side--sheet');
 
-  useEffect(() => {
-    if (!element) {
-      element = document.createElement('div');
-      element.setAttribute('id', 'side-sheet');
-      document.body.appendChild(element);
-    }
-    if (show) {
-      containerAnimation.start(animations.container.show);
-      shadeAnimation.start(animations.shade.show);
-      if (onOpenComplete) onOpenComplete();
-    }
-  }, [show]);
+  if (!element) {
+    element = document.createElement('div');
+    element.setAttribute('id', 'side--sheet');
+    document.body.appendChild(element);
+  }
 
-  async function handleClose() {
-    const shouldClose = onBeforeClose();
-    if (shouldClose) {
-      await Promise.all([
-        containerAnimation.start(animations.container.hide),
-        shadeAnimation.start(animations.shade.hide)
-      ]);
+  const curtainKey = `side-sheet-curtain-${id}`;
+  const containerKey = `side-sheet-container-${id}`;
 
-      document.body.removeChild(element);
-      if (onCloseComplete) onCloseComplete();
+
+  function handleCurtainClick(event: MouseEvent) {
+    if (curtainRef.current === event.target) {
+      event.stopPropagation();
+      onClose();
     }
   }
 
-  function handleEscapeKeyPress(event: KeyboardEvent) {
-    if (event.key === 'Escape' && shouldCloseOnEscapePress) {
-      handleClose();
-    }
-  }
-
-  function handleShadeClick(event: MouseEvent) {
-    // @ts-ignore
-    if (!containerRef.current.contains(event.target) && shouldCloseOnOverlayClick) {
-      handleClose();
-    }
-  }
-
-  function renderSheet() {
+  function renderSideSheet() {
     return (
-      <FocusLock>
-        <SideSheetBase
-          initial={{ background: 'rgba(0,0,0,0)' }}
-          animate={shadeAnimation}
-          onClick={handleShadeClick}
+      <AnimatePresence>
+        {show && (
+        <Curtain
+          ref={curtainRef}
+          key={curtainKey}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={handleCurtainClick}
         >
-          <RemoveScroll enabled>
+          <FocusLock>
             <Container
-              initial={{ x: width }}
-              animate={containerAnimation}
-              ref={containerRef}
-              onKeyUp={handleEscapeKeyPress}
+              key={containerKey}
+              initial={{ x: '100%' }}
+              animate={{ x: '0%' }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'tween', ease: 'easeInOut' }}
             >
-              <Button
-                mt="8px"
-                ml="8px"
-                circular
-                icon="close"
-                className="side-sheet-close"
-                onClick={handleClose}
-              />
-              {children}
+              <Box justifyContent="center" padding="24px 16px 0 16px">
+                <CollapseButton onClick={onClose}>
+                  <Icon icon="close" size={18} />
+                </CollapseButton>
+              </Box>
+              <Content>
+                {children}
+              </Content>
             </Container>
-          </RemoveScroll>
-        </SideSheetBase>
-      </FocusLock>
+          </FocusLock>
+        </Curtain>
+        )}
+      </AnimatePresence>
     );
   }
 
-
-  if (!show) return null;
-
-  return createPortal(
-    renderSheet(),
-    element
+  return (
+    createPortal(
+      renderSideSheet(),
+      element
+    )
   );
 }
 

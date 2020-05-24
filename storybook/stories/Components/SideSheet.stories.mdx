@@ -26,9 +26,13 @@ import Button from '@knack-ux/button';
             Open Side Sheet
           </Button>
           <SideSheet
+            id="first"
             show={isOpen}
-            onCloseComplete={() => setOpen(false)}
-          />
+            onClose={() => setOpen(false)}
+          >
+            Some Children Content
+          </SideSheet>
+          
         </>
       )
     }}
