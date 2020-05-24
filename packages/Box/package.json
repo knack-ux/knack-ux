@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/box",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Box component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {

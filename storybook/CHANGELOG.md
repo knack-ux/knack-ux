@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.18.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/storybook@0.17.4...@knack-ux/storybook@0.18.0) (2020-05-24)
+
+
+### Features
+
+* **side-sheet:** full rewrite ([29bb46f](https://github.com/knack-ux/knack-ux/commit/29bb46f7a42217ce56e02e575194f7455fc4142d))
+
+
+
+
+
 ## [0.17.4](https://github.com/knack-ux/knack-ux/compare/@knack-ux/storybook@0.17.3...@knack-ux/storybook@0.17.4) (2020-03-02)
 
 **Note:** Version bump only for package @knack-ux/storybook
