@@ -54,13 +54,12 @@ import { version } from '@knack-ux/button/package.json';
 ## Icon
 <Preview>
   <Story name="Icon">
-    <>
-     <Button
+    <div style={{ display: 'flex'}}>
+      <Button
         icon="arrow_forward"
         appearance="primary"
         mr="8px"
-      >
-      </Button>
+      />
       <Button
         icon="arrow_forward"
         appearance="primary"
@@ -68,7 +67,21 @@ import { version } from '@knack-ux/button/package.json';
       >
         Continue
       </Button>
-    </>
+      <Button
+        iconRight="arrow_forward"
+        appearance="primary"
+        mr="8px"
+      >
+        Continue
+      </Button>
+      <Button
+        icon="clear"
+        appearance="minimal"
+        mr="8px"
+      >
+        Cancel
+      </Button>
+    </div>
   </Story>
 </Preview>
 
@@ -83,3 +96,13 @@ import { version } from '@knack-ux/button/package.json';
       </Button>
   </Story>
 </Preview>
+
+## Full Width
+<Preview>
+  <Story name="Full Width">
+    <Button appearance="primary" width="100%">
+      Full Width
+    </Button>
+  </Story>
+</Preview>
+

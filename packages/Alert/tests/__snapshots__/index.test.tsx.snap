@@ -6,7 +6,7 @@ exports[`<Alert /> snapshots 1`] = `
     class="sc-AxjAm SnzzN"
   >
     <i
-      class="src__IconBase-m4bsf3-0 eyPafq material-icons-round"
+      class="src__IconBase-m4bsf3-0 fhDrnd material-icons-round"
       font-size="24"
     >
       error

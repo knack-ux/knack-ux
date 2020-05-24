@@ -4,7 +4,7 @@ import { shade } from 'polished';
 import { Props } from '.';
 
 
-export const Base = styled.button<Props>`
+export const ButtonBase = styled.button<Props>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -24,10 +24,6 @@ export const Base = styled.button<Props>`
 
   &::-moz-focus-inner {
     border: 0;
-  }
-
-  & > *:nth-child(2) {
-    margin-left: 8px;
   }
 
   ${({ theme }) => css`

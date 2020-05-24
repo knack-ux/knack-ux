@@ -25,18 +25,18 @@
     "@knack-ux/switch": "^0.2.0",
     "@knack-ux/tabs": "^0.2.2",
     "@knack-ux/theme": "^0.7.3",
-    "@storybook/theming": "^5.3.14",
+    "@storybook/theming": "^5.3.19",
     "serialize-javascript": "^3.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.6",
-    "@storybook/addon-actions": "^5.3.14",
-    "@storybook/addon-docs": "^5.3.14",
-    "@storybook/addon-links": "^5.3.14",
-    "@storybook/addons": "^5.3.14",
-    "@storybook/react": "^5.3.14",
-    "babel-loader": "^8.0.6",
-    "react": "^16.10.2",
-    "styled-components": "^5.0.1"
+    "@babel/core": "^7.9.6",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-docs": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
+    "babel-loader": "^8.1.0",
+    "react": "^16.13.1",
+    "styled-components": "^5.1.0"
   }
 }

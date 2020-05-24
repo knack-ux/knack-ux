@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@knack-ux/theme": "^0.7.3",
-    "@popperjs/core": "^2.0.6"
+    "@popperjs/core": "^2.4.0"
   },
   "gitHead": "259d59c20c130d889bb07835c16f1b8bda3dff43"
 }

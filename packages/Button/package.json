@@ -28,8 +28,9 @@
     "styled-system": "^5.1.2"
   },
   "dependencies": {
+    "@knack-ux/icon": "^0.3.0",
     "@knack-ux/theme": "^0.7.3",
-    "polished": "^3.4.4"
+    "polished": "^3.6.3"
   },
   "gitHead": "259d59c20c130d889bb07835c16f1b8bda3dff43"
 }

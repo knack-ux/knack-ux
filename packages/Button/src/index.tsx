@@ -1,18 +1,18 @@
-import React, {
-  ButtonHTMLAttributes, forwardRef, Ref
-} from 'react';
+import React, { forwardRef, Ref, ComponentPropsWithRef } from 'react';
 import { LayoutProps, SpaceProps } from 'styled-system';
+import Icon from '@knack-ux/icon';
 
-import { Base } from './styled';
+import { ButtonBase } from './styled';
 
-type ReactButton = ButtonHTMLAttributes<HTMLButtonElement>
+type ReactButton = ComponentPropsWithRef<'button'>
 
 export interface Props extends ReactButton, SpaceProps, LayoutProps {
   appearance?: 'default' | 'primary' | 'minimal'
   intent?: string
   icon?: string
-  ref?: Ref<HTMLButtonElement>
+  iconRight?: string
   circular?: boolean
+  loading?: boolean
 }
 
 export const Button = forwardRef<HTMLButtonElement, Props>((
@@ -20,37 +20,38 @@ export const Button = forwardRef<HTMLButtonElement, Props>((
     appearance = 'default',
     intent = 'info',
     icon,
+    iconRight,
     children,
     disabled,
+    onClick,
     ...props
   },
   ref
-) => {
-  function renderIcon() {
-    return icon && (
-      <i
-        className="material-icons-round"
-        style={{ marginRight: children ? '8px' : 0 }}
-      >
-        {icon}
-      </i>
-    );
-  }
-
-  return (
-    <Base
-      intent={intent}
-      appearance={appearance}
-      aria-disabled={disabled}
-      type="button"
-      ref={ref}
-      {...props}
-    >
-      {renderIcon()}
-      {children}
-    </Base>
-  );
-});
+) => (
+  <ButtonBase
+    intent={intent}
+    appearance={appearance}
+    aria-disabled={disabled}
+    type="button"
+    ref={ref}
+    onClick={!disabled ? onClick : () => {}}
+    {...props}
+  >
+    {icon && (
+      <Icon
+        icon={icon}
+        mr={children ? '8px' : '0'}
+      />
+    )}
+    {children}
+    {iconRight && (
+      <Icon
+        icon={iconRight}
+        ml="8px"
+      />
+    )}
+  </ButtonBase>
+));
 
 
 export default Button;
