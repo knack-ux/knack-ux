@@ -61,7 +61,7 @@
     "react-docgen-typescript-loader": "^3.7.2",
     "react-svg-loader": "^3.0.3",
     "ts-jest": "^26.0.0",
-    "ts-loader": "^7.0.4",
+    "ts-loader": "^8.0.3",
     "typescript": "^3.9.3",
     "url-loader": "^4.1.0",
     "webpack": "4.43.0",
