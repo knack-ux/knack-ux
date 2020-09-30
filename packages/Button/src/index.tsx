@@ -53,5 +53,4 @@ export const Button = forwardRef<HTMLButtonElement, Props>((
   </ButtonBase>
 ));
 
-
 export default Button;

@@ -8,7 +8,6 @@ import {
   space
 } from 'styled-system';
 
-
 export const Trigger = styled.div`
   display: inline-flex;
   border: none;

@@ -3,6 +3,7 @@
   "extends": ["airbnb"],
   "plugins": ["@typescript-eslint"],
   "rules": {
+    "react/require-default-props": "off",
     "linebreak-style": "off",
     "comma-dangle": "off",
     "class-methods-use-this": "off",

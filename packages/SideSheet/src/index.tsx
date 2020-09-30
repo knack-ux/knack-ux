@@ -45,7 +45,6 @@ export function SideSheet({
   const curtainKey = `side-sheet-curtain-${id}`;
   const containerKey = `side-sheet-container-${id}`;
 
-
   function handleCurtainClick(event: MouseEvent) {
     if (curtainRef.current === event.target) {
       event.stopPropagation();
@@ -96,6 +95,5 @@ export function SideSheet({
     )
   );
 }
-
 
 export default SideSheet;

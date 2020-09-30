@@ -80,5 +80,4 @@ export const Switch = forwardRef<HTMLInputElement, Props>(
   }
 );
 
-
 export default Switch;

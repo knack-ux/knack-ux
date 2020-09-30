@@ -70,7 +70,6 @@ export const TabPanel = styled.div`
   font-family: "Cabin";
 `;
 
-
 export const BorderBottom = styled.div`
   width: 100%;
   height: 4px;

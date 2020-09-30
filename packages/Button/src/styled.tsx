@@ -3,7 +3,6 @@ import { variant, layout, space } from 'styled-system';
 import { shade } from 'polished';
 import { Props } from '.';
 
-
 export const ButtonBase = styled.button<Props>`
   display: inline-flex;
   align-items: center;

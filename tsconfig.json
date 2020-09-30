@@ -10,7 +10,8 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "lib": ["dom", "esnext"],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "resolveJsonModule": true
   },
   "exclude": [
     "node_modules",

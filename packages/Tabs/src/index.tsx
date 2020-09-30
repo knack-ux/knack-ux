@@ -115,6 +115,5 @@ export function Tabs({
   );
 }
 
-
 export { Tab };
 export default Tabs;

@@ -3,7 +3,7 @@
 exports[`<Avatar /> component match snapshot on 24px size (initials) 1`] = `
 <div
   aria-label="Jon Snow"
-  class="sc-AxjAm gqcqwf"
+  class="sc-bdnylx enyrbm"
   color="white"
   font-size="11"
   size="24"
@@ -15,7 +15,7 @@ exports[`<Avatar /> component match snapshot on 24px size (initials) 1`] = `
 exports[`<Avatar /> component match snapshot on 40px size (image src) 1`] = `
 <div
   aria-label="Jon Snow"
-  class="sc-AxjAm bkITpE"
+  class="sc-bdnylx pKLIF"
   color="white"
   font-size="16"
   size="40"
@@ -30,7 +30,7 @@ exports[`<Avatar /> component match snapshot on 40px size (image src) 1`] = `
 exports[`<Avatar /> component match snapshot on 40px size (initials) 1`] = `
 <div
   aria-label="Jon Snow"
-  class="sc-AxjAm bkITpE"
+  class="sc-bdnylx pKLIF"
   color="white"
   font-size="16"
   size="40"

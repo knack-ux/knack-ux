@@ -10,8 +10,7 @@ import {
   SegmentBase
 } from './styled';
 
-
-interface Option {
+interface IOption {
   label: string
   value: string
 }
@@ -26,7 +25,7 @@ export type BaseProps = Modify<
 export interface Props extends BaseProps {
   id: string
   value: string
-  options: Option[]
+  options: IOption[]
   onChange: ComponentPropsWithRef<'input'>['onChange']
   inputProps: ComponentPropsWithRef<'input'>
   height?: number
@@ -123,6 +122,5 @@ export const Segment = forwardRef<HTMLInputElement, Props>(
     );
   }
 );
-
 
 export default Segment;

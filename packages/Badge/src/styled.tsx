@@ -1,13 +1,9 @@
 import styled from 'styled-components';
-import {
-  color,
-  space,
-  layout,
-  system
-} from 'styled-system';
+import { system, color } from 'styled-system';
+
+import { defaultTheme } from '@knack-ux/theme';
 
 import { Props } from '.';
-
 
 export const BadgeBase = styled.div<Props>`
   display: inline-flex;
@@ -21,13 +17,17 @@ export const BadgeBase = styled.div<Props>`
   font-weight: 500;
 
   ${system({
-    variant: {
+    intent: {
+      property: 'background',
+      scale: 'intents',
+      defaultScale: defaultTheme.intents
+    },
+    background: {
+      property: 'background',
       scale: 'colors',
-      property: 'background'
+      defaultScale: defaultTheme.colors
     }
   })}
 
-  ${space}
-  ${layout}
   ${color}
 `;

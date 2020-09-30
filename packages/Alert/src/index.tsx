@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react';
+import React, { ComponentPropsWithoutRef } from 'react';
 import { LayoutProps, SpaceProps } from 'styled-system';
 import Icon from '@knack-ux/icon';
 
@@ -6,21 +6,29 @@ import {
   Container,
   Description,
   Title,
-  Wrap
+  AlertBase
 } from './styled';
 
-type ReactDiv = HTMLAttributes<HTMLDivElement>;
-
-export interface Props extends ReactDiv, LayoutProps, SpaceProps {
+export interface Props extends ComponentPropsWithoutRef<'div'>,
+  LayoutProps,
+  SpaceProps {
   title?: string
   description: string
+  /**
+   * Specified by the intents property
+   * of the @knack-ux/theme's ThemeProvider
+   * Specified options by default are:
+   * info | warning | danger | success
+   */
   intent?: string
+  icon?: string
 }
 
 export function Alert({
   title,
   description,
   intent = 'info',
+  icon,
   ...props
 }: Props) {
   function renderIcon() {
@@ -29,12 +37,12 @@ export function Alert({
     else if (intent === 'success') iconName = 'check';
 
     return (
-      <Icon icon={iconName} />
+      <Icon icon={icon || iconName} />
     );
   }
 
   return (
-    <Wrap
+    <AlertBase
       paddingY={[16, 24]}
       paddingRight={[40, 48]}
       paddingLeft={[16, 24]}
@@ -44,17 +52,16 @@ export function Alert({
       {renderIcon()}
       <Container>
         {title && (
-        <Title fontSize={[2, 3]}>
-          {title}
-        </Title>
+          <Title fontSize={[2, 3]}>
+            {title}
+          </Title>
         )}
         <Description fontSize={[1, 2]}>
           {description}
         </Description>
       </Container>
-    </Wrap>
+    </AlertBase>
   );
 }
-
 
 export default Alert;

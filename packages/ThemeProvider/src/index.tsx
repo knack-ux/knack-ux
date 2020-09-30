@@ -15,11 +15,16 @@ export const defaultTheme = {
     warning: '#FFAB00',
     danger: '#D63B00',
   },
+  intents: {
+    info: '#0052CC',
+    success: '#00855f',
+    warning: '#FFAB00',
+    danger: '#D63B00',
+  },
   breakpoints: ['648px', '1176px'],
   fontSizes: ['12px', '14px', '16px', '18px', '20px'],
   focus: '#6554C0'
 };
-
 
 declare module 'styled-components' {
   // @ts-ignore

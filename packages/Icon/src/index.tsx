@@ -5,7 +5,6 @@ import {
   SpaceProps, LayoutProps, TypographyProps, ColorProps
 } from 'styled-system';
 
-
 interface Props extends SpaceProps, LayoutProps, TypographyProps, ColorProps {
   icon: string
   size?: number

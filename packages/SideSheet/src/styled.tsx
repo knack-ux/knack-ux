@@ -23,7 +23,6 @@ export const CollapseButton = styled(motion.button)`
   }
 `;
 
-
 export const Curtain = styled(motion.div)`
   display: flex;
   justify-content: flex-end;
@@ -63,7 +62,6 @@ export const Container = styled(motion.div)`
 
   box-sizing: border-box;
 `;
-
 
 export const Content = styled.div`
   display: flex;

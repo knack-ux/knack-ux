@@ -3,25 +3,25 @@
 exports[`<Alert /> snapshots 1`] = `
 <DocumentFragment>
   <div
-    class="sc-AxjAm SnzzN"
+    class="sc-bdnylx hUCLgE"
   >
     <i
-      class="src__IconBase-m4bsf3-0 fhDrnd material-icons-round"
+      class="src__IconBase-m4bsf3-0 mMFqW material-icons-round"
       font-size="24"
     >
       error
     </i>
     <div
-      class="sc-AxhCb ccMvAG"
+      class="sc-hKFyIo"
     >
       <div
-        class="sc-AxirZ fRWfze"
+        class="sc-gtssRu fjVzol"
         font-size="2,3"
       >
         Error 500
       </div>
       <div
-        class="sc-AxiKw cAQzyg"
+        class="sc-dlnjPT bAvxvX"
         font-size="1,2"
       >
         Something went wrong!

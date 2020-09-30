@@ -1,4 +1,3 @@
-
 import React, { HTMLAttributes } from 'react';
 import {
   LayoutProps,
@@ -81,6 +80,5 @@ export function Avatar({
     </AvatarBase>
   );
 }
-
 
 export default Avatar;

@@ -81,7 +81,6 @@ export function Popover({
     else destroy();
   }, [open]);
 
-
   function renderTrigger() {
     const trigger = (
       childrenArray

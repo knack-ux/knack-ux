@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 import {
-  system, layout, space, typography,
+  system,
+  layout,
+  space,
+  typography,
   TypographyProps
 } from 'styled-system';
 
 import { Props } from '.';
 
-type WrapProps = Omit<Props, 'description'>
+export type AlertBaseProps = Omit<Props, 'description'>
 
-export const Wrap = styled.div<WrapProps>`
+export const AlertBase = styled.div<AlertBaseProps>`
   display: inline-flex;
   align-items: center;
 
@@ -23,7 +26,7 @@ export const Wrap = styled.div<WrapProps>`
   ${system({
     intent: {
       property: 'border',
-      scale: 'colors',
+      scale: 'intents',
       transform: (value, scale) => `3px solid ${scale[value]}`
     }
   })}
@@ -32,7 +35,7 @@ export const Wrap = styled.div<WrapProps>`
   ${system({
     intent: {
       property: 'color',
-      scale: 'colors'
+      scale: 'intents'
     }
   })}
   }

@@ -8,11 +8,12 @@ import {
   BorderProps,
   PositionProps,
   ShadowProps,
+  BackgroundColorProps
 } from 'styled-system';
 
 import { BoxBase } from './styled';
 
-interface Props extends LayoutProps,
+export interface Props extends LayoutProps,
   SpaceProps,
   ColorStyleProps,
   TypographyProps,
@@ -20,25 +21,20 @@ interface Props extends LayoutProps,
   BorderProps,
   PositionProps,
   ShadowProps,
-  ComponentPropsWithoutRef<'div'> {
-  children?: ReactNode
-  as?: any
-}
+  BackgroundColorProps,
+  ComponentPropsWithoutRef<'div'> {}
 
 export function Box({
-  as = 'div',
   children,
   ...props
 }: Props) {
   return (
     <BoxBase
-      as={as}
       {...props}
     >
       {children}
     </BoxBase>
   );
 }
-
 
 export default Box;

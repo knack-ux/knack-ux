@@ -7,7 +7,6 @@ export function getInitials(name: string) {
   return initials;
 }
 
-
 export function getInitialFontSize(
   size: number,
   sizeLimitOneCharacter: number

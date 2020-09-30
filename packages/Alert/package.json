@@ -23,13 +23,13 @@
     "access": "public"
   },
   "peerDependencies": {
-    "framer-motion": "^1.6.8",
     "react": "^16.8.4",
-    "styled-components": "^5.0.1",
-    "styled-system": "^5.1.2"
+    "styled-components": "^5.0.1"
   },
   "dependencies": {
-    "@knack-ux/icon": "^0.3.0"
+    "@knack-ux/icon": "^0.3.0",
+    "framer-motion": "^2.6.15",
+    "styled-system": "^5.1.2"
   },
   "gitHead": "d51f38e228660db628b9f7c92c2670a2c9ff9a68"
 }
