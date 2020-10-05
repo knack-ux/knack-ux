@@ -14,7 +14,7 @@
   "dependencies": {
     "@storybook/core": "6.0.21",
     "framer-motion": "^2.6.15",
-    "polished": "^3.6.7",
+    "polished": "^4.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
