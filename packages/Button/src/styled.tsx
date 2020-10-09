@@ -35,11 +35,11 @@ export const ButtonBase = styled.button<Props>`
     prop: 'appearance',
     variants: {
       default: {
-        border: '2px solid #EBECF0',
+        border: '2px solid #E1E2E6',
         background: '#FAFBFC',
         color: theme.colors[intent],
         ':hover': {
-          background: '#EBECF0'
+          background: '#E1E2E6'
         }
       },
       primary: {
