@@ -23,7 +23,7 @@ export interface Props {
   id: string
   show: boolean
   children: ReactNode
-  onClose: () => {}
+  onClose: () => void
 }
 
 export function SideSheet({
