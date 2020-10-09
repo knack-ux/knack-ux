@@ -3,7 +3,7 @@ import { space, layout } from 'styled-system';
 
 import { Props } from '.';
 
-export const Wrap = styled.div`
+export const InputBase = styled.div`
   display: inline-flex;
   flex-direction: column;
   
@@ -20,6 +20,8 @@ export const Base = styled.input<BaseInputProps>`
   border-radius: 3px;
   border: 2px solid #E1E2E6;
   font-size: 16px;
+  height: 48px;
+  box-sizing: border-box;
   padding: 12px 16px;
   transition-property: border, background-color;
   transition-duration: .35s;

@@ -6,7 +6,7 @@ import {
   Container,
   ErrorText,
   Label,
-  Wrap
+  InputBase
 } from './styled';
 
 type ReactDiv = React.HTMLAttributes<HTMLDivElement>;
@@ -52,7 +52,7 @@ function Input({
   }
 
   return (
-    <Wrap {...props}>
+    <InputBase {...props}>
       <Label
         htmlFor={id}
         disabled={disabled}
@@ -71,7 +71,7 @@ function Input({
         {renderIcon()}
       </Container>
       {error && renderError()}
-    </Wrap>
+    </InputBase>
   );
 }
 
