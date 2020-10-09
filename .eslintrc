@@ -15,7 +15,9 @@
     "jsx-a11y/no-noninteractive-element-to-interactive-role": "off",
     "import/no-extraneous-dependencies": "off",
     "import/extensions": ["error", "never"],
-    "no-use-before-define": "off"
+    "no-use-before-define": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"]
   },
   "settings": {
     "import/resolver": {

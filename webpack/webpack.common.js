@@ -3,12 +3,11 @@ const path = require('path');
 const glob = require('glob');
 
 const nodeExternals = require('webpack-node-externals');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const outputPath = path.resolve('./lib');
 // const entry = path.resolve('src');
-const babelrc = path.resolve('../../', '.babelrc');
-const tsconfig = path.resolve('./tsconfig.json');
 
 const entry = glob
     .sync("src/*.tsx")
@@ -44,21 +43,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(tsx?)|(jsx?)$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              configFile: babelrc
-            }
-          },
-          {
-            loader: 'ts-loader',
-            options: {
-              configFile: tsconfig
-            }
-          }
+          'babel-loader',
+          'ts-loader'
         ]
       },
       {
@@ -79,12 +68,7 @@ module.exports = {
         test: /\.svg$/,
         exclude: /node_modules/,
         use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              configFile: babelrc
-            }
-          },
+          'babel-loader',
           {
             loader: 'react-svg-loader',
             options: {
@@ -100,6 +84,7 @@ module.exports = {
     ]
   },
   plugins: [
+    // new ForkTsCheckerWebpackPlugin(),
     // new BundleAnalyzerPlugin()
   ]
 };
