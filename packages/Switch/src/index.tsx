@@ -11,7 +11,7 @@ export type BaseProps = Modify<
   MotionProps & LayoutProps & SpaceProps
 >;
 
-interface Props extends BaseProps {
+export interface Props extends BaseProps {
   id: string
   size?: number,
   checked?: boolean
