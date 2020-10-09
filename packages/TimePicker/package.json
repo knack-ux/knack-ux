@@ -1,0 +1,33 @@
+{
+  "name": "@knack-ux/time-picker",
+  "version": "0.1.0",
+  "description": "Time Picker component for the Knack UI Project",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/knack-ux/knack-ux.git",
+    "directory": "@knack-ux/time-picker"
+  },
+  "files": [
+    "lib/"
+  ],
+  "author": "Kristiyan Serafimov (chrispcode)",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack --watch --config=../../webpack/webpack.dev.js",
+    "build": "webpack --config=../../webpack/webpack.prod.js",
+    "build:doc": "webpack --config=../../webpack/webpack.dev.js",
+    "clean": "rm -rf lib"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": "^16.8.4",
+    "styled-components": "^5.0.1"
+  },
+  "dependencies": {
+    "@types/luxon": "^1.25.0",
+    "luxon": "^1.25.0"
+  }
+}
