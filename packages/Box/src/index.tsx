@@ -24,16 +24,11 @@ export interface Props extends LayoutProps,
   BackgroundColorProps,
   ComponentPropsWithoutRef<'div'> {}
 
-export function Box({
-  children,
-  ...props
-}: Props) {
+export function Box(props: Props) {
   return (
     <BoxBase
       {...props}
-    >
-      {children}
-    </BoxBase>
+    />
   );
 }
 
