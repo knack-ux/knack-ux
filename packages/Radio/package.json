@@ -31,6 +31,6 @@
     "@knack-ux/theme": "^0.7.3",
     "framer-motion": "^2.6.15",
     "styled-system": "^5.1.2",
-    "polished": "^3.6.7"
+    "polished": "^4.0.2"
   }
 }
