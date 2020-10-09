@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@knack-ux/theme": "^0.7.3",
-    "polished": "^3.6.7",
+    "polished": "^4.0.2",
     "styled-system": "^5.1.2"
   },
   "gitHead": "259d59c20c130d889bb07835c16f1b8bda3dff43"

@@ -29,8 +29,8 @@
   "dependencies": {
     "@knack-ux/icon": "^0.3.0",
     "@knack-ux/theme": "^0.7.3",
-    "framer-motion": "^2.6.15",
-    "styled-system": "^5.1.2",
-    "polished": "^3.6.7"
+    "framer-motion": "^2.8.0",
+    "polished": "^4.0.2",
+    "styled-system": "^5.1.2"
   }
 }
