@@ -27,7 +27,7 @@ export interface Props extends BaseProps {
   value: string
   options: IOption[]
   onChange: ComponentPropsWithRef<'input'>['onChange']
-  inputProps: ComponentPropsWithRef<'input'>
+  inputProps?: ComponentPropsWithRef<'input'>
   height?: number
 }
 
