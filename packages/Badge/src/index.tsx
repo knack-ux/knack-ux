@@ -1,11 +1,8 @@
-import React, { ReactText, useContext } from 'react';
-import { ThemeContext } from 'styled-components';
-import { TextColorProps } from 'styled-system';
-import { readableColor } from 'polished';
+import React, { ReactText } from 'react';
 
 import { BadgeBase } from './styled';
 
-export interface Props extends TextColorProps {
+export interface Props {
   intent?: string
   color?: string
   background?: string
@@ -19,20 +16,14 @@ export function Badge({
   children,
   ...props
 }: Props) {
-  const theme = useContext(ThemeContext);
-
-  let internalColor = readableColor(theme.intents[intent]);
-  if (background) internalColor = readableColor(background);
-  if (color) internalColor = color;
-
   return (
     <BadgeBase
       intent={intent}
       background={background}
-      color={internalColor}
+      color={color}
       {...props}
     >
-      Something else
+      {children.toString().toUpperCase()}
     </BadgeBase>
   );
 }

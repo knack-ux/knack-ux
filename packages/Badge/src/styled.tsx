@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { system, color } from 'styled-system';
-
+import { readableColor } from 'polished';
 import { defaultTheme } from '@knack-ux/theme';
 
 import { Props } from '.';
@@ -22,6 +22,18 @@ export const BadgeBase = styled.div<Props>`
       scale: 'intents',
       defaultScale: defaultTheme.intents
     },
+  })}
+
+  ${system({
+    intent: {
+      property: 'color',
+      scale: 'intents',
+      transform: (value, scale) => readableColor(scale[value] as string),
+      defaultScale: defaultTheme.intents
+    }
+  })}
+
+  ${system({
     background: {
       property: 'background',
       scale: 'colors',
