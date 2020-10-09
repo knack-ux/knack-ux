@@ -1,16 +1,5 @@
 import React from 'react';
 import { Story } from '@storybook/react';
-import {
-  Title,
-  Subtitle,
-  Primary,
-  Stories,
-  Source,
-  PRIMARY_STORY,
-  ArgsTable,
-  // @ts-ignore
-} from '@storybook/addon-docs/blocks';
-import Box from '@knack-ux/box';
 import Badge, { Props } from '@knack-ux/badge';
 import { version } from '@knack-ux/badge/package.json';
 
@@ -19,32 +8,22 @@ export default {
   component: Badge,
   parameters: {
     docs: {
-      page: () => (
-        <>
-          <Title />
-          <Subtitle>
-            {`Latest Version: ${version}`}
-          </Subtitle>
-          <Source
-            language="zsh"
-            code="yarn add @knack-ux/badge # npm install --save @knack-ux/badge"
-          />
-          <Source
-            language="js"
-            code={'import Badge from \'@knack-ux/badge\';'}
-          />
-          <Box>This component will generate a font color based on it&apos;s background</Box>
-          <Primary />
-          <ArgsTable story={PRIMARY_STORY} />
-          <Stories />
-        </>
-      ),
-    },
-  },
+      description: {
+        component: `Current version: ${version}`
+      }
+    }
+  }
 };
 
 export const Default: Story<Props> = (args) => (
-  <Badge>Info (default)</Badge>
+  <>
+    <Badge>Info (default)</Badge>
+    <Badge intent="success">Success</Badge>
+    <Badge intent="warning">Warning</Badge>
+    <Badge intent="danger">Danger</Badge>
+    <Badge background="royalblue">Custom blue</Badge>
+    <Badge background="#00FFFF" color="#000">Custom cyan</Badge>
+  </>
 );
 
 Default.args = {};
