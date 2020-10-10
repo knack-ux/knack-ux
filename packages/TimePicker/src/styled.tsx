@@ -28,6 +28,8 @@ export const Select = styled.select<Pick<Props, 'error'>>`
   font-size: 16px;
   font-family: "IBM Plex Mono";
 
+  height: 48px;
+  box-sizing: border-box;
   padding: 12px 16px;
   
   transition-property: border, background-color;
