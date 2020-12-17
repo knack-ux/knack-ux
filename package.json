@@ -37,7 +37,7 @@
     "@types/styled-system": "^5.1.10",
     "@typescript-eslint/eslint-plugin": "^4.4.0",
     "@typescript-eslint/parser": "^4.4.0",
-    "ajv": "^6.12.5",
+    "ajv": "^7.0.1",
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.11.1",
     "babel-plugin-syntax-jsx": "^6.18.0",
