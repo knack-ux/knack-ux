@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@storybook/core": "6.0.26",
-    "framer-motion": "^2.8.0",
+    "framer-motion": "^3.0.0",
     "polished": "^4.0.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
