@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/switch",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Switch component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {
@@ -27,7 +27,7 @@
     "styled-components": "^5.2.1"
   },
   "dependencies": {
-    "@knack-ux/theme": "^0.8.0",
+    "@knack-ux/theme": "^1.0.0",
     "framer-motion": "^3.1.1",
     "styled-system": "^5.1.2"
   },

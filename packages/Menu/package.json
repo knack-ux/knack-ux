@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/menu",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Menu component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {
@@ -28,8 +28,8 @@
     "styled-system": "^5.1.2"
   },
   "dependencies": {
-    "@knack-ux/icon": "^0.4.0",
-    "@knack-ux/theme": "^0.8.0"
+    "@knack-ux/icon": "^1.0.0",
+    "@knack-ux/theme": "^1.0.0"
   },
   "gitHead": "259d59c20c130d889bb07835c16f1b8bda3dff43"
 }
