@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/icon",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Icon component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {
@@ -28,7 +28,7 @@
     "styled-system": "^5.1.2"
   },
   "dependencies": {
-    "@knack-ux/theme": "^1.0.0"
+    "@knack-ux/theme": "^1.1.0"
   },
   "gitHead": "259d59c20c130d889bb07835c16f1b8bda3dff43"
 }

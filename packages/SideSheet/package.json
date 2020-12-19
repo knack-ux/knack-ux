@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/side-sheet",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Side Sheet component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {
@@ -28,10 +28,10 @@
     "styled-components": "^5.2.1"
   },
   "dependencies": {
-    "@knack-ux/box": "^1.0.0",
-    "@knack-ux/button": "^1.0.0",
-    "@knack-ux/icon": "^1.0.0",
-    "@knack-ux/theme": "^1.0.0",
+    "@knack-ux/box": "^1.1.0",
+    "@knack-ux/button": "^1.1.0",
+    "@knack-ux/icon": "^1.1.0",
+    "@knack-ux/theme": "^1.1.0",
     "framer-motion": "^3.1.1",
     "react-focus-lock": "^2.3.1",
     "react-remove-scroll": "^2.3.0",
