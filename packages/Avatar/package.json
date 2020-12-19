@@ -23,8 +23,8 @@
     "access": "public"
   },
   "peerDependencies": {
-    "react": "^16.8.4",
-    "styled-components": "^5.0.1"
+    "react": "^17.0.1",
+    "styled-components": "^5.2.1"
   },
   "dependencies": {
     "@knack-ux/icon": "^0.3.0",

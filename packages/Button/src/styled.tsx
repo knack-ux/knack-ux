@@ -8,7 +8,7 @@ export const ButtonBase = styled.button<Props>`
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  height: 40px;
+  height: 48px;
   padding: 0 16px;
 
   font-family: 'Cabin';

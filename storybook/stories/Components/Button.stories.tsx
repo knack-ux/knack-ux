@@ -34,7 +34,7 @@ export const Primary: Story<Props> = (args) => (
 );
 
 export const Minimal: Story<Props> = (args) => (
-  <Button appearance="minimal">
+  <Button appearance="minimal" disabled>
     Minimal
   </Button>
 );

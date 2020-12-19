@@ -23,12 +23,12 @@
     "access": "public"
   },
   "peerDependencies": {
-    "react": "^16.8.4",
-    "styled-components": "^5.0.1"
+    "react": "^17.0.1",
+    "styled-components": "^5.2.1"
   },
   "dependencies": {
     "@knack-ux/theme": "^0.7.3",
-    "framer-motion": "^2.8.0",
+    "framer-motion": "^3.1.1",
     "styled-system": "^5.1.2"
   },
   "gitHead": "259d59c20c130d889bb07835c16f1b8bda3dff43"

@@ -30,7 +30,6 @@ module.exports = {
     filename: "[name].js",
     path: outputPath,
     publicPath: '/',
-    library: ['knack-ux', '[name]'],
     libraryTarget: 'umd'
   },
   externals: [

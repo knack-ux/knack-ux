@@ -39,7 +39,7 @@
     "@storybook/addons": "^6.0.26",
     "@storybook/react": "^6.0.26",
     "babel-loader": "^8.1.0",
-    "react": "^16.13.1",
+    "react": "^17.0.1",
     "styled-components": "^5.1.0"
   }
 }

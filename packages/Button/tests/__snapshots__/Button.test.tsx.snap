@@ -3,7 +3,7 @@
 exports[`Button should match disabled snapshot 1`] = `
 <button
   aria-disabled="true"
-  class="sc-bdnylx jfAtBm"
+  class="sc-gsTCUz jwbJMO"
   type="button"
 >
   Continue
@@ -12,7 +12,7 @@ exports[`Button should match disabled snapshot 1`] = `
 
 exports[`Button should match snapshot 1`] = `
 <button
-  class="sc-bdnylx hYGDQn"
+  class="sc-gsTCUz hRhGqn"
   type="button"
 >
   Continue

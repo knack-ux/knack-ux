@@ -23,16 +23,16 @@
     "access": "public"
   },
   "peerDependencies": {
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "styled-components": "^5.0.1"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
   },
   "dependencies": {
     "@knack-ux/box": "^0.2.0",
     "@knack-ux/button": "^0.11.1",
     "@knack-ux/icon": "^0.3.0",
     "@knack-ux/theme": "^0.7.3",
-    "framer-motion": "^2.8.0",
+    "framer-motion": "^3.1.1",
     "react-focus-lock": "^2.3.1",
     "react-remove-scroll": "^2.3.0",
     "styled-system": "^5.1.2"

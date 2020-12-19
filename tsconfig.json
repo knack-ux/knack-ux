@@ -2,10 +2,10 @@
   "compilerOptions": {
     "declaration": true,
     "module": "esnext",
-    "noImplicitAny": false,
     "target": "es6",
-    "moduleResolution": "node",
     "jsx": "react",
+    "noImplicitAny": false,
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "sourceMap": true,
