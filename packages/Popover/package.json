@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/popover",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "Popover component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {
@@ -28,7 +28,7 @@
     "styled-system": "^5.1.2"
   },
   "dependencies": {
-    "@knack-ux/theme": "^0.7.3",
+    "@knack-ux/theme": "^0.8.0",
     "@popperjs/core": "^2.5.3"
   },
   "gitHead": "259d59c20c130d889bb07835c16f1b8bda3dff43"

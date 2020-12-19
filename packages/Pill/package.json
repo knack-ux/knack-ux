@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/pill",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "Pill component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {
@@ -28,8 +28,8 @@
     "styled-system": "^5.1.2"
   },
   "dependencies": {
-    "@knack-ux/icon": "^0.3.0",
-    "@knack-ux/theme": "^0.7.3",
+    "@knack-ux/icon": "^0.4.0",
+    "@knack-ux/theme": "^0.8.0",
     "polished": "^4.0.2"
   },
   "gitHead": "259d59c20c130d889bb07835c16f1b8bda3dff43"

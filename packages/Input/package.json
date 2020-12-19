@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/input",
-  "version": "0.5.6",
+  "version": "0.6.0",
   "description": "Input component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {

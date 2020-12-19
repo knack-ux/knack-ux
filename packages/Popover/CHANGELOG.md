@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/popover@0.1.7...@knack-ux/popover@0.2.0) (2020-12-19)
+
+
+### Features
+
+* **update:** too many things to describe ([60ae7d3](https://github.com/knack-ux/knack-ux/commit/60ae7d3a21f3504a2ed792d08d9b0b4d4a293549))
+* **wip:** wip ([b271e23](https://github.com/knack-ux/knack-ux/commit/b271e238a81541a7bb4be59b1b623b39b7277719))
+
+
+
+
+
 ## [0.1.7](https://github.com/knack-ux/knack-ux/compare/@knack-ux/popover@0.1.6...@knack-ux/popover@0.1.7) (2020-05-24)
 
 **Note:** Version bump only for package @knack-ux/popover

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/knack-ux/knack-ux/compare/@knack-ux/input@0.5.6...@knack-ux/input@0.6.0) (2020-12-19)
+
+
+### Features
+
+* **update:** too many things to describe ([60ae7d3](https://github.com/knack-ux/knack-ux/commit/60ae7d3a21f3504a2ed792d08d9b0b4d4a293549))
+
+
+
+
+
 ## [0.5.6](https://github.com/knack-ux/knack-ux/compare/@knack-ux/input@0.5.5...@knack-ux/input@0.5.6) (2020-02-21)
 
 
