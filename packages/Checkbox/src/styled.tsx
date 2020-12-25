@@ -27,7 +27,7 @@ export const Label = styled.label<{checked?: boolean}>`
 
     font-size: 16px;
   
-    border-radius: 3px;
+    border-radius: 5px;
     background: ${({ checked, theme }) => (checked ? theme.colors.info : '#FFFFFF')};
     border: 2px solid ${({ theme }) => theme.colors.info};
 
