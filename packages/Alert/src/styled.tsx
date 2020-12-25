@@ -18,7 +18,7 @@ export const AlertBase = styled.div<AlertBaseProps>`
   max-width: 320px;
   padding: 24px 48px 24px 24px;
   
-  border-radius: 3px;
+  border-radius: 5px;
 
   ${space}
   ${layout}
