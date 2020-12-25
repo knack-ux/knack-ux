@@ -9,14 +9,16 @@ export const ButtonBase = styled.button<Props>`
   justify-content: center;
   flex-shrink: 0;
   height: 48px;
-  padding: 0 16px;
+  padding: 0 24px;
 
   font-family: 'Cabin';
-  font-size: 16px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
 
   background: #F1F2F6;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
 
   cursor: pointer;
   transition: background 0.2s;
