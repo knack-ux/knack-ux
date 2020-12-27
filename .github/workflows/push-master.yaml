@@ -78,8 +78,6 @@ jobs:
       - name: Push packages to Github NPM Registry
         run: yarn lerna publish from-package --no-verify-access -y;
 
-      - run: sudo yarn global add firebase-tools
-
       - name: Deploy to Firebase Hosting
         run: |
           sudo yarn global add firebase-tools
