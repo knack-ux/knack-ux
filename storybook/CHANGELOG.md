@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.20.4](https://github.com/knack-ux/knack-ux/compare/@knack-ux/storybook@0.20.3...@knack-ux/storybook@0.20.4) (2020-12-27)
+
+**Note:** Version bump only for package @knack-ux/storybook
+
+
+
+
+
 ## [0.20.3](https://github.com/knack-ux/knack-ux/compare/@knack-ux/storybook@0.20.2...@knack-ux/storybook@0.20.3) (2020-12-25)
 
 **Note:** Version bump only for package @knack-ux/storybook

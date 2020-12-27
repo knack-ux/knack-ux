@@ -1,6 +1,6 @@
 {
   "name": "@knack-ux/popover",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Popover component for the Knack UI Project",
   "main": "lib/index.js",
   "repository": {
