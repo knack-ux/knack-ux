@@ -9,7 +9,7 @@ export const ButtonBase = styled.button<Props>`
   justify-content: center;
   flex-shrink: 0;
   height: 48px;
-  padding: 0 24px;
+  padding: 0 22px; // 22px + 2px padding = 24px
 
   font-family: 'Cabin';
   font-weight: 400;
