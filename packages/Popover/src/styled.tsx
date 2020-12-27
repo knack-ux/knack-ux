@@ -1,6 +1,4 @@
-import React from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 import {
   LayoutProps,
   SpaceProps,
@@ -17,12 +15,12 @@ export const Trigger = styled.div`
   cursor: pointer;
 `;
 
-export const Content = styled(motion.div)<LayoutProps & SpaceProps>`
+export const Content = styled.div<LayoutProps & SpaceProps>`
   position: absolute;
   display: none;
   background: white;
   border: 2px solid #EBECF0;
-  border-radius: 3px;
+  border-radius: 5px;
   margin-top: 8px;
 
   &[data-show="true"] {
