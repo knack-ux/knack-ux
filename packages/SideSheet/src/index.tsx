@@ -56,33 +56,34 @@ export function SideSheet({
     return (
       <AnimatePresence>
         {show && (
-        <Curtain
-          ref={curtainRef}
-          key={curtainKey}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={handleCurtainClick}
-        >
-          <FocusLock>
-            <Container
-              key={containerKey}
-              initial={{ x: '100%' }}
-              animate={{ x: '0%' }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'tween', ease: 'easeInOut' }}
-            >
-              <Box justifyContent="center" padding="24px 16px 0 16px">
-                <CollapseButton onClick={onClose}>
-                  <Icon icon="close" size={18} />
-                </CollapseButton>
-              </Box>
-              <Content>
-                {children}
-              </Content>
-            </Container>
-          </FocusLock>
-        </Curtain>
+          <Curtain
+            ref={curtainRef}
+            key={curtainKey}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={handleCurtainClick}
+            transition={{ type: 'just' }}
+          >
+            <FocusLock>
+              <Container
+                key={containerKey}
+                initial={{ x: '100%' }}
+                animate={{ x: '0%' }}
+                exit={{ x: '100%' }}
+                transition={{ type: 'just' }}
+              >
+                <Box justifyContent="center" padding="24px 16px 0 16px">
+                  <CollapseButton onClick={onClose}>
+                    <Icon icon="close" size={18} />
+                  </CollapseButton>
+                </Box>
+                <Content>
+                  {children}
+                </Content>
+              </Container>
+            </FocusLock>
+          </Curtain>
         )}
       </AnimatePresence>
     );

@@ -18,6 +18,15 @@ export const CollapseButton = styled(motion.button)`
   z-index: 1;
   cursor: pointer;
 
+  &:focus {
+    outline: none;
+    box-shadow: none;
+
+    box-shadow: 
+      0 0 0 2px #FFFFFF,
+      0 0 0 4px #0052CC
+  }
+
   & > i {
     color: white;
   }
@@ -26,6 +35,7 @@ export const CollapseButton = styled(motion.button)`
 export const Curtain = styled(motion.div)`
   display: flex;
   justify-content: flex-end;
+  z-index: 1;
 
   position: fixed;
   top: 0;
