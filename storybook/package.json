@@ -7,7 +7,7 @@
   "author": "Kristiyan Serafimov (chrispcode)",
   "license": "MIT",
   "scripts": {
-    "start": "start-storybook -p 6006 --quiet",
+    "start": "start-storybook -p 6006 --quiet --ci",
     "build": "build-storybook --quiet"
   },
   "dependencies": {
