@@ -1,0 +1,73 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: fork-ts-checker-webpack-plugin
+    versions:
+    - 6.1.0
+    - 6.1.1
+    - 6.2.0
+    - 6.2.1
+    - 6.2.4
+  - dependency-name: ajv
+    versions:
+    - 7.0.3
+    - 7.0.4
+    - 7.1.0
+    - 7.1.1
+    - 7.2.1
+    - 7.2.3
+    - 8.0.1
+    - 8.0.5
+    - 8.1.0
+  - dependency-name: firebase-tools
+    versions:
+    - 9.2.2
+    - 9.3.0
+    - 9.4.0
+    - 9.5.0
+    - 9.6.0
+    - 9.6.1
+    - 9.7.0
+    - 9.8.0
+    - 9.9.0
+  - dependency-name: "@typescript-eslint/eslint-plugin"
+    versions:
+    - 4.14.1
+    - 4.14.2
+    - 4.15.0
+    - 4.15.1
+    - 4.15.2
+    - 4.16.1
+    - 4.17.0
+    - 4.18.0
+    - 4.19.0
+    - 4.20.0
+    - 4.21.0
+  - dependency-name: "@typescript-eslint/parser"
+    versions:
+    - 4.14.1
+    - 4.14.2
+    - 4.15.0
+    - 4.15.1
+    - 4.15.2
+    - 4.16.1
+    - 4.17.0
+    - 4.18.0
+    - 4.19.0
+    - 4.20.0
+    - 4.21.0
+  - dependency-name: webpack-cli
+    versions:
+    - 4.4.0
+    - 4.5.0
+  - dependency-name: webpack-bundle-analyzer
+    versions:
+    - 4.4.0
+  - dependency-name: node-notifier
+    versions:
+    - 8.0.1
