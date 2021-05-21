@@ -4240,10 +4240,10 @@ ajv@^6.1.0, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.2, ajv@^6.12.3, ajv@^6.12.4, ajv
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-ajv@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-7.0.1.tgz#d39ed49159672a91f796e2563e1e96984956e338"
-  integrity sha512-D2UYOXvDzGLVwld2/EyRu3xiJG885QUz2xS1phZzebYLPMPBFbPK4naXGDCtPltZoOG+I1+ZkNAJ65SJ3vqbsg==
+ajv@^8.5.0:
+  version "8.5.0"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.5.0.tgz#695528274bcb5afc865446aa275484049a18ae4b"
+  integrity sha512-Y2l399Tt1AguU3BPRP9Fn4eN+Or+StUGWCUpbnFyXSo8NZ9S4uj+AG2pjs5apK+ZMOwYOz1+a+VKvKH7CudXgQ==
   dependencies:
     fast-deep-equal "^3.1.1"
     json-schema-traverse "^1.0.0"
